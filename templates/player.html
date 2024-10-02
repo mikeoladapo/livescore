@@ -1,0 +1,237 @@
+{% extends "app.html" %}
+
+{% block app %}
+<div class="flex justify-between items-center">
+    <div class="flex justify-start items-center gap-4">
+        <div
+            class="relative text-white bg-p1 rounded-full size-10 flex justify-center items-center"
+            >
+            <i class="ph ph-caret-left text-xl"></i>
+        </div>
+        <h1 class="heading-1 font-semibold">Victor Malan</h1>
+    </div>
+</div>
+<div class="playerInfoTab pt-8">
+    <ul
+        class="tab-button flex justify-between items-center text-lg font-semibold"
+        >
+        <li
+            id="tabOne"
+            class="activeTabButton tabButton w-full text-center pb-4 border-b-2 border-n70 dark:border-blackN50"
+            >
+            Profile
+        </li>
+        <li
+            id="tabTwo"
+            class="tabButton w-full text-center pb-4 border-b-2 border-n70 dark:border-blackN50"
+            >
+            Stats
+        </li>
+    </ul>
+    <div class="pt-8">
+        <div class="tab-content activeTab pt-4" id="tabOne_data">
+            <div
+                class="bg-n20 border border-n30 rounded-xl grid grid-cols-2 dark:bg-blackN30 dark:border-blackN50"
+                >
+                <div class="pl-5 py-8 grid grid-cols-2 gap-4">
+                    <div class="">
+                        <p class="text-xs font-medium">Age</p>
+                        <p class="text-lg font-semibold">24</p>
+                    </div>
+                    <div class="">
+                        <p class="text-xs font-medium">Appearances</p>
+                        <p class="text-lg font-semibold">70</p>
+                    </div>
+                    <div class="">
+                        <p class="text-xs font-medium">Total Games</p>
+                        <p class="text-lg font-semibold">24</p>
+                    </div>
+                    <div class="">
+                        <p class="text-xs font-medium">Position</p>
+                        <p class="text-lg font-semibold">Defender</p>
+                    </div>
+                </div>
+                <div class="-mt-10">
+                    <img src="assets/images/player-profile-img.png" alt="" />
+                </div>
+            </div>
+            <div
+                class="flex justify-start items-center gap-3 py-8 overflow-auto"
+                >
+                <div
+                    class="flex justify-start items-start gap-2 py-2 px-3 rounded-lg bg-r50 border border-p1 dark:bg-blackN30"
+                    >
+                    <img
+                        src="assets/images/team-logo/arsenal.png"
+                        class="size-5"
+                        alt=""
+                        />
+                    <div class="pr-6">
+                        <p class="text-base font-semibold pb-1">Sweden</p>
+                        <p class="text-n500 text-xs text-nowrap dark:text-blackN500">
+                            Total Games
+                        </p>
+                    </div>
+                </div>
+                <div
+                    class="flex justify-start items-start gap-2 py-2 px-3 rounded-lg bg-n20 border border-n30 dark:bg-blackN30 dark:border-blackN50"
+                    >
+                    <div class="pr-6">
+                        <p class="text-n500 text-xs dark:text-blackN500">
+                            Date of Birth
+                        </p>
+                        <p class="text-base font-semibold pb-1 text-nowrap">
+                            15 june 1995
+                        </p>
+                    </div>
+                </div>
+                <div
+                    class="flex justify-start items-start gap-2 py-2 px-3 rounded-lg bg-n20 border border-n30 dark:bg-blackN30 dark:border-blackN50"
+                    >
+                    <div class="pr-6">
+                        <p class="text-n500 text-xs dark:text-blackN500">Height</p>
+                        <p class="text-base font-semibold pb-1">7.8"</p>
+                    </div>
+                </div>
+            </div>
+            <div
+                class="bg-n20 border border-n30 rounded-xl dark:bg-blackN30 dark:border-blackN50"
+                >
+                <div class="player-profile-chart"></div>
+            </div>
+        </div>
+        <div class="tab-content hiddenTab" id="tabTwo_data">
+            <div class="">
+                <div
+                    class="flex justify-between items-center bg-p1 text-white py-3 w-full font-semibold pl-2"
+                    >
+                    <div class="flex justify-start items-center">
+                        <p>Season</p>
+                    </div>
+                    <div class="flex justify-start items-center">
+                        <p class="w-12 text-center">G</p>
+                        <p class="w-12 text-center">A</p>
+                    </div>
+                </div>
+                <div
+                    class="flex justify-between items-center py-3 w-full font-semibold pl-2"
+                    >
+                    <div class="flex justify-start items-center">
+                        <div class="flex justify-start items-center gap-2">
+                            <p>2023-24 Premier League</p>
+                        </div>
+                    </div>
+                    <div class="flex justify-start items-center">
+                        <p class="w-12 text-center">22</p>
+                        <p class="w-12 text-center">37</p>
+                    </div>
+                </div>
+                <div
+                    class="flex justify-between items-center py-3 w-full font-semibold pl-2"
+                    >
+                    <div class="flex justify-start items-center">
+                        <div class="flex justify-start items-center gap-2">
+                            <p>2022-23 Premier League</p>
+                        </div>
+                    </div>
+                    <div class="flex justify-start items-center">
+                        <p class="w-12 text-center">22</p>
+                        <p class="w-12 text-center">37</p>
+                    </div>
+                </div>
+                <div
+                    class="flex justify-between items-center py-3 w-full font-semibold pl-2"
+                    >
+                    <div class="flex justify-start items-center">
+                        <div class="flex justify-start items-center gap-2">
+                            <p>2021-22 Premier League</p>
+                        </div>
+                    </div>
+                    <div class="flex justify-start items-center">
+                        <p class="w-12 text-center">22</p>
+                        <p class="w-12 text-center">37</p>
+                    </div>
+                </div>
+                <div
+                    class="flex justify-between items-center py-3 w-full font-semibold pl-2"
+                    >
+                    <div class="flex justify-start items-center">
+                        <div class="flex justify-start items-center gap-2">
+                            <p>2020-21 Premier League</p>
+                        </div>
+                    </div>
+                    <div class="flex justify-start items-center">
+                        <p class="w-12 text-center">22</p>
+                        <p class="w-12 text-center">37</p>
+                    </div>
+                </div>
+                <div
+                    class="flex justify-between items-center py-3 w-full font-semibold pl-2"
+                    >
+                    <div class="flex justify-start items-center">
+                        <div class="flex justify-start items-center gap-2">
+                            <p>2019-20 Premier League</p>
+                        </div>
+                    </div>
+                    <div class="flex justify-start items-center">
+                        <p class="w-12 text-center">22</p>
+                        <p class="w-12 text-center">37</p>
+                    </div>
+                </div>
+                <div
+                    class="flex justify-between items-center py-3 w-full font-semibold pl-2"
+                    >
+                    <div class="flex justify-start items-center">
+                        <div class="flex justify-start items-center gap-2">
+                            <p>2018-19 Premier League</p>
+                        </div>
+                    </div>
+                    <div class="flex justify-start items-center">
+                        <p class="w-12 text-center">22</p>
+                        <p class="w-12 text-center">37</p>
+                    </div>
+                </div>
+                <div
+                    class="flex justify-between items-center py-3 w-full font-semibold pl-2"
+                    >
+                    <div class="flex justify-start items-center">
+                        <div class="flex justify-start items-center gap-2">
+                            <p>2017-18 Premier League</p>
+                        </div>
+                    </div>
+                    <div class="flex justify-start items-center">
+                        <p class="w-12 text-center">22</p>
+                        <p class="w-12 text-center">37</p>
+                    </div>
+                </div>
+                <div
+                    class="flex justify-between items-center py-3 w-full font-semibold pl-2"
+                    >
+                    <div class="flex justify-start items-center">
+                        <div class="flex justify-start items-center gap-2">
+                            <p>2016-17 Premier League</p>
+                        </div>
+                    </div>
+                    <div class="flex justify-start items-center">
+                        <p class="w-12 text-center">22</p>
+                        <p class="w-12 text-center">37</p>
+                    </div>
+                </div>
+                <div
+                    class="flex justify-between items-center py-3 w-full font-semibold pl-2"
+                    >
+                    <div class="flex justify-start items-center">
+                        <div class="flex justify-start items-center gap-2">
+                            <p>2015-16 Premier League</p>
+                        </div>
+                    </div>
+                    <div class="flex justify-start items-center">
+                        <p class="w-12 text-center">22</p>
+                        <p class="w-12 text-center">37</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock app %}

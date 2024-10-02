@@ -1,0 +1,110 @@
+{% extends "mobile/app.html" %}
+
+{% block app %}
+<div class="flex justify-between items-center gap-4 px-6">
+    <div class="flex justify-start items-center gap-4">
+        <a
+            href="{% url 'index' %}"
+            class="relative text-white bg-p1 rounded-full size-10 flex justify-center items-center"
+            >
+        <i class="ph ph-caret-left text-xl"></i>
+        </a>
+        <h1 class="heading-1 font-semibold">Favourites</h1>
+    </div>
+</div>
+<!-- Tab List Start -->
+<div class="pl-6 pt-8">
+    <ul
+        class="flex justify-start items-center gap-3 overflow-auto pb-8 pr-6"
+        >
+        <li>
+            <a
+                href="favourite-matches.html"
+                class="px-5 py-2 rounded-lg font-semibold text-base bg-n20 border border-n30 dark:bg-blackN30 dark:border-blackN50 block"
+                >Matches</a
+                >
+        </li>
+        <li>
+            <a
+                href="favourite-competitions.html"
+                class="px-5 py-2 rounded-lg font-semibold text-base bg-p1 border border-p1 text-white block"
+                >Competitions</a
+                >
+        </li>
+        <li>
+            <a
+                href="favourite-teams.html"
+                class="px-5 py-2 rounded-lg font-semibold text-base bg-n20 border border-n30 dark:bg-blackN30 dark:border-blackN50 block"
+                >Teams</a
+                >
+        </li>
+    </ul>
+</div>
+<!-- Tab List End -->
+<div class="grid grid-cols-12 gap-4 px-6">
+    <a
+        href="{% url 'm_league_info' 1 %}"
+        class="col-span-6 relative border border-n50 rounded-2xl py-5 flex justify-center items-center flex-col dark:border-blackN50"
+        >
+        <div
+            class="absolute top-2 right-2 border rounded-full p-1 flex justify-center items-center"
+            >
+            <i class="ph-fill ph-star text-o300"></i>
+        </div>
+        <img
+            src="assets/images/team-logo/worldcup.png"
+            class="size-10"
+            alt=""
+            />
+        <p class="pt-3 s-text font-semibold">World Cup 2026</p>
+    </a>
+    <a
+        href="{% url 'm_league_info' 1 %}"
+        class="col-span-6 relative border border-n50 rounded-2xl py-5 flex justify-center items-center flex-col dark:border-blackN50"
+        >
+        <div
+            class="absolute top-2 right-2 border rounded-full p-1 flex justify-center items-center"
+            >
+            <i class="ph-fill ph-star text-o300"></i>
+        </div>
+        <img
+            src="assets/images/team-logo/UEFA_Champions.jpg"
+            class="size-10 rounded-full"
+            alt=""
+            />
+        <p class="pt-3 s-text font-semibold">Champions League</p>
+    </a>
+    <a
+        href="{% url 'm_league_info' 1 %}"
+        class="col-span-6 relative border border-n50 rounded-2xl py-5 flex justify-center items-center flex-col dark:border-blackN50"
+        >
+        <div
+            class="absolute top-2 right-2 border rounded-full p-1 flex justify-center items-center"
+            >
+            <i class="ph-fill ph-star text-o300"></i>
+        </div>
+        <img
+            src="assets/images/team-logo/copa-america.png"
+            class="size-10"
+            alt=""
+            />
+        <p class="pt-3 s-text font-semibold">Copa America</p>
+    </a>
+    <a
+        href="{% url 'm_league_info' 1 %}"
+        class="col-span-6 relative border border-n50 rounded-2xl py-5 flex justify-center items-center flex-col dark:border-blackN50"
+        >
+        <div
+            class="absolute top-2 right-2 border rounded-full p-1 flex justify-center items-center"
+            >
+            <i class="ph-fill ph-star text-o300"></i>
+        </div>
+        <img
+            src="assets/images/team-logo/europa-league.png"
+            class="size-10"
+            alt=""
+            />
+        <p class="pt-3 s-text font-semibold">Europa League</p>
+    </a>
+</div>
+{% endblock app %}

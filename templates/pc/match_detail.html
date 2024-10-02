@@ -1,0 +1,125 @@
+{% extends "mobile/app.html" %}
+{% block title %}{{ match_info.home_team.name }} vs {{ match_info.away_team.name }} - 720scores{% endblock title %}
+{% block app %}
+<div class="flex justify-between items-center gap-4 px-2">
+    <div class="flex justify-start items-center gap-4">
+        <a
+            href="{% url 'index' %}"
+            class="relative text-white bg-p1 rounded-full size-10 flex justify-center items-center"
+            >
+        <i class="ph ph-caret-left text-xl"></i>
+        </a>
+        <h1 class="heading-1 font-semibold">{{ match_info.home_team.name }} vs {{ match_info.away_team.name }}</h1>
+    </div>
+</div>
+<div class="px-6 pt-8">
+    <div class="bg-n900 p-5 rounded-2xl text-white swiper-slide dark:bg-blackN30 relative">
+        <img src="{{match_info.league_logo}}" class="absolute top-0 bottom-0 left-0 -z-10" alt="" />
+        <a href="{% url 'm_league_info' 1 %}" class="text-base font-semibold">{{match_info.league}}</a>
+        <p class="text-xs pt-1 pb-6">{{match_info.league_country}}</p>
+        <div class="flex justify-center items-center w-full border-t border-dashed border-n500">
+            <p class="bg-n900 -mt-3 w-fit px-2 dark:bg-blackN30">VS</p>
+        </div>
+        <div class="flex justify-between items-center pt-3">
+            <a href="#" class="flex justify-center items-center flex-col">
+                <img src="{{ match_info.home_team.logo }}" alt="{{ match_info.home_team.name }}" width="100" />
+                <p class="text-base font-semibold text-center pt-3">{{ match_info.home_team.name }}</p>
+            </a>
+            <div class="flex justify-center items-center flex-col gap-3">
+                <p class="text-[30px] font-bold">{{match_info.fulltime.home}} : {{match_info.fulltime.away}}</p>
+                <p class="border border-p1 rounded-full text-sm text-p1 py-1 px-5">90+4</p>
+            </div>
+            <a href="#" class="flex justify-center items-center flex-col">
+                <img src="{{ match_info.away_team.logo }}" alt="{{ match_info.away_team.name }}" width="100" />
+                <p class="text-base font-semibold text-center pt-3">{{ match_info.away_team.name }}</p>
+            </a>
+        </div>
+    </div>
+</div>
+<!-- Tab List Start -->
+<div class="pt-8 pl-6">
+    <ul class="flex justify-start items-center gap-3 overflow-auto pb-8 pr-6 tabItems">
+        <li>
+            <a href="#" class="item active text-n900 dark:text-white" data-tab="info">Info</a>
+        </li>
+        <li>
+            <a href="#" class="item text-n900 dark:text-white" data-tab="summary">Summary</a>
+        </li>
+        {% if match_info.statistics %}
+        <li>
+            <a href="#" class="item text-n900 dark:text-white" data-tab="stats">Stats</a>
+        </li>
+        {% endif %}
+        {% if match_info.lineups.home and match_info.lineups.away %}
+        <li>
+            <a href="#" class="item text-n900 dark:text-white" data-tab="lineup">Lineup</a>
+        </li>
+        {% endif %}
+        <li class="shrink-0 w-fit">
+            <a href="#" class="item text-n900 dark:text-white" data-tab="h2h">H2H</a>
+        </li>
+    </ul>
+</div>
+<!-- Tab List End -->
+ <div class="flex justify-center items-center w-full mt-3">
+    <a href="https://www.betway.com.ng/lobby/casino/?btag=P105314-PR27270-CM93552-TS2010123&"; target="_blank" rel="nofollow">
+        <img src="https://secure.betwaypartnersafrica.com/imagehandler/5cd130e5-efc1-4f82-9f0c-08b6534e93a0/" border="0"  alt="" />
+    </a>
+</div>
+
+<!-- Tab Content Start -->
+<div id="info" class="tab-content active">
+    <!-- Info Content -->
+    {% include "mobile/match_info.html" %}
+</div>
+<div id="summary" class="tab-content hidden">
+    <!-- Summary Content -->
+    {% include "mobile/match_summary.html" %}
+</div>
+<div id="stats" class="tab-content hidden">
+    <!-- Stats Content -->
+    {% include "mobile/match_stats.html" %}
+</div>
+
+<div id="lineup" class="tab-content hidden">
+    <!-- Lineup Content -->
+    {% include "mobile/match_lineup.html" %}
+</div>
+<div id="h2h" class="tab-content hidden">
+    <!-- H2H Content -->
+    {% include "mobile/match_h2h.html" %}
+</div>
+<!-- Tab Content End -->
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    const tabs = document.querySelectorAll('.tabItems a');
+    const contents = document.querySelectorAll('.tab-content');
+
+    tabs.forEach(tab => {
+        tab.addEventListener('click', function (event) {
+            event.preventDefault();
+
+            // Remove active class from all tabs
+            tabs.forEach(item => item.classList.remove('active', 'text-p1'));
+            tabs.forEach(item => item.classList.add('text-n900', 'dark:text-white'));
+
+            // Add active class to the clicked tab
+            tab.classList.add('active', 'text-p1');
+            tab.classList.remove('text-n900', 'dark:text-white');
+
+            // Hide all content sections
+            contents.forEach(content => content.classList.add('hidden'));
+            contents.forEach(content => content.classList.remove('active'));
+
+            // Show the content section related to the clicked tab
+            const tabContentId = tab.getAttribute('data-tab');
+            const activeContent = document.getElementById(tabContentId);
+            activeContent.classList.add('active');
+            activeContent.classList.remove('hidden');
+        });
+    });
+});
+</script>
+
+{% endblock app %}

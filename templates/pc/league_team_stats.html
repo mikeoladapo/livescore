@@ -1,0 +1,49 @@
+<!-- Team Stats Table Start -->
+<div class="px-6 flex flex-col gap-8">
+    <div class="">
+        <div
+            class="flex justify-between items-center bg-p1 text-white py-3 w-full font-semibold"
+            >
+            <div class="flex justify-start items-center">
+                <p class="w-12 text-center">P</p>
+                <p>Team</p>
+            </div>
+            <div class="flex justify-start items-center">
+                <p class="w-16 text-center">PLD</p>
+                <p class="w-16 text-center">PTS</p>
+                <p class="w-16 text-center">W</p>
+                <p class="w-16 text-center">D</p>
+                <p class="w-16 text-center">L</p>
+                <p class="w-16 text-center">GF</p>
+                <p class="w-16 text-center">GA</p>
+                <p class="w-16 text-center">GD</p>
+            </div>
+        </div>
+    
+    {% for team in table %}
+    <div class="flex justify-between items-center py-3 w-full font-semibold">
+        <div class="flex justify-start items-center">
+            <p class="w-12 text-center">
+                <span class="bg-black rounded-md text-white px-1 py-0.5">{{team.ranking}}</span>
+            </p>
+            <div class="flex justify-start items-center gap-2">
+                <img src="{{team.team_logo}}" class="size-7" alt="" />
+                <p>{{team.name}}</p>
+            </div>
+        </div>
+        <div class="flex justify-start items-center">
+            <p class="w-16 text-center">{{team.Played}}</p> 
+            <p class="w-16 text-center">{{team.pts}}</p>
+            <p class="w-16 text-center">{{team.Wins}}</p>
+            <p class="w-16 text-center">{{team.Draw}}</p>
+            <p class="w-16 text-center">{{team.Lose}}</p>
+            <p class="w-16 text-center">{{team.GF}}</p>
+            <p class="w-16 text-center">{{team.GA}}</p>
+            <p class="w-16 text-center">{{team.GD}}</p>
+
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+<!-- Team Stats Table End -->

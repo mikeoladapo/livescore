@@ -1,0 +1,34 @@
+<!-- Sidebar Area Start -->
+<div class="hidden bg-black/30 sidebarBg z-[998]"></div>
+<div
+    class="duration-500 z-[999] sidebarModal closeSidebarModal left-0 fixed top-0"
+    >
+    <div class="w-[280px] bg-white rounded-r-xl h-full p-6 dark:bg-black">
+        <div class="flex justify-between items-center">
+            <a href="{% url 'index' %}" class="logo-link">
+                <img src="/static/m/images/logo.png" alt="720Scores Logo" class="h-5">
+            </a>
+            <button class="text-2xl sidebarCloseButton">
+            <i class="ph ph-arrow-left"></i>
+            </button>
+        </div>
+        <ul class="pt-8 flex flex-col gap-4">
+            <li
+                class="flex justify-between items-center pb-4 border-b border-dashed border-n50"
+                >
+                <div class="flex justify-start items-center gap-4">
+                    <div
+                        class="p-2 bg-p1 flex justify-center items-center rounded-full text-white text-2xl"
+                        >
+                        <i class="ph ph-soccer-ball"></i>
+                    </div>
+                    <p class="s-text font-semibold text-p1">Football</p>
+                </div>
+                <div class="">
+                    <i class="ph ph-caret-right text-xl text-p1"></i>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+<!-- Sidebar Area End -->

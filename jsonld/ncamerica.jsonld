@@ -1,0 +1,153 @@
+{
+  "@context": "https://schema.org",
+  "@type": "SportsOrganization",
+  "name": "720scores",
+  "url": "https://720scores.com.ng",
+  "logo": "https://720scores.com.ng/logo.png",
+  "description": "Live scores and updates from around the world",
+  "keywords": ["live scores", "football", "match result", "league table"],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "North/Central America Football Leagues",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "name": "Mexico-Liga MX",
+        "description": "Top-tier Mexican football league",
+        "keywords": ["Mexican football", "Liga MX", "Mexico soccer"]
+      },
+      {
+        "@type": "Offer",
+        "name": "Mexico-Ascenso MX",
+        "description": "Second-tier Mexican football league",
+        "keywords": ["Mexican football", "Ascenso MX", "Mexico soccer"]
+      },
+      {
+        "@type": "Offer",
+        "name": "Costa Rica-Primera División",
+        "description": "Top-tier Costa Rican football league",
+        "keywords": ["Costa Rican football", "Primera División", "Costa Rica soccer"]
+      },
+      {
+        "@type": "Offer",
+        "name": "USA-MLS",
+        "description": "Top-tier American football league",
+        "keywords": ["American football", "MLS", "USA soccer"]
+      },
+      {
+        "@type": "Offer",
+        "name": "Guatemala-Liga Nacional",
+        "description": "Top-tier Guatemalan football league",
+        "keywords": ["Guatemalan football", "Liga Nacional", "Guatemala soccer"]
+      },
+      {
+        "@type": "Offer",
+        "name": "Mexico-Liga Premier",
+        "description": "Third-tier Mexican football league",
+        "keywords": ["Mexican football", "Liga Premier", "Mexico soccer"]
+      },
+      {
+        "@type": "Offer",
+        "name": "Honduras-Liga Nacional",
+        "description": "Top-tier Honduran football league",
+        "keywords": ["Honduran football", "Liga Nacional", "Honduras soccer"]
+      },
+      {
+        "@type": "Offer",
+        "name": "Panama-LPF",
+        "description": "Top-tier Panamanian football league",
+        "keywords": ["Panamanian football", "LPF", "Panama soccer"]
+      },
+      {
+        "@type": "Offer",
+        "name": "Costa Rica-Liga de Ascenso",
+        "description": "Second-tier Costa Rican football league",
+        "keywords": ["Costa Rican football", "Liga de Ascenso", "Costa Rica soccer"]
+      },
+      {
+        "@type": "Offer",
+        "name": "USA-USL",
+        "description": "Second-tier American football league",
+        "keywords": ["American football", "USL", "USA soccer"]
+      },
+      {
+        "@type": "Offer",
+        "name": "El Salvador-Primera Division",
+        "description": "Top-tier Salvadoran football league",
+        "keywords": ["Salvadoran football", "Primera Division", "El Salvador soccer"]
+      },
+{
+        "@type": "Offer",
+        "name": "El Salvador-Primera Division",
+        "description": "Top-tier Salvadoran football league",
+        "keywords": ["Salvadoran football", "Primera Division", "El Salvador soccer"]
+      },
+      {
+        "@type": "Offer",
+        "name": "Guatemala-Primera Division",
+        "description": "Top-tier Guatemalan football league",
+        "keywords": ["Guatemalan football", "Primera Division", "Guatemala soccer"]
+      },
+      {
+        "@type": "Offer",
+        "name": "Panama-Liga Nacional de Ascenso",
+        "description": "Second-tier Panamanian football league",
+        "keywords": ["Panamanian football", "Liga Nacional de Ascenso", "Panama soccer"]
+      },
+      {
+        "@type": "Offer",
+        "name": "Jamaica-Premier League",
+        "description": "Top-tier Jamaican football league",
+        "keywords": ["Jamaican football", "Premier League", "Jamaica soccer"]
+      },
+      {
+        "@type": "Offer",
+        "name": "Nicaragua-Primera Division",
+        "description": "Top-tier Nicaraguan football league",
+        "keywords": ["Nicaraguan football", "Primera Division", "Nicaragua soccer"]
+      },
+      {
+        "@type": "Offer",
+        "name": "United States-USL League One",
+        "description": "Third-tier American football league",
+        "keywords": ["American football", "USL League One", "USA soccer"]
+      },
+      {
+        "@type": "Offer",
+        "name": "Trinidad and Tobago-T & T Pro League",
+        "description": "Top-tier Trinidadian football league",
+        "keywords": ["Trinidadian football", "T & T Pro League", "Trinidad soccer"]
+      },
+      {
+        "@type": "Offer",
+        "name": "Haiti-Championnat National",
+        "description": "Top-tier Haitian football league",
+        "keywords": ["Haitian football", "Championnat National", "Haiti soccer"]
+      },
+      {
+        "@type": "Offer",
+        "name": "Belize-Premier League",
+        "description": "Top-tier Belizean football league",
+        "keywords": ["Belizean football", "Premier League", "Belize soccer"]
+      },
+      {
+        "@type": "Offer",
+        "name": "Trinidad and Tobago-Super League One",
+        "description": "Second-tier Trinidadian football league",
+        "keywords": ["Trinidadian football", "Super League One", "Trinidad soccer"]
+      },
+      {
+        "@type": "Offer",
+        "name": "Puerto Rico-LNFPR First Division",
+        "description": "Top-tier Puerto Rican football league",
+        "keywords": ["Puerto Rican football", "LNFPR First Division", "Puerto Rico soccer"]
+      },
+      {
+        "@type": "Offer",
+        "name": "Guyana-GFF Elite League",
+        "description": "Top-tier Guyanese football league",
+        "keywords": ["Guyanese football", "GFF Elite League", "Guyana soccer"]
+      },
+    ]
+  }
+}

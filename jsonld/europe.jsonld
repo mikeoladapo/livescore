@@ -1,0 +1,265 @@
+{
+  "@context": "https://schema.org",
+  "@type": "SportsOrganization",
+  "name": "720scores",
+  "url": "https://720scores.com.ng",
+  "logo": "https://720scores.com.ng/logo.png",
+  "description": "Live scores and updates from around the world",
+  "keywords": ["live scores", "football", "match Result", "league table"],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "European Football Leagues",
+    "itemListElement": [
+      {"@type": "Offer",
+ "name": "English Premier League",
+ "description": "Live scores and updates from the English Premier League",
+"keywords": ["English Premier league", "EPL", "chelsea", EPL "league table", "Liverpool"],
+},
+      {"@type": "Offer", 
+"name": "Spanish La Liga", 
+"description": "Live scores and updates from Spanish La Liga"
+"keywords": ["Laliga", "Barcelona", "match Result", "Laliga league table", "Real Madrid"],
+},
+      {"@type": "Offer",
+"name": "German Bundesliga",
+"description": "Live scores and updates from German Bundesliga"
+"keywords": ["Bundlesliga", "Bayern Munich", "bundlesliga matches today ", "league table", "Dortmund"],
+},
+      {"@type": "Offer", 
+"name": "Italian Serie A", 
+"description": "Live scores and updates from Italian Serie A"
+"keywords": ["Inter Milan ", "Seria A table", "Fiorentina", "Serie A league table", "AC Milan"],
+},
+      {"@type": "Offer", 
+"name": "French Ligue 1", 
+"description": "Live scores and updates from French Ligue 1"
+"keywords": ["Ligue 1", "PSG", "AS monaco", "league table", "FC Nantes"],
+},
+      {"@type": "Offer", 
+"name": "Portuguese Primeira Liga",
+ "description": "Live scores and updates from Portuguese Primeira Liga"
+"keywords": ["Portuguese Primeira Liga", "FC Porto", "match Result", "league table", "SL Benfica"],
+},
+      {"@type": "Offer",
+ "name": "Greek Super League",
+ "description": "Live scores and updates from Greek Super League"
+"keywords": ["Greek League", "Panathinaikos F.C.", "match Result", "league table", "Olympiacos F.C."],
+},
+      {"@type": "Offer", 
+"name": "Turkish Süper Lig", 
+"description": "Live scores and updates from Turkish Süper Lig"
+"keywords": ["Turkish Super Lig", "Fernabahce S.K.", "match Result", "league table", "Galatasaray S.K."],
+},
+{"@type": "Offer",
+ "name": "Turkish Lig 1", 
+"description":Live scores and updates from the Turkish Lig 1"
+"keywords": ["Turkish Ligue 1", "Altay", "match Result", "league table", "Adanaspor"],
+},
+      {"@type": "Offer",
+ "name": "Russian Premier League", 
+"description": "Live scores and updates from Russian Premier League"
+"keywords": ["Russian League", "Spartak Moscow", "match day Result", "league table", "Zenith St Petersburg"],
+},
+      {"@type": "Offer", 
+"name": "Belgian First Division A",
+ "description": "Live scores and updates from Belgian First Division A"
+"keywords": ["Belgian First Division", "RSC Anderlecht", "match Result", "league table", "Club Brugge KV"],
+},
+      {"@type": "Offer", 
+"name": "Dutch Eredivisie", 
+"description": "Live scores and updates from Dutch Eredivisie"
+"keywords": ["Eredivisie", "PSV Eindhoven", "match Result", "league table", "Ajax"],
+},
+      {"@type": "Offer", 
+"name": "Czech First League", 
+"description": "Live scores and updates from Czech First League"
+"keywords": ["Czech League", "SK Slavia Prague", "match Result", "league table", "AC Sparta Prague"],
+},
+      {"@type": "Offer", 
+"name": "Croatian 1. HNL", 
+"description": "Live scores and updates from Croatian 1. HNL"
+"keywords": ["Croatian League", "Hajduk Split", "match Result", "league table", "Dinamo Zagreb"],
+},
+      {"@type": "Offer",
+ "name": "Danish Superliga", 
+"description": "Live scores and updates from Danish Superliga"
+"keywords": ["Danish superliga", "FC Midtjylland", "Match Result", "league table", "FC Copenhagen"],
+},
+      {"@type": "Offer", 
+"name": "Swiss Super League", 
+"description": "Live scores and updates from Swiss Super League"
+"keywords": ["Swiss League", "BSC Young Boys", "Match Result", "league table", "FC Basel"],
+},
+      {"@type": "Offer", 
+"name": "Scottish Premiership", 
+"description": "Live scores and updates from Scottish Premiership"
+"keywords": ["Scottish League", "Rangers FC", "Match Day Result", "league table", "Celtic FC"],
+},
+      {"@type": "Offer", 
+"name": "Austrian Bundesliga", 
+"description": "Live scores and updates from Austrian Bundesliga"
+"keywords": ["Austrian Bundlesliga", "Rapid Vienna", "Match Day Result", "league table", "Red Bull Salzburg"],
+},
+      {"@type": "Offer", 
+"name": "Israeli Ligat ha'Al", 
+"description": "Live scores and updates from Israeli ha'Al League"
+"keywords": ["isreali League", "Maccabi Tel Aviv", "match Result", "league table", "Maccabi Haifa"],
+},
+      {"@type": "Offer",
+ "name": "Swedish Allsvenskan",
+ "description": "Live scores and updates from Swedish Allsvenskan"
+"keywords": ["Swedish Football League", "IFK Göteborg", "Match Day Result", "league table", "Malmö FF"],
+},
+      {"@type": "Offer", 
+"name": "Polish Ekstraklasa", 
+"description": "Live scores and updates from Polish Ekstraklasa"
+"keywords": ["Polish League", "Lech poznan", "match Result", "league table", "Legia Warsaw"],
+},
+      {"@type": "Offer",
+ "name": "Romanian Liga I", 
+"description": "Live scores and updates from Romanian Liga I"
+"keywords": ["Romanian Liga", "Dinamo Bucuresti", "match Result", "league table", "FCSB"],
+},
+      {"@type": "Offer", 
+"name": "Slovak Super Liga",
+ "description": "Live scores and updates from Slovak Super Liga"
+"keywords": ["Slovak Super Liga", "Slovan Bratislava", "Match Result", "league table", "MSK Zilina"],
+},
+      {"@type": "Offer",
+ "name": "Slovenian-1.SNL",
+ "description": "Live scores and updates from Slovenian-1 SNL"
+"keywords": ["PrvaLiga", "Olimpija Ljubljana", "Match Result", "league table", "NK Maribor"],
+},
+      {"@type": "Offer", 
+"name": "Bosnian and Herzegovina Premijer Liga", 
+"description": "Live scores and updates from Bosnian and Herzegovina Premijer Liga"
+"keywords": ["B&H premijer Liga", "zeljeznicar", "Match Day Result", "league table", "FK Sarajevo"],
+},
+      {"@type": "Offer",
+ "name": "Georgian Erovnuli Liga", 
+"description": "Live scores and updates from Georgian Erovnuli Liga"
+"keywords": ["Erovnuli Liga", "Torpedo Kutaisi", "match Result", "league table", "FC Dinamo Tbilisi"],
+},
+      {"@type": "Offer", 
+"name": "Ukrainian Premier League", 
+"description": "Live scores and updates from Ukrainian Premier League"
+"keywords": ["Ukraine League ", "Shakhtar Donetsk", "match Result", "league table", "Dynamo Kyiv"],
+},
+      {"@type": "Offer", 
+"name": "Belarusian Premier League",
+ "description": "Live scores and updates from Belarusian Premier League"
+"keywords": ["BPL", "FC Dinamo Minsk", "match Result", "league table", "FC BATE Borisov"],
+},
+      {"@type": "Offer", 
+"name": "Azerbaijani Premyer Liqa", 
+"description": "Live scores and updates from Azerbaijani Premier League"
+"keywords": ["premyer liqa", "Neftçi", "match Result", "league table", "Qarabag FK"],
+},
+      {"@type": "Offer",
+ "name": "Norwegian Eliteserien", 
+"description":Live scores and updates from the Norwegian Eliteserien"
+"keywords": ["Eliteserien", "Molde FK", "match Result", "league table", "Rosenborg BK"],
+},
+{"@type": "Offer",
+ "name": "Spanish Segunda Division", 
+"description":Live scores and updates from the Spanish Segunda division"
+"keywords": ["LaLiga Smartbank", "Málaga CF", "match Result", "league table", "RCD Espanyol "],
+},
+{"@type": "Offer",
+ "name": "Spanish Segunda B", 
+"description":Live scores and match updates from the Spanish Segunda B "
+"keywords": ["Segunda B", "CD Castellón", "match Result", "league table", "Racing De Satander"],
+}, 
+{"@type": "Offer",
+ "name": "English Championship", 
+"description":Live scores and match updates from the English Championship"
+"keywords": ["championship", "Mirrleebrough FC", "match Result", "league table", "Norwich City FC"],
+},
+{"@type": "Offer",
+ "name": "Portuguese Segunda Liga", 
+"description":Live scores and match updates from the Portuguese Segunda Liga"
+"keywords": ["Liga Portugal 2", "CD Feirense", "match Result", "league table", "CD Nacional"],
+},
+{"@type": "Offer",
+ "name": "Greek Super League 2 ", 
+"description":Live scores and match updates from the Greek Super League 2"
+"keywords": ["Greece Super League 2", "PAOK B", "match Result", "league table", "AEK Athens B"],
+},
+{"@type": "Offer",
+ "name": "German Bundlesliga 2", 
+"description":Live scores and updates from the German Bundlesliga 2"
+"keywords": ["2 Bundlesliga", "Fortuna Düsseldorf", "Match Result", "league table", "Hamburger SV"],
+},
+{"@type": "Offer",
+ "name": "German Bundlesliga 3", 
+"description":Live scores and updates from the German Bundlesliga 3"
+"keywords": ["3 Liga", "Dynamo Dresden", "match Result", "league table", "TSV 1860 Munich"],
+},
+{"@type": "Offer",
+ "name": "Italian Serie B", 
+"description":Live scores and match updates from the Italian Seria B"
+"keywords": ["Serie B", "Palermo", "Match Day Result", "league table", "Parma"],
+},
+{"@type": "Offer",
+ "name": "Italian Serie C", 
+"description":Live scores and match updates from the Italian Seria C"
+"keywords": ["serie C", "Pro Vercelli", "match Result", "league table", "Juventus U23"],
+},
+{"@type": "Offer",
+ "name": "Cyprus-1 Division", 
+"description":Live scores and updates from the Cyprus-1 Division"
+"keywords": ["Cypriot League", "AC Omonia Nicosia", "match Result", "league table", "APOEL FC"],
+},
+{"@type": "Offer",
+ "name": "French Ligue 2", 
+"description":Live scores and match updates from the French Ligue 2"
+"keywords": ["Ligue 2", "SC Bastia", "match Result", "league table", "AS Saint Étienne"],
+},
+{"@type": "Offer",
+ "name": "French National 1", 
+"description":Live scores and updates from the French National 1 Ligue"
+"keywords": ["National 1", "US Concarneau", "Match Day Result", "league table", "USL Dunkerque"],
+},
+{"@type": "Offer",
+ "name": "Swiss Challenge League", 
+"description":Live scores and updates from the Swiss Challenge League"
+"keywords": ["Challenge League", "FC Lausanne-Ouchy", "match Result", "league table", "AC Bellinzona"],
+},
+{"@type": "Offer",
+ "name": "English League one", 
+"description":Live scores and match updates from the English League one"
+"keywords": ["League one", "Portsmouth FC", "match Result", "league table", "Bolton Wanderers FC"],
+},
+{"@type": "Offer",
+ "name": "Polish 1 Liga", 
+"description":Live scores and updates from the Polish 1 Liga"
+"keywords": ["1 Liga", "Miedz Legnica", "match Result", "polish league table", "Arka Gdynia"],
+},
+{"@type": "Offer",
+ "name": "Russian FNL", 
+"description":Live scores and match updates from the Russian FNL"
+"keywords": ["FNL", "Yenisey Krasnoyarsk", "match Result", "FNL league table", "FC Krasnodar-2"],
+},
+{"@type": "Offer",
+ "name": "Hungarian NB 1", 
+"description":Live scores and updates from the Hungarian NB 1"
+"keywords": ["NB 1", "MTK Budapest", "match Result", "NB 1 league table", "Debrecen"],
+},
+{"@type": "Offer",
+ "name": "Serbian Super Liga", 
+"description":Live scores and updates from the Serbian Super Liga"
+"keywords": ["SuperLiga", "Partizan Belgrade", "match Result", "league table", "Red Star Belgrade"],
+},
+{"@type": "Offer",
+ "name": "Kazakhstan Premier League", 
+"description":Live scores and match updates from the Kazakhstan Premier League"
+"keywords": ["KPL", "FC Kairat Almaty", "match Result", "league table", "FC Astana"],
+},
+{"@type": "Offer",
+ "name": "Bulgarian First League", 
+"description":Live scores and updates from the Bulgarian First League"
+"keywords": ["BFL", "Ludogorets Razgrad", "match Result", "BFL league table", "PFC CSKA Sofia"],
+},
+]
+}
+}

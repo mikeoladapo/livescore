@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="description" content="Find the latest football results and live scores from various leagues and tournaments. Get the most up-to-date information on football matches and standings.">
+    <link
+      rel="shortcut icon"
+      href="/static/images/favicon.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="/static/css/swiper.min.css" />
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-KHY7G3FMLX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-KHY7G3FMLX');
+    </script>
+    {% block meta %}<meta name="description" content="Find the latest football results and live scores from various leagues and tournaments. Get the most up-to-date information on football matches and standings.">{% endblock meta%}
+    <title>Live Football Scores | EPL, La Liga, Champions League & More</title>
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link rel="stylesheet" href="/static/css/swiper.min.css" />
+    {% comment %} <link rel="manifest" href="/static/manifest.json" /> {% endcomment %}
+    {% comment %} <script defer src="/static/js/index.js"></script> {% endcomment %}
+    <script type= "application/ld+json" src= "/jsonld/europe.jsonld"></script>
+    <script type= "application/ld+json" src= "/jsonld/ncamerica.jsonld"></script>
+    <script type= "application/ld+json" src= "/jsonld/oceania.jsonld"></script>
+    <script type= "application/ld+json" src= "/jsonld/asia.jsonld"></script>
+    <script type= "application/ld+json" src= "/jsonld/southamerica.jsonld"></script>
+    <script type= "application/ld+json" src= "/jsonld/africa.jsonld"></script>
+    <link href="/static/css/style.css" rel="stylesheet">
+    <link rel="canonical" href="https://www.720scores.com.ng/">
+    
+    	<!-- Twitter Meta Tags -->
+<meta name="twitter:card" content="summary_large_image">
+<meta property="twitter:domain" content="720scores.com.ng">
+<meta property="twitter:url" content="https://720scores.com.ng">
+<meta name="twitter:title" content="Live Football Scores | EPL, La Liga, Champions League & More">
+<meta name="twitter:description" content="Find the latest football results and live scores from various leagues and tournaments. Get the most up-to-date information on football matches and standings.">
+<meta name="twitter:image" content="https://opengraph.b-cdn.net/production/images/0389d10c-4e86-4677-b27c-033665ef0c46.jpg?token=AsJ3YWdLqiEZZs7XhDgzxoFK9rjTJMh_O6KetwFCoO0&height=1200&width=1200&expires=33262010924">
+
+<!-- Facebook Meta Tags -->
+<meta property="og:url" content="https://720scores.com.ng">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Live Football Scores | EPL, La Liga, Champions League & More">
+<meta property="og:description" content="Find the latest football results and live scores from various leagues and tournaments. Get the most up-to-date information on football matches and standings.">
+<meta property="og:image" content="https://opengraph.b-cdn.net/production/images/0389d10c-4e86-4677-b27c-033665ef0c46.jpg?token=AsJ3YWdLqiEZZs7XhDgzxoFK9rjTJMh_O6KetwFCoO0&height=1200&width=1200&expires=33262010924">
+
+<form method="post" action="{% url 'logout' %}">
+  {% csrf_token %}
+  <button type="submit">Logout</button>
+</form> 
+  </head>
+
+  <body>
+    <script type='text/javascript' src='//frontinventory.com/c1/3d/8b/c13d8b27ad067322352aa12250897c6c.js'></script>
+    {% if is_home %}
+    <main
+      class="container pt-6 pb-20 relative overflow-hidden dark:bg-black dark:text-white"
+    >
+        
+    {% else %}
+    <main
+      class="container p-2 overflow-hidden dark:bg-n900 dark:text-white pb-16"
+    >
+    {% endif %}
+    {% include "header.html" %}
+    {% block app %}{% endblock app %}
+    <!-- Bottom Tab Link Start -->
+      <div
+        class="fixed bottom-0 left-0 right-0 flex justify-center items-center z-50"
+      >
+        <div
+          class="bg-p1 text-white flex justify-around items-center py-4 w-[430px] text-2xl rounded-t-lg"
+        >
+          <a href="{% url 'pc_index' %}"><i class="ph-fill ph-house"></i></a>
+          {% comment %} <a href="favourite-matches.html"
+            ><i class="ph ph-heart-straight"></i
+          ></a> {% endcomment %}
+          
+          <a href="{% url 'pc_settings' %}"><i class="ph ph-user"></i></a>
+        </div>
+      </div>
+      <!-- Bottom Tab Link End -->
+
+      {% include "sidebar.html" %}
+  </main>
+
+  <!-- ==== js dependencies start ==== -->
+    {% comment %} <script src="/static/js/index.js"></script> {% endcomment %}
+    <script src="/static/js/plugins/plugins.js"></script>
+    <script src="/static/js/main.js"></script>
+    <script src="/static/js/plugins/plugin-custom.js"></script>
+    
+  </body>
+</html>

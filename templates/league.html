@@ -1,0 +1,100 @@
+{% extends "app.html" %}
+
+{% block app %}
+<!-- Header Area Start -->
+<div class="flex justify-between items-center px-2">
+    <div class="flex justify-start items-center gap-4">
+        <a
+            href="{% url 'pc_index' %}"
+            class="relative text-white bg-p1 rounded-full size-9 flex justify-center items-center"
+            >
+            <i class="ph ph-caret-left text-xl"></i>
+        </a>
+        <h1 class="heading-1 font-semibold">{{league_name}}</h1>
+        <img src="{{league_logo}}" class="size-10" >
+    </div>
+    <div
+        class="size-10 flex justify-center items-center border border-n30 rounded-full bg-n20 dark:bg-blackN30 dark:border-blackN50"
+        >
+        <img src="/static/images/flag.png">
+    </div>
+</div>
+<!-- Header Area End -->
+
+<!-- Tab List Start -->
+<div class="pt-8 pl-6">
+    <ul class="flex justify-start items-center gap-3 overflow-auto pb-8 pr-6">
+        <li>
+            <a href="#" class="tab-link px-5 py-2 rounded-lg font-semibold text-base bg-p1 text-white border border-p1 block" data-tab="overview">Overview</a>
+        </li>
+        <li>
+            <a href="#" class="tab-link px-5 py-2 rounded-lg font-semibold text-base bg-n20 border border-n30 dark:bg-blackN30 dark:border-blackN50 block" data-tab="matches">Matches</a>
+        </li>
+        <li>
+            <a href="#" class="tab-link px-5 py-2 rounded-lg font-semibold text-base bg-n20 border border-n30 dark:bg-blackN30 dark:border-blackN50 block" data-tab="table">Table</a>
+        </li>
+        <li>
+            <a href="#" class="tab-link px-5 py-2 rounded-lg font-semibold text-base bg-n20 border border-n30 dark:bg-blackN30 dark:border-blackN50 block" data-tab="news">News</a>
+        </li>
+        <li class="shrink-0 w-fit">
+            <a href="#" class="tab-link px-5 py-2 rounded-lg font-semibold text-base bg-n20 border border-n30 dark:bg-blackN30 dark:border-blackN50 block" data-tab="team-stats">Team Stats</a>
+        </li>
+    </ul>
+</div>
+<!-- Tab List End -->
+
+<!-- Tab Content Start -->
+<div id="overview" class="tab-content active">
+    <!-- Overview Content -->
+    {% include "league_overview.html" %}
+</div>
+<div id="matches" class="tab-content hidden">
+    <!-- Matches Content -->
+    {% include "league_matches.html" %}
+</div>
+<div id="table" class="tab-content hidden">
+    <!-- Table Content -->
+    {% include "league_table.html" %}
+</div>
+<div id="news" class="tab-content hidden">
+    <!-- News Content -->
+    {% include "league_news.html" %}
+</div>
+<div id="team-stats" class="tab-content hidden">
+    <!-- Team Stats Content -->
+    {% include "league_team_stats.html" %}
+</div>
+<!-- Tab Content End -->
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    const tabs = document.querySelectorAll('.tab-link');
+    const contents = document.querySelectorAll('.tab-content');
+
+    tabs.forEach(tab => {
+        tab.addEventListener('click', function (event) {
+            event.preventDefault();
+
+            // Remove active class from all tabs
+            tabs.forEach(item => item.classList.remove('bg-p1', 'text-white'));
+            tabs.forEach(item => item.classList.add('bg-n20', 'border-n30', 'dark:bg-blackN30', 'dark:border-blackN50'));
+
+            // Add active class to the clicked tab
+            tab.classList.add('bg-p1', 'text-white');
+            tab.classList.remove('bg-n20', 'border-n30', 'dark:bg-blackN30', 'dark:border-blackN50');
+
+            // Hide all content sections
+            contents.forEach(content => content.classList.add('hidden'));
+            contents.forEach(content => content.classList.remove('active'));
+
+            // Show the content section related to the clicked tab
+            const tabContentId = tab.getAttribute('data-tab');
+            const activeContent = document.getElementById(tabContentId);
+            activeContent.classList.add('active');
+            activeContent.classList.remove('hidden');
+        });
+    });
+});
+</script>
+
+{% endblock app %}

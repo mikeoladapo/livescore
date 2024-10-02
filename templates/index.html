@@ -1,0 +1,79 @@
+{% extends "app.html" %}
+{% block app %}
+<div class="pt-2 px-2" id="homepage-content">
+    <div id="date-picker" class="pt-5 flex justify-center items-center gap-4 pl-2 overflow-auto selectDate">
+        <!-- Date items will be dynamically injected here -->
+    </div>
+
+    <div class="flex justify-center items-center pb-5">
+        <div class="flex items-center space-x-2">
+            <input type="text" id="date-input" onfocus="(this.type='date')" onblur="(this.value == '' ? this.type='text' : this.type='date')" name="date" placeholder="Select date" value="{{ date_today }}" class="text-lg font-semibold text-p1 bg-white border border-gray-300 rounded-md p-2 dark:bg-gray-800 dark:border-gray-700" onchange="fetchRecentUpdates(this.value)">
+        </div>
+    </div>
+</div>
+<!-- Date Select End -->
+<!-- Loading icon -->
+<div class="loader-720" id="loading-icon"></div>
+
+<div class="flex justify-center items-center w-full mt-3">
+    <a href="https://www.betway.com.ng/lobby/casino/?btag=P105314-PR27270-CM93552-TS2010123&"; target="_blank" rel="nofollow">
+        <img src="https://secure.betwaypartnersafrica.com/imagehandler/5cd130e5-efc1-4f82-9f0c-08b6534e93a0/" border="0" alt=""/>
+    </a>
+</div>
+{% if news.homepageArticles.0.articles %}
+<!-- Live Match Updates State -->
+<div class="pt-8 px-6">
+    {% with news.homepageArticles.0.articles.0 as first_news %}
+    <div class="flex justify-between items-center pb-5">
+        <h2 class="lead-text font-semibold">Latest Updates</h2>
+        <a href="{% url 'pc_news' %}" class="text-sm font-semibold text-p1"
+            >Show all</a
+            >
+    </div>
+    <div
+        class="bg-p1 rounded-xl p-5 flex justify-start items-start flex-col relative"
+        >
+        <img
+            src="/static/images/latest-update-bg.png"
+            class="absolute top-0 right-0 bottom-0 h-full"
+            alt=""
+            />
+        <img
+            src="/static/images/latest-update-img.png"
+            class="absolute -top-3 right-0 -bottom-"
+            alt=""
+            />
+        <div class="max-w-[150px]">
+            <p class="text-base text-white pb-14">
+                {{first_news.title}}
+            </p>
+            <a
+                href="{% url 'pc_news_detail' first_news.id first_news.type %}"
+                class="text-p1 text-base font-medium py-2 px-4 rounded-lg bg-white"
+                >Continue</a
+                >
+        </div>
+    </div>
+    {% endwith %}
+</div>
+<!-- Live Match Updates End -->
+ {% endif %}
+<!-- Live Match Slider Start -->
+<div class="pt-12">
+    <div class="flex justify-between items-center pb-5 px-6">
+        <h2 class="lead-text font-semibold">Live Matches</h2>
+        <a href="{% url 'pc_live_match' %}" class="text-sm font-semibold text-p1">Show all</a>
+    </div>
+    <div id="live-matches-container" class="swiper live-score-carousel px-2">
+        <div class="swiper-wrapper" id="live-matches-wrapper">
+            <!-- Live matches will be dynamically injected here -->
+        </div>
+    </div>
+</div>
+<!-- Live Match Slider End -->
+<!-- Recent Update Start -->
+<div class="flex flex-col gap-4" id="recent-updates-container">
+    <!-- Matches and ads will be dynamically injected here -->
+</div>
+<!-- Recent Update End -->
+{% endblock app %}

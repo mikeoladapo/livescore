@@ -1,0 +1,73 @@
+{% extends "app.html" %}
+
+{% block app %}
+<div class="flex justify-between items-center pb-12">
+    <div class="flex justify-start items-center gap-4">
+        <a
+            href="{% url 'pc_settings' %}"
+            class="relative text-white bg-p1 rounded-full size-9 flex justify-center items-center"
+            >
+        <i class="ph ph-caret-left text-xl"></i>
+        </a>
+        <h1 class="heading-1 font-semibold">Terms & Conditions</h1>
+    </div>
+</div>
+<div class="h-[80vh] overflow-auto">
+    <h3 class="text-lg font-semibold">Introduction</h3>
+    <p class="pt-3 text-n500 dark:text-blackN500">
+        Welcome to 720Scores, a live football scores website providing up-to-the-minute scores, 
+        results, and statistics for football matches around the world.
+    </p>
+    <h3 class="text-lg font-semibold">Use of Website</h3>
+    <p class="pt-2 text-n500 dark:text-blackN500">
+        Our website is completely free to use, with no subscription or registration 
+        required to access our live scores and statistics. You may access and use 
+        our website for personal, non-commercial purposes only.
+    </p>
+    <h3 class="text-lg font-semibold">Intellectual Property</h3>
+    <p class="pt-2 text-n500 dark:text-blackN500">
+        All content on our website, including scores, statistics, and other data, 
+        is owned by us or our licensors. You may not reproduce, modify, 
+        or distribute our content without our prior written consent.
+    </p>
+    <h3 class="text-lg font-semibold pt-5">
+        Accuracy and Reliability
+    </h3>
+    <p class="pt-3 text-n500 dark:text-blackN500">
+        We strive to provide accurate and reliable information, updating our scores in real-time. 
+        However, we make no guarantees about the accuracy or completeness of our content.
+    </p>
+    <h3 class="text-lg font-semibold pt-5">
+        Mobile Access
+    </h3>
+    <p class="pt-2 text-n500 dark:text-blackN500">
+        Our website is fully responsive and accessible on all mobile devices, 
+        allowing you to stay up-to-date with live scores wherever you are.
+    </p>
+    <h3 class="text-lg font-semibold pt-5">
+        Additional Features and Statistics
+    </h3>
+    <p class="pt-3 text-n500 dark:text-blackN500">
+        We provide detailed statistics, including possession, shots on target, 
+        corners, transfers, live commentary, news, venues, tables, fixtures, 
+        and match day results. However, we reserve the right to modify or discontinue these features at any time.
+    </p>
+    <h3 class="text-lg font-semibold pt-5">
+        Changes to Terms
+    </h3>
+    <p class="pt-2 pb-2 text-n500 dark:text-blackN500">
+        We may modify these Terms of Use at any time without notice. 
+        Your continued use of our website constitutes acceptance of these Terms of Use.
+    </p>
+    <h3 class="text-lg font-semibold pt-5">
+        Governing Law
+    </h3>
+    <p class="pt-2 pb-2 text-n500 dark:text-blackN500">
+        These Terms of Use are governed by and construed in accordance with the laws of Nigeria.
+    </p>
+
+    <p>
+        By using our website, you agree to these Terms of Use. If you have any questions or concerns, please contact us.
+    </p>
+</div>
+{% endblock app %}

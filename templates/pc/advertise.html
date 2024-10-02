@@ -1,0 +1,37 @@
+{% extends "mobile/app.html" %}
+
+{% block app %}
+<div class="flex justify-between items-center pb-12">
+    <div class="flex justify-start items-center gap-4">
+        <a
+            href="{% url 'm_settings' %}"
+            class="relative text-white bg-p1 rounded-full size-9 flex justify-center items-center"
+            >
+        <i class="ph ph-caret-left text-xl"></i>
+        </a>
+        <h1 class="heading-1 font-semibold">Advertise with us</h1>
+    </div>
+</div>
+<div class="h-[80vh] overflow-auto">
+    <p>Reaching out to us is made just for you.</p>
+
+    <h3 class="text-lg font-semibold">Maximize Your ROI with a Highly Engaged Audience</h3>
+    <p class="pt-3 text-n500 dark:text-blackN500">
+        Reach millions of sports enthusiasts daily with 720Scores! Our platform offers:
+    </p>
+    <p class="pt-2 text-n500 dark:text-blackN500">
+        <ul>
+            <li>Massive impressions (millions daily)</li>
+            <li>Global audience reach</li>
+            <li>Premium ad slots for maximum visibility</li>
+            <li>Dedicated support team for campaign success</li>
+        </ul>
+    </p>
+    <p class="pt-2 text-n500 dark:text-blackN500">
+        Get your brand in front of a highly engaged audience and boost your ROI. Partner with us to deliver effective native advertising campaigns!
+    </p>
+    <p class="pt-3 text-n500 dark:text-blackN500">
+        For more details: <a href="mailto:support@720scores.com.ng ">support@720scores.com.ng</a>
+    </p>
+</div>
+{% endblock app %}

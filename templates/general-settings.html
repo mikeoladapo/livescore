@@ -1,0 +1,75 @@
+{% extends "app.html" %}
+
+{% block app %}
+<div class="flex justify-between items-center">
+    <div class="flex justify-start items-center gap-4">
+        <a
+            href="{% url 'pc_settings' %}"
+            class="relative text-white bg-p1 rounded-full size-9 flex justify-center items-center"
+            >
+        <i class="ph ph-caret-left text-xl"></i>
+        </a>
+        <h1 class="heading-1 font-semibold">General</h1>
+    </div>
+</div>
+<div class="pt-12 flex flex-col gap-5">
+    {% comment %} <div
+        class="flex justify-between items-center pb-5 border-b border-dashed border-n50"
+        >
+        <p class="font-semibold">Automatic Refresh</p>
+        <div
+            class="rounded-switch bg-n40 w-10 h-5 rounded-full relative duration-500"
+            >
+            <div
+                class="absolute size-4 rounded-full bg-white top-0.5 left-0.5 duration-500"
+                ></div>
+        </div>
+    </div>
+    <div
+        class="flex justify-between items-center pb-5 border-b border-dashed border-n50"
+        >
+        <p class="font-semibold">Vibration</p>
+        <div
+            class="rounded-switch bg-n40 w-10 h-5 rounded-full relative duration-500"
+            >
+            <div
+                class="absolute size-4 rounded-full bg-white top-0.5 left-0.5 duration-500"
+                ></div>
+        </div>
+    </div> {% endcomment %}
+    <div
+        class="flex justify-between items-center pb-5 border-b border-dashed border-n50"
+        >
+        <a href="{% url 'pc_advertise' %}">
+            <p class="font-semibold">Advertise with us</p>
+        </a>
+    </div>
+    <div
+        class="flex justify-between items-center pb-5 border-b border-dashed border-n50"
+        >
+        <a href="{% url 'pc_policy' %}">
+            <p class="font-semibold">Privacy and Policy</p>
+        </a>
+    </div>
+    {% comment %} <div
+        class="flex justify-between items-center pb-5 border-b border-dashed border-n50"
+        >
+        <p class="font-semibold">News Publishers</p>
+    </div>
+    <div
+        class="flex justify-between items-center pb-5 border-b border-dashed border-n50"
+        >
+        <p class="font-semibold">Video Publishers</p>
+    </div>
+    <div class="flex justify-between items-center pb-5">
+        <p class="font-semibold">Consent Preferences</p>
+    </div> {% endcomment %}
+
+    
+</div>
+<div class="flex justify-center items-center w-full mt-3">
+        <a href="https://www.betway.com.ng/lobby/casino/?btag=P105314-PR37371-CM104006-TS2010123&"; target="_blank" rel="nofollow">
+            <img src="https://secure.betwaypartnersafrica.com/imagehandler/a71e5297-9c4e-4b80-9a82-843895fe5759/" border="0"  alt="" />
+        </a>
+    </div>
+{% endblock app %}

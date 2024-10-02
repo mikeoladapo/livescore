@@ -1,0 +1,21 @@
+{% if is_home %}
+<!-- Header Section Start -->
+<div class="flex justify-between items-center px-6">
+    <div
+        class="relative text-white bg-p1 rounded-full size-10 flex justify-center items-center sidebarOpenButton"
+    >
+        <i class="ph ph-list text-xl"></i>
+    </div>
+    <a href="{% url 'pc_index' %}" class="logo-link">
+        <img src="/static/images/logo.png" alt="720Scores Logo" class="">
+    </a>
+    <a
+        href="#"
+        class="bg-n20 border border-n30 size-10 rounded-full flex justify-center items-center text-n90 dark:bg-blackN30 dark:border-blackN50"
+    >
+        {% comment %} <i class="ph ph-magnifying-glass"></i> {% endcomment %}
+        <img src="/static/images/favicon.png">
+    </a>
+</div>
+<!-- Header Section End -->
+{% endif %}

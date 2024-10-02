@@ -1,0 +1,54 @@
+<div class="px-6 flex flex-col gap-4">
+    <div class="border border-n30 rounded-xl flex flex-col gap-4 dark:bg-blackN30 dark:border-blackN50 pb-5">
+        <div>
+            <div class="flex justify-between items-center bg-n900 text-white p-3 rounded-t-xl">
+                <p class="text-lg font-semibold">All Time</p>
+            </div>
+            <div class="flex justify-between items-center font-semibold text-n500 dark:text-blackN500 pt-5 px-5">
+                <p>Wins {{ match_info.h2h_stats.all_time.home_wins }}</p>
+                <p>Draws {{ match_info.h2h_stats.all_time.draws }}</p>
+                <p>Wins {{ match_info.h2h_stats.all_time.away_wins }}</p>
+            </div>
+            <div class="flex justify-between items-center w-full gap-2 pt-3 px-5">
+                <div class="w-full bg-n30 dark:bg-blackN40 rounded-full h-2 relative">
+                    <div class="h-2 bg-p1 absolute lineAnimation right-0 top-0 rounded-full" style="width: {{ match_info.h2h_stats.all_time.home_wins_percentage }}%"></div>
+                </div>
+                <div class="w-[60%] bg-n50 dark:bg-blackN40 rounded-full h-2 relative">
+                    <div class="h-2 bg-n50 absolute lineAnimation right-0 top-0 rounded-full" style="width: {{ match_info.h2h_stats.all_time.draws_percentage }}%"></div>
+                </div>
+                <div class="w-full bg-n30 dark:bg-blackN40 rounded-full h-2 relative">
+                    <div class="h-2 bg-n900 dark:bg-blackN60 absolute lineAnimation left-0 top-0 rounded-full" style="width: {{ match_info.h2h_stats.all_time.away_wins_percentage }}%"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="border border-n30 rounded-xl flex flex-col gap-4 dark:bg-blackN30 dark:border-blackN50 pb-5">
+        <div>
+            <div class="flex justify-between items-center bg-n900 text-white p-3 rounded-t-xl">
+                <p class="text-lg font-semibold">Last 5</p>
+            </div>
+            <div class="flex justify-between items-center font-semibold text-n500 dark:text-blackN500 pt-5 px-5">
+                <p>Wins {{ match_info.h2h_stats.last_5.home_wins }}</p>
+                <p>Draws {{ match_info.h2h_stats.last_5.draws }}</p>
+                <p>Wins {{ match_info.h2h_stats.last_5.away_wins }}</p>
+            </div>
+            <div class="flex justify-between items-center w-full gap-2 pt-3 px-5">
+                <div class="w-full bg-n30 dark:bg-blackN40 rounded-full h-2 relative">
+                    <div class="h-2 bg-p1 absolute lineAnimation right-0 top-0 rounded-full" style="width: {{ match_info.h2h_stats.last_5.home_wins_percentage }}%"></div>
+                </div>
+                <div class="w-[60%] bg-n50 dark:bg-blackN40 rounded-full h-2 relative">
+                    <div class="h-2 bg-n50 absolute lineAnimation right-0 top-0 rounded-full" style="width: {{ match_info.h2h_stats.last_5.draws_percentage }}%"></div>
+                </div>
+                <div class="w-full bg-n30 dark:bg-blackN40 rounded-full h-2 relative">
+                    <div class="h-2 bg-n900 dark:bg-blackN60 absolute lineAnimation left-0 top-0 rounded-full" style="width: {{ match_info.h2h_stats.last_5.away_wins_percentage }}%"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="flex justify-center items-center w-full mt-3 mb-4">
+    <a href="https://www.betway.com.ng/?btag=P105314-PR25154-CM79705-TS2010123" target="_blank" rel="nofollow">
+        <img src="https://secure.betwaypartnersafrica.com/imagehandler/525c9174-9834-4a89-8083-7d203fbc5281/" border="0" alt="Ad 1"/>
+    </a>
+</div>

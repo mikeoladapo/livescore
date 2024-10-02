@@ -1,0 +1,30 @@
+{% extends "app.html" %}
+
+{% block app %}
+<div class="px-6">
+    <div class="bg-n20 dark:bg-blackN30 dark:border-blackN50 dark:text-white border border-n30 p-5 rounded-xl flex flex-col gap-3 text-n500">
+        {% for event in match_info.events %}
+        <div class="flex justify-between items-center gap-3 pb-3 border-b border-dashed border-n50">
+            <p class="text-sm">{{ event.time.elapsed }}'</p>
+            <div class="flex justify-start items-center gap-3">
+                <p class="text-xs">{{ event.player.name }}</p>
+                {% if event.type == "Goal" %}
+                <p class="text-xs">{{ event.type}}</p>
+                {% elif event.type == "Card" and event.detail == "Yellow Card" %}
+                <p class="w-4 h-5 rounded-sm bg-o300"></p>
+                {% elif event.type == "Card" and event.detail == "Red Card" %}
+                <p class="w-4 h-5 rounded-sm bg-p1"></p>
+                {% else %}
+                <p class="text-xs">{{ event.detail}}</p>
+                {% endif %}
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+<div class="flex justify-center items-center w-full mt-3">
+    <a href="https://www.betway.com.ng/?btag=P105314-PR25154-CM79705-TS2010123" target="_blank" rel="nofollow">
+        <img src="https://secure.betwaypartnersafrica.com/imagehandler/525c9174-9834-4a89-8083-7d203fbc5281/" border="0" alt="Ad 1"/>
+    </a>
+</div>
+{% endblock app %}

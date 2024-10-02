@@ -1,0 +1,70 @@
+{
+  "@context": "https://schema.org",
+  "@type": "SportsOrganization",
+  "name": "720scores",
+  "url": "https://720scores.com.ng",
+  "logo": "https://720scores.com.ng/logo.png",
+  "description": "Live scores and updates from around the world",
+  "keywords": ["live scores", "football", "match result", "league table"],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Asian and Oceania Football Leagues",
+    "itemListElement": [
+      ... (previous leagues)
+      {
+        "@type": "Offer",
+        "name": "New Zealand Football Championship",
+        "description": "Top-tier New Zealand football league",
+        "keywords": ["New Zealand football", "Football Championship", "NZ soccer"]
+      },
+      {
+        "@type": "Offer",
+        "name": "Papua New Guinea National Soccer League",
+        "description": "Top-tier Papua New Guinean football league",
+        "keywords": ["Papua New Guinean football", "National Soccer League", "PNG soccer"]
+      },
+      {
+        "@type": "Offer",
+        "name": "Fiji National Football League",
+        "description": "Top-tier Fijian football league",
+        "keywords": ["Fijian football", "National Football League", "Fiji soccer"]
+      },
+      {
+        "@type": "Offer",
+        "name": "Solomon Islands S-League",
+        "description": "Top-tier Solomon Islands football league",
+        "keywords": ["Solomon Islands football", "S-League", "Solomon soccer"]
+      },
+      {
+        "@type": "Offer",
+        "name": "Vanuatu VFF National Super League",
+        "description": "Top-tier Vanuatuan football league",
+        "keywords": ["Vanuatuan football", "VFF National Super League", "Vanuatu soccer"]
+      },
+      {
+        "@type": "Offer",
+        "name": "New Caledonia Super Ligue",
+        "description": "Top-tier New Caledonian football league",
+        "keywords": ["New Caledonian football", "Super Ligue", "New Caledonia soccer"]
+      },
+      {
+        "@type": "Offer",
+        "name": "Tahiti Ligue 1",
+        "description": "Top-tier Tahitian football league",
+        "keywords": ["Tahitian football", "Ligue 1", "Tahiti soccer"]
+      },
+      {
+        "@type": "Offer",
+        "name": "Cook Islands Round Cup",
+        "description": "Top-tier Cook Islands football league",
+        "keywords": ["Cook Islands football", "Round Cup", "Cook Islands soccer"]
+      },
+      {
+        "@type": "Offer",
+        "name": "Tonga Major League",
+        "description": "Top-tier Tongan football league",
+        "keywords": ["Tongan football", "Major League", "Tonga soccer"]
+      }
+    ]
+  }
+}

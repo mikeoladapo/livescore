@@ -1,0 +1,109 @@
+{% extends "mobile/app.html" %}
+{% load custom_filters %}
+{% block title %}News - Latest news in the football world{% endblock title %}
+{% block app %}
+<div class="flex justify-between items-center gap-4 px-2">
+    <div class="flex justify-start items-center gap-4">
+        <a
+            href="{% url 'index' %}"
+            class="relative text-white bg-p1 rounded-full size-10 flex justify-center items-center"
+            >
+        <i class="ph ph-caret-left text-xl"></i>
+        </a>
+        <h1 class="heading-1 font-semibold">All News</h1>
+    </div>
+</div>
+<!-- Tab List Start -->
+<div class="pl-6 pt-8">
+    <ul
+        class="flex justify-start items-center gap-3 overflow-auto pb-8 pr-6"
+        >
+        <li>
+            <a
+                href="{% url 'm_news' %}"
+                class="px-5 py-2 rounded-lg font-semibold text-base bg-p1 border border-p1 text-white block"
+                >News</a
+                >
+        </li>
+        {% comment %} <li>
+            <a
+                href="video-page.html"
+                class="px-5 py-2 rounded-lg font-semibold text-base bg-n20 border border-n30 dark:bg-blackN30 dark:border-blackN50 block"
+                >Videos</a
+                >
+        </li> {% endcomment %}
+    </ul>
+</div>
+<!-- Tab List End -->
+ <!-- First News Start -->
+{% if news.homepageArticles.0.articles %}
+    {% with news.homepageArticles.0.articles.0 as first_news %}
+    <div class="px-6">
+        <div class="rounded-xl overflow-hidden relative">
+            <img src="{{first_news.mainMedia.0.original.url}}" alt="{{first_news.title}}" class="rounded-xl"/>
+            <div class="absolute inset-0 bg-black/40"></div>
+            <div class="absolute bottom-3 left-4 right-4 text-white font-semibold z-20">
+                <div class="flex justify-start items-center gap-3 text-sm font-medium">
+                    <p>#{{ first_news.categoryLabel }}</p>
+                    <p class="size-1 bg-white rounded-full"></p>
+                    <p>{{ first_news.publishedAt|time_ago }}</p>
+                </div>
+                <div class="flex justify-between items-start gap-4">
+                    <a href="{% url 'm_news_detail' first_news.id first_news.type %}">
+                        <h2 class="text-lg">{{ first_news.title }}</h2>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endwith %}
+{% endif %}
+<!-- First News End -->
+<div class="flex justify-center items-center my-auto mt-3">
+    <a href="https://www.betway.com.ng/lobby/casino/?btag=P105314-PR27270-CM93552-TS2010123&"; target="_blank" rel="nofollow">
+        <img src="https://secure.betwaypartnersafrica.com/imagehandler/5cd130e5-efc1-4f82-9f0c-08b6534e93a0/" border="0"  alt="" />
+    </a>
+</div>
+
+<!-- News List Start -->
+<div class="pt-8 px-2">
+    <p class="text-xl font-semibold">Latest News</p>
+    <div class="flex flex-col gap-4 pt-5">
+        {% for news in news.homepageArticles.0.articles|slice:"1:" %}
+        <div class="flex justify-between items-start gap-4">
+            <div class="flex justify-start items-center w-full gap-4">
+                <div class="w-full">
+                    <img src="{{ news.mainMedia.0.original.url }}" alt="{{ news.title }}" class="rounded-lg overflow-hidden"/>
+                </div>
+                <div>
+                    <a href="{% url 'm_news_detail' news.id news.type %}">
+                        <h3 class="text-base font-semibold">{{ news.title }}</h3>
+                    </a>
+                    <p class="text-n500 text-xs pt-2">{{ news.publishedAt|time_ago }}</p>
+                </div>
+            </div>
+        </div>
+        {% if forloop.counter == 3 %}
+        <div class="flex justify-center items-center my-4">
+            <a href="https://www.betway.com.ng/?btag=P105314-PR25154-CM79705-TS2010123" target="_blank" rel="nofollow">
+                <img src="https://secure.betwaypartnersafrica.com/imagehandler/525c9174-9834-4a89-8083-7d203fbc5281/" border="0" alt=""/>
+            </a>
+        </div>
+        {% elif forloop.counter == 8 %}
+        <div class="flex justify-center items-center my-4">
+            <a href="https://www.betway.com.ng/lobby/casino/?btag=P105314-PR37371-CM104006-TS2010123&"; target="_blank" rel="nofollow">
+                <img src="https://secure.betwaypartnersafrica.com/imagehandler/a71e5297-9c4e-4b80-9a82-843895fe5759/" border="0"  alt="" />
+            </a>
+        </div>
+        {% elif forloop.last %}
+        <div class="flex justify-center items-center mb-4">
+            <a href="https://www.betway.com.ng/lobby/casino/?btag=P105314-PR27270-CM93552-TS2010123&"; target="_blank" rel="nofollow">
+                <img src="https://secure.betwaypartnersafrica.com/imagehandler/5cd130e5-efc1-4f82-9f0c-08b6534e93a0/" border="0"  alt="" />
+            </a>
+        </div>
+        {% endif %}
+        {% endfor %}
+    </div>
+</div>
+<!-- News List End -->
+{% endblock app %}

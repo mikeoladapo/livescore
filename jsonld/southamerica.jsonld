@@ -1,0 +1,189 @@
+{
+  "@context": "https://schema.org",
+  "@type": "SportsOrganization",
+  "name": "720scores",
+  "url": "https://720scores.com.ng",
+  "logo": "https://720scores.com.ng/logo.png",
+  "description": "Live scores and updates from around the world",
+  "keywords": ["live scores", "football", "match result", "league table"],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "South American Football Leagues",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "name": "Brazilian Série A",
+        "description": "Top-tier Brazilian football league",
+        "keywords": ["Brazilian football", "Série A", "Brazilian soccer"]
+      },
+      {
+        "@type": "Offer",
+        "name": "Argentine Primera División",
+        "description": "Top-tier Argentine football league",
+        "keywords": ["Argentine football", "Primera División", "Argentine soccer"]
+      },
+      {
+        "@type": "Offer",
+        "name": "Colombian Primera A",
+        "description": "Top-tier Colombian football league",
+        "keywords": ["Colombian football", "Primera A", "Colombian soccer"]
+      },
+      {
+        "@type": "Offer",
+        "name": "Ecuadorian Primera A",
+        "description": "Top-tier Ecuadorian football league",
+        "keywords": ["Ecuadorian football", "Primera A", "Ecuadorian soccer"]
+      },
+      {
+        "@type": "Offer",
+        "name": "Paraguayan Division Profesional",
+        "description": "Top-tier Paraguayan football league",
+        "keywords": ["Paraguayan football", "Division Profesional", "Paraguayan soccer"]
+      },
+      {
+        "@type": "Offer",
+        "name": "Brazilian Série B",
+        "description": "Second-tier Brazilian football league",
+        "keywords": ["Brazilian football", "Série B", "Brazilian soccer"]
+      },
+      {
+        "@type": "Offer",
+        "name": "Uruguayan Primera División",
+        "description": "Top-tier Uruguayan football league",
+        "keywords": ["Uruguayan football", "Primera División", "Uruguayan soccer"]
+      },
+      {
+        "@type": "Offer",
+        "name": "Chilean Primera División",
+        "description": "Top-tier Chilean football league",
+        "keywords": ["Chilean football", "Primera División", "Chilean soccer"]
+      },
+      {
+        "@type": "Offer",
+        "name": "Argentine Primera B Nacional",
+        "description": "Second-tier Argentine football league",
+        "keywords": ["Argentine football", "Primera B Nacional", "Argentine soccer"]
+      },
+      {
+        "@type": "Offer",
+        "name": "Brazilian Série C",
+        "description": "Third-tier Brazilian football league",
+        "keywords": ["Brazilian football", "Série C", "Brazilian soccer"]
+      },
+      {
+        "@type": "Offer",
+        "name": "Colombian Primera B",
+        "description": "Second-tier Colombian football league",
+        "keywords": ["Colombian football", "Primera B", "Colombian soccer"]
+      },
+      {
+        "@type": "Offer",
+        "name": "Peruvian Primera División",
+        "description": "Top-tier Peruvian football league",
+        "keywords": ["Peruvian football", "Primera División", "Peruvian soccer"]
+      },
+      {
+        "@type": "Offer",
+        "name": "Argentine Torneo Federal A",
+        "description": "Third-tier Argentine football league",
+        "keywords": ["Argentine football", "Torneo Federal A", "Argentine soccer"]
+      },
+      {
+        "@type": "Offer",
+        "name": "Brazilian Série D",
+        "description": "Fourth-tier Brazilian football league",
+        "keywords": ["Brazilian football", "Série D", "Brazilian soccer"]
+      },
+      {
+        "@type": "Offer",
+        "name": "Paraguayan Division Intermedia",
+        "description": "Second-tier Paraguayan football league",
+        "keywords": ["Paraguayan football", "Division Intermedia", "Paraguayan soccer"]
+      },
+{
+        "@type": "Offer",
+        "name": "Ecuadorian Primera B",
+        "description": "Second-tier Ecuadorian football league",
+        "keywords": ["Ecuadorian football", "Primera B", "Ecuadorian soccer"]
+      },
+      {
+        "@type": "Offer",
+        "name": "Bolivian LFPB",
+        "description": "Top-tier Bolivian football league",
+        "keywords": ["Bolivian football", "LFPB", "Bolivian soccer"]
+      },
+      {
+        "@type": "Offer",
+        "name": "Venezuelan Primera División",
+        "description": "Top-tier Venezuelan football league",
+        "keywords": ["Venezuelan football", "Primera División", "Venezuelan soccer"]
+      },
+      {
+        "@type": "Offer",
+        "name": "Chilean Primera B",
+        "description": "Second-tier Chilean football league",
+        "keywords": ["Chilean football", "Primera B", "Chilean soccer"]
+      },
+      {
+        "@type": "Offer",
+        "name": "Uruguayan Segunda División",
+        "description": "Second-tier Uruguayan football league",
+        "keywords": ["Uruguayan football", "Segunda División", "Uruguayan soccer"]
+      },
+      {
+        "@type": "Offer",
+        "name": "Argentine Primera B Metro",
+        "description": "Third-tier Argentine football league",
+        "keywords": ["Argentine football", "Primera B Metro", "Argentine soccer"]
+      },
+      {
+        "@type": "Offer",
+        "name": "Peruvian Segunda División",
+        "description": "Second-tier Peruvian football league",
+        "keywords": ["Peruvian football", "Segunda División", "Peruvian soccer"]
+      },
+      {
+        "@type": "Offer",
+        "name": "Argentine Torneo Federal B",
+        "description": "Fourth-tier Argentine football league",
+        "keywords": ["Argentine football", "Torneo Federal B", "Argentine soccer"]
+      },
+      {
+        "@type": "Offer",
+        "name": "Argentine Primera C",
+        "description": "Fourth-tier Argentine football league",
+        "keywords": ["Argentine football", "Primera C", "Argentine soccer"]
+      },
+      {
+        "@type": "Offer",
+        "name": "Venezuelan Segunda División",
+        "description": "Second-tier Venezuelan football league",
+        "keywords": ["Venezuelan football", "Segunda División", "Venezuelan soccer"]
+      },
+      {
+        "@type": "Offer",
+        "name": "Chilean Segunda División",
+        "description": "Third-tier Chilean football league",
+        "keywords": ["Chilean football", "Segunda División", "Chilean soccer"]
+      },
+      {
+        "@type": "Offer",
+        "name": "Uruguayan Segunda Amateur",
+        "description": "Third-tier Uruguayan football league",
+        "keywords": ["Uruguayan football", "Segunda Amateur", "Uruguayan soccer"]
+      },
+      {
+        "@type": "Offer",
+        "name": "Chilean Tercera A",
+        "description": "Fourth-tier Chilean football league",
+        "keywords": ["Chilean football", "Tercera A", "Chilean soccer"]
+      },
+      {
+        "@type": "Offer",
+        "name": "Bolivian Nacional B",
+        "description": "Second-tier Bolivian football league",
+        "keywords": ["Bolivian football", "Nacional B", "Bolivian soccer"]
+      },
+    ]
+  }
+}

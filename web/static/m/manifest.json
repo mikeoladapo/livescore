@@ -1,0 +1,21 @@
+{
+  "name": "720Scores",
+  "short_name": "720scores",
+  "start_url": "/m/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#000000",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/static/m/images/fav-192.png",
+      "sizes": "248x248",
+      "type": "image/png"
+    },
+    {
+      "src": "/static/m/images/fav-512.png",
+      "sizes": "660x660",
+      "type": "image/png"
+    }
+  ]
+}

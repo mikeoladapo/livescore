@@ -1,0 +1,244 @@
+{% extends "app.html" %}
+
+{% block app %}
+<div class="flex justify-between items-center gap-4 px-6">
+    <div class="flex justify-start items-center gap-4">
+        <a
+            href="{% url 'pc_index' %}"
+            class="relative text-white bg-p1 rounded-full size-10 flex justify-center items-center"
+            >
+        <i class="ph ph-caret-left text-xl"></i>
+        </a>
+        <h1 class="heading-1 font-semibold">Favourites</h1>
+    </div>
+</div>
+<!-- Tab List Start -->
+<div class="pl-6 pt-8">
+    <ul
+        class="flex justify-start items-center gap-3 overflow-auto pb-8 pr-6"
+        >
+        <li>
+            <a
+                href="favourite-matches.html"
+                class="px-5 py-2 rounded-lg font-semibold text-base bg-p1 border border-p1 text-white block"
+                >Matches</a
+                >
+        </li>
+        <li>
+            <a
+                href="favourite-competitions.html"
+                class="px-5 py-2 rounded-lg font-semibold text-base bg-n20 border border-n30 dark:bg-blackN30 dark:border-blackN50 block"
+                >Competitions</a
+                >
+        </li>
+        <li>
+            <a
+                href="favourite-teams.html"
+                class="px-5 py-2 rounded-lg font-semibold text-base bg-n20 border border-n30 dark:bg-blackN30 dark:border-blackN50 block"
+                >Teams</a
+                >
+        </li>
+    </ul>
+</div>
+<!-- Tab List End -->
+<div class="px-6">
+    <div class="flex flex-col gap-4">
+        <div class="bg-n30 rounded-xl dark:bg-blackN30">
+            <div
+                class="flex justify-between items-center bg-n900 rounded-t-xl text-white p-5 dark:bg-blackN30"
+                >
+                <div class="flex justify-start items-center gap-4">
+                    <img
+                        src="assets/images/team-logo/premier-league-new-logo.png"
+                        alt=""
+                        class="size-12"
+                        />
+                    <div class="">
+                        <a
+                            href="{% url 'm_league_info' 1 %}"
+                            class="text-lg font-semibold relative"
+                            >
+                        English League
+                        <i
+                            class="ph-fill ph-star absolute -top-1 -right-6 text-o300"
+                            ></i>
+                        </a>
+                        <p class="pt-1">Group C</p>
+                    </div>
+                </div>
+                <a href="#">
+                <i class="ph ph-caret-right text-2xl"></i>
+                </a>
+            </div>
+            <div class="p-4 flex flex-col gap-4">
+                <a
+                    href="match-info.html"
+                    class="p-5 rounded-xl bg-white flex justify-between items-center gap-6 dark:bg-black"
+                    >
+                    <div class="w-full">
+                        <div class="flex justify-between items-center pb-4">
+                            <div class="flex justify-start items-center gap-3">
+                                <img
+                                    src="assets/images/team-logo/arsenal.png"
+                                    class="size-10"
+                                    alt=""
+                                    />
+                                <p class="text-sm relative font-semibold">
+                                    Arsenal
+                                    <i
+                                        class="ph-fill ph-star absolute top-0 -right-5 text-o300"
+                                        ></i>
+                                </p>
+                            </div>
+                        </div>
+                        <div
+                            class="border-t border-dashed border-n50 dark:border-blackN50"
+                            >
+                            <p
+                                class="text-sm font-semibold -mt-[10px] bg-white px-2 w-fit ml-10 dark:bg-black"
+                                >
+                                FT
+                            </p>
+                        </div>
+                        <div class="flex justify-between items-center pt-2">
+                            <div class="flex justify-start items-center gap-3">
+                                <img
+                                    src="assets/images/team-logo/ArminiaBielefeld.png"
+                                    class="size-10"
+                                    alt=""
+                                    />
+                                <p class="text-sm relative font-semibold">
+                                    ArminiaBielefeld
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <button>
+                    <i class="ph-fill ph-star text-o300 text-2xl"></i>
+                    </button>
+                </a>
+                <a
+                    href="match-info.html"
+                    class="p-5 rounded-xl bg-white flex justify-between items-center gap-6 dark:bg-black"
+                    >
+                    <div class="w-full">
+                        <div class="flex justify-between items-center pb-4">
+                            <div class="flex justify-start items-center gap-3">
+                                <img
+                                    src="assets/images/team-logo/astonvilla.png"
+                                    class="size-10"
+                                    alt=""
+                                    />
+                                <p class="text-sm relative font-semibold">
+                                    Astonvilla
+                                    <i
+                                        class="ph-fill ph-star absolute top-0 -right-5 text-o300"
+                                        ></i>
+                                </p>
+                            </div>
+                        </div>
+                        <div
+                            class="border-t border-dashed border-n50 dark:border-blackN50"
+                            >
+                            <p
+                                class="text-sm font-semibold -mt-[10px] bg-white px-2 w-fit ml-10 dark:bg-black"
+                                >
+                                FT
+                            </p>
+                        </div>
+                        <div class="flex justify-between items-center pt-2">
+                            <div class="flex justify-start items-center gap-3">
+                                <img
+                                    src="assets/images/team-logo/Atletico.png"
+                                    class="size-10"
+                                    alt=""
+                                    />
+                                <p class="text-sm relative font-semibold">Atletico</p>
+                            </div>
+                        </div>
+                    </div>
+                    <button>
+                    <i class="ph-fill ph-star text-o300 text-2xl"></i>
+                    </button>
+                </a>
+            </div>
+        </div>
+        <div class="bg-n30 rounded-xl dark:bg-blackN30">
+            <div
+                class="flex justify-between items-center bg-n900 rounded-t-xl text-white p-5 dark:bg-blackN30"
+                >
+                <div class="flex justify-start items-center gap-4">
+                    <img
+                        src="assets/images/team-logo/UEFA_Champions.jpg"
+                        alt=""
+                        class="size-11 rounded-full"
+                        />
+                    <div class="">
+                        <a
+                            href="{% url 'm_league_info' 1 %}"
+                            class="text-lg font-semibold relative"
+                            >
+                        UEFA League
+                        <i
+                            class="ph-fill ph-star absolute -top-1 -right-6 text-o300"
+                            ></i>
+                        </a>
+                        <p class="pt-1">Group C</p>
+                    </div>
+                </div>
+                <a href="#">
+                <i class="ph ph-caret-right text-2xl"></i>
+                </a>
+            </div>
+            <div class="p-4">
+                <a
+                    href="match-info.html"
+                    class="p-5 rounded-xl bg-white flex justify-between items-center gap-6 dark:bg-black"
+                    >
+                    <div class="w-full">
+                        <div class="flex justify-between items-center pb-4">
+                            <div class="flex justify-start items-center gap-3">
+                                <img
+                                    src="assets/images/team-logo/barcelona.png"
+                                    class="size-10"
+                                    alt=""
+                                    />
+                                <p class="text-sm relative font-semibold">
+                                    Barcelona
+                                    <i
+                                        class="ph-fill ph-star absolute top-0 -right-5 text-o300"
+                                        ></i>
+                                </p>
+                            </div>
+                        </div>
+                        <div
+                            class="border-t border-dashed border-n50 dark:border-blackN50"
+                            >
+                            <p
+                                class="text-sm font-semibold -mt-[10px] bg-white px-2 w-fit ml-10 dark:bg-black"
+                                >
+                                FT
+                            </p>
+                        </div>
+                        <div class="flex justify-between items-center pt-2">
+                            <div class="flex justify-start items-center gap-3">
+                                <img
+                                    src="assets/images/team-logo/BayernM%c3%bcnchen.png"
+                                    class="size-10"
+                                    alt=""
+                                    />
+                                <p class="text-sm relative font-semibold">
+                                    Bayern München
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <button>
+                    <i class="ph-fill ph-star text-o300 text-2xl"></i>
+                    </button>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock app %}

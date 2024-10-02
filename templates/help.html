@@ -1,0 +1,249 @@
+{% extends "app.html" %}
+{% block title %}Help - 720scores - Latest news in the football world{% endblock title %}
+{% block app %}
+<div class="flex justify-between items-center">
+    <div class="flex justify-start items-center gap-4">
+        <a
+            href="{% url 'pc_settings' %}"
+            class="relative text-white bg-p1 rounded-full size-9 flex justify-center items-center"
+            >
+        <i class="ph ph-caret-left text-xl"></i>
+        </a>
+        <h1 class="heading-1 font-semibold">Help Center</h1>
+    </div>
+</div>
+<div class="playerInfoTab pt-12">
+    <ul
+        class="tab-button flex justify-between items-center text-lg font-semibold"
+        >
+        <li
+            id="tabOne"
+            class="activeTabButton tabButton w-full text-center pb-4 border-b-2 border-n70"
+            >
+            FAQ
+        </li>
+        <li
+            id="tabTwo"
+            class="tabButton w-full text-center pb-4 border-b-2 border-n70"
+            >
+            Contact Us
+        </li>
+    </ul>
+    <div class="pt-8">
+        <div class="tab-content activeTab" id="tabOne_data">
+            <ul
+                class="flex justify-start items-center gap-3 overflow-auto pb-8"
+                >
+                <li
+                    class="px-5 py-2 rounded-lg font-semibold text-base bg-p1 text-white border border-p1"
+                    >
+                    FAQs
+                </li>
+                {% comment %} <li
+                    class="px-5 py-2 rounded-lg font-semibold text-base bg-n20 border border-n30 dark:bg-blackN30 dark:border-blackN50"
+                    >
+                    Account
+                </li>
+                <li
+                    class="px-5 py-2 rounded-lg font-semibold text-base bg-n20 border border-n30 dark:bg-blackN30 dark:border-blackN50"
+                    >
+                    Services
+                </li>
+                <li
+                    class="px-5 py-2 rounded-lg font-semibold text-base bg-n20 border border-n30 dark:bg-blackN30 dark:border-blackN50"
+                    >
+                    Payement
+                </li>
+                <li
+                    class="px-5 py-2 rounded-lg font-semibold text-base bg-n20 border border-n30 dark:bg-blackN30 dark:border-blackN50"
+                    >
+                    Restricted
+                </li>
+                <li
+                    class="px-5 py-2 rounded-lg font-semibold text-base bg-n20 border border-n30 dark:bg-blackN30 dark:border-blackN50"
+                    >
+                    Matches
+                </li> {% endcomment %}
+            </ul>
+            <div class="flex justify-center items-center w-full mt-3">
+                <a href="https://www.betway.com.ng/lobby/casino/?btag=P105314-PR27270-CM93552-TS2010123&"; target="_blank" rel="nofollow">
+                    <img src="https://secure.betwaypartnersafrica.com/imagehandler/5cd130e5-efc1-4f82-9f0c-08b6534e93a0/" border="0"  alt="" />
+                </a>
+            </div>
+            <div class="pt-6">
+                <div class="flex flex-col gap-5">
+                    <div
+                        class="faq-accordion-area border rounded-xl p-4 dark:border-blackN50"
+                        >
+                        <div
+                            class="faq-accordion duration-500 flex justify-between items-center"
+                            >
+                            <h6 class="text-base font-semibold">What is 720Scores?</h6>
+                            <div class="">
+                                <i class="ph-fill ph-caret-down ti-plus"> </i>
+                            </div>
+                        </div>
+                        <div class="duration-500 h-0 overflow-hidden">
+                            <p
+                                class="text-sm text-n500 border-t border-dashed border-n50 pt-3 mt-3 dark:text-blackN500"
+                                >
+                                720Scores is a live football scores website providing up-to-the-minute scores, results, and statistics for football matches around the world.
+                            </p>
+                        </div>
+                    </div>
+                    <div
+                        class="faq-accordion-area border rounded-xl p-4 dark:border-blackN50"
+                        >
+                        <div
+                            class="faq-accordion duration-500 flex justify-between items-center"
+                            >
+                            <h6 class="text-base font-semibold">
+                                How often are the scores updated?
+                            </h6>
+                            <div class="">
+                                <i class="ph-fill ph-caret-down ti-plus"> </i>
+                            </div>
+                        </div>
+                        <div class="duration-500 h-0 overflow-hidden">
+                            <p
+                                class="text-sm text-n500 border-t border-dashed border-n50 pt-3 mt-3 dark:text-blackN500"
+                                >
+                                Our scores are updated in real-time, ensuring you have the latest information on all football matches.
+                            </p>
+                        </div>
+                    </div>
+                    <div
+                        class="faq-accordion-area border rounded-xl p-4 dark:border-blackN50"
+                        >
+                        <div
+                            class="faq-accordion duration-500 flex justify-between items-center"
+                            >
+                            <h6 class="text-base font-semibold">
+                                Do you cover all football leagues and competitions?
+                            </h6>
+                            <div class="">
+                                <i class="ph-fill ph-caret-down ti-plus"> </i>
+                            </div>
+                        </div>
+                        <div class="duration-500 h-0 overflow-hidden">
+                            <p
+                                class="text-sm text-n500 border-t border-dashed border-n50 pt-3 mt-3 dark:text-blackN500"
+                                >
+                                We cover a wide range of football leagues and competitions, including English Premier League, Bundlesliga, Spanish La Liga, Ligue 1, Italian seria A, club friendlies, World cup. We cover them all.
+                            </p>
+                        </div>
+                    </div>
+                    <div
+                        class="faq-accordion-area border rounded-xl p-4 dark:border-blackN50"
+                        >
+                        <div
+                            class="faq-accordion duration-500 flex justify-between items-center"
+                            >
+                            <h6 class="text-base font-semibold">
+                                Can I access your website on my mobile device?
+                            </h6>
+                            <div class="">
+                                <i class="ph-fill ph-caret-down ti-plus"> </i>
+                            </div>
+                        </div>
+                        <div class="duration-500 h-0 overflow-hidden">
+                            <p
+                                class="text-sm text-n500 border-t border-dashed border-n50 pt-3 mt-3 dark:text-blackN500"
+                                >
+                                Yes, our website is fully responsive and accessible on all mobile devices, ensuring you can stay up-to-date with live scores wherever you are.
+                            </p>
+                        </div>
+                    </div>
+                    <div
+                        class="faq-accordion-area border rounded-xl p-4 dark:border-blackN50"
+                        >
+                        <div
+                            class="faq-accordion duration-500 flex justify-between items-center"
+                            >
+                            <h6 class="text-base font-semibold">
+                                Do you offer any additional features or statistics?
+                            </h6>
+                            <div class="">
+                                <i class="ph-fill ph-caret-down ti-plus"> </i>
+                            </div>
+                        </div>
+                        <div class="duration-500 h-0 overflow-hidden">
+                            <p
+                                class="text-sm text-n500 border-t border-dashed border-n50 pt-3 mt-3 dark:text-blackN500"
+                                >
+                                Yes, we provide detailed statistics, including possession, shots on target, corners, Transfers. We also offer live commentary, News, venues, tables, fixtures & Match dayresults.
+                            </p>
+                        </div>
+                    </div>
+                    <div
+                        class="faq-accordion-area border rounded-xl p-4 dark:border-blackN50"
+                        >
+                        <div
+                            class="faq-accordion duration-500 flex justify-between items-center"
+                            >
+                            <h6 class="text-base font-semibold">
+                                Is your website free to use?
+                            </h6>
+                            <div class="">
+                                <i class="ph-fill ph-caret-down ti-plus"> </i>
+                            </div>
+                        </div>
+                        <div class="duration-500 h-0 overflow-hidden">
+                            <p
+                                class="text-sm text-n500 border-t border-dashed border-n50 pt-3 mt-3 dark:text-blackN500"
+                                >
+                                Yes, our website is completely free to use, with no subscription or registration required to access our live scores and statistics.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="tab-content hiddenTab" id="tabTwo_data">
+            <div class="border border-b30 rounded-xl p-5 flex flex-col gap-5">
+                <div
+                    class="flex justify-start items-center gap-3 border-b border-dashed pb-5"
+                    >
+                    <i class="ph ph-headphones text-p1 text-2xl"></i>
+                    <p class="text-base font-semibold"><a href="mailto:support@720scores.com.ng">Customer Service</a></p>
+                </div>
+                <div
+                    class="flex justify-start items-center gap-3 border-b border-dashed pb-5"
+                    >
+                    <i class="ph ph-whatsapp-logo text-p1 text-2xl"></i>
+                    <p class="text-base font-semibold"><a href="https://whatsapp.com/channel/0029VaeWZkf8F2pMBsKaO82y">WhatsApp</a></p>
+                </div>
+                {% comment %} <div
+                    class="flex justify-start items-center gap-3 border-b border-dashed pb-5"
+                    >
+                    <i class="ph ph-globe text-p1 text-2xl"></i>
+                    <p class="text-base font-semibold">Website</p>
+                </div> {% endcomment %}
+                <div
+                    class="flex justify-start items-center gap-3 border-b border-dashed pb-5"
+                    >
+                    <i class="ph ph-facebook-logo text-p1 text-2xl"></i>
+                    <p class="text-base font-semibold"><a href="mailto:ogunsolsemilore@gmail.com">Send Email</a></p>
+                </div>
+                <div
+                    class="flex justify-start items-center gap-3 border-b border-dashed pb-5"
+                    >
+                    <i class="ph ph-x-logo text-p1 text-2xl"></i>
+                    <p class="text-base font-semibold"><a href="https://twitter.com/720scores">X (Twitter)</a></p>
+                </div>
+                <div class="flex justify-center items-center w-full mt-3">
+                    <a href="https://www.betway.com.ng/lobby/casino/?btag=P105314-PR37371-CM104006-TS2010123&"; target="_blank" rel="nofollow">
+                        <img src="https://secure.betwaypartnersafrica.com/imagehandler/a71e5297-9c4e-4b80-9a82-843895fe5759/" border="0"  alt="" />
+                    </a>
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    <div class="flex justify-center items-center w-full mt-3">
+        <a href="https://www.betway.com.ng/lobby/casino/?btag=P105314-PR27270-CM93552-TS2010123&"; target="_blank" rel="nofollow">
+            <img src="https://secure.betwaypartnersafrica.com/imagehandler/5cd130e5-efc1-4f82-9f0c-08b6534e93a0/" border="0"  alt="" />
+        </a>
+    </div>
+</div>
+{% endblock app %}

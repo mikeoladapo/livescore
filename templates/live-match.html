@@ -1,0 +1,51 @@
+{% extends "app.html" %}
+
+{% block app %}
+    <div class="flex justify-between items-center" id="show-all-live-matches-content">
+        <div class="flex justify-start items-center gap-4">
+            <a
+                href="{% url 'pc_index' %}"
+                class="relative text-white bg-p1 rounded-full size-9 flex justify-center items-center"
+                >
+            <i class="ph ph-caret-left text-xl"></i>
+            </a>
+            <h1 class="heading-1 font-semibold">Live Match</h1>
+        </div>
+        <div
+            class="bg-n20 border border-n30 size-10 rounded-full flex justify-center items-center text-n90 dark:bg-blackN30 dark:border-blackN50"
+            >
+            <img src="/static/images/favicon.png">
+        </div>
+    </div>
+    <div class="liveMatchTab pt-8">
+        <ul
+            class="tab-button flex justify-between items-center text-lg font-semibold"
+            >
+            <li
+                id="tabOne"
+                class="activeTabButton tabButton w-full text-center pb-4 border-b-2 border-n70"
+                >
+                Fixtures
+            </li>
+            <li
+                id="tabTwo"
+                class="tabButton w-full text-center pb-4 border-b-2 border-n70"
+                >
+                Results
+            </li>
+        </ul>
+        <div class="pt-8">
+            <div class="tab-content activeTab" id="tabOne_data">
+                <div class="flex flex-col gap-4" id="live-matches-container">
+                    <!-- Live matches will be dynamically injected here -->
+                </div>
+            </div>
+            <div class="tab-content hiddenTab" id="tabTwo_data">
+                <div class="flex flex-col gap-4" id="finished-matches-container">
+                    <!-- Finished matches will be dynamically injected here -->
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endblock app %}

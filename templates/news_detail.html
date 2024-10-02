@@ -1,0 +1,82 @@
+{% extends "app.html" %}
+{% load custom_filters %}
+{% block title %}{ news.article.title }} - News - 720scores{% endblock title %}
+{% block app %}
+<div class="flex justify-between items-center gap-4 px-2">
+    <div class="flex justify-start items-center gap-4">
+        <a
+            href="{% url 'pc_news' %}"
+            class="relative text-white bg-p1 rounded-full size-10 flex justify-center items-center"
+            >
+        <i class="ph ph-caret-left text-xl"></i>
+        </a>
+        <h1 class="heading-1 font-semibold">{{ news_type|title }} details</h1>
+    </div>
+    <div
+        class="size-10 flex justify-center items-center border border-n30 rounded-full bg-n20 dark:bg-blackN30 cursor-pointer"
+        >
+        <i class="ph ph-share-network text-xl"></i>
+    </div>
+</div>
+<div class="pt-8 px-2 pb-3">
+    <h2 class="heading-2 font-semibold">
+        {{ news.article.title }}
+    </h2>
+    <div class="flex justify-start items-center gap-2 text-sm py-5">
+        <p>{{ news.article.authors.0.name }}</p>
+        <div class="flex justify-start items-center gap-2 text-p1">
+            {% for skip in news.article.related.tags|slice:":3" %}
+            <p>#{{ skip.title }}</p>
+            {% endfor %}
+        </div>
+    </div>
+    <div class="flex flex-col gap-5">
+        <p class="text-n500 dark:text-blackN500">
+            {{ news.article.subTitle }}
+        </p>
+        <div class="">
+            <img
+                src="{{ news.article.mainMedia.0.original.url }}"
+                class="rounded-xl"
+                alt="{{ news.article.mainMedia.0.original.alt }}"
+                />
+        </div>
+        <p class="text-n500 dark:text-blackN500">
+            {% with news.article.body|filter_blocks as filtered_blocks %}
+                {% for block in filtered_blocks %}
+                    {% if block.type == 'editor_block' %}
+                        {% if block.data.type == 'paragraph' %}
+                            {{ block.data.content|safe }}
+                        {% elif block.data.type == 'heading' %}
+                            <h2>{{ block.data.content|safe }}</h2>
+                        {% endif %}
+                    {% elif block.type == 'image' %}
+                        <img src="{{ block.image.original.url }}" alt="{{ block.image.original.alt }}" class="article-image">
+                        <small>{{ block.image.original.alt }}</small><br>
+                    {% endif %}
+                    {% if forloop.counter == 2 %}
+                        <div class="flex justify-center items-center my-4">
+                            <a href="https://www.betway.com.ng/lobby/casino/?btag=P105314-PR37371-CM104006-TS2010123&"; target="_blank" rel="nofollow">
+                                <img src="https://secure.betwaypartnersafrica.com/imagehandler/a71e5297-9c4e-4b80-9a82-843895fe5759/" border="0"  alt="" />
+                            </a>
+                        </div>
+                    {% elif forloop.counter == 10 %}
+                        <div class="flex justify-center items-center my-4">
+                            <a href="https://www.betway.com.ng/lobby/casino/?btag=P105314-PR27270-CM93552-TS2010123&"; target="_blank" rel="nofollow">
+                                <img src="https://secure.betwaypartnersafrica.com/imagehandler/5cd130e5-efc1-4f82-9f0c-08b6534e93a0/" border="0"  alt="" />
+                            </a>
+                        </div>
+                    {% elif forloop.last %}
+                    <div class="flex justify-center items-center my-4">
+                        <a href="https://www.betway.com.ng/?btag=P105314-PR25154-CM79705-TS2010123" target="_blank" rel="nofollow">
+                            <img src="https://secure.betwaypartnersafrica.com/imagehandler/525c9174-9834-4a89-8083-7d203fbc5281/" border="0" alt="Ad 2"/>
+                        </a>
+                    </div>
+                    {% endif %}
+                {% endfor %}
+            {% endwith %}
+        </p>
+    </div>
+</div>
+
+{% endblock app %}

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="/static/m/images/favicon.png"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="/static/m/css/swiper.min.css" />
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-KHY7G3FMLX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+
+        gtag('config', 'G-KHY7G3FMLX');
+    </script>
+    {% block meta %}<meta name="description" content="720Scores - Latest scores on football & upcoming fixtures">{% endblock meta%}
+    <title>{% block title %}720Scores - Latest scores on football & upcoming fixtures{% endblock title %}</title>
+    <script src="https://unpkg.com/@phosphor-icons/web"></script>
+    <link rel="stylesheet" href="/static/m/css/swiper.min.css" />
+    <link rel="manifest" href="/static/m/manifest.json" />
+  <script defer src="/static/m/js/index.js"></script>
+  <link href="/static/m/css/style.css" rel="stylesheet"></head>
+  <body>
+    {% if is_home %}
+    <main
+      class="container pt-6 pb-20 relative overflow-hidden dark:bg-black dark:text-white"
+    >
+    {% else %}
+    <main
+      class="container p-2 overflow-hidden dark:bg-n900 dark:text-white pb-16"
+    >
+    {% endif %}
+    {% include "mobile/header.html" %}
+    {% block app %}{% endblock app %}
+    <!-- Bottom Tab Link Start -->
+      <div
+        class="fixed bottom-0 left-0 right-0 flex justify-center items-center z-50"
+      >
+        <div
+          class="bg-p1 text-white flex justify-around items-center py-4 w-[430px] text-2xl rounded-t-lg"
+        >
+          <a href="{% url 'index' %}"><i class="ph-fill ph-house"></i></a>
+          {% comment %} <a href="favourite-matches.html"
+            ><i class="ph ph-heart-straight"></i
+          ></a> {% endcomment %}
+          <a href="{% url 'm_news' %}"><i class="ph ph-article"></i></a>
+          <a href="{% url 'm_settings' %}"><i class="ph ph-user"></i></a>
+        </div>
+      </div>
+      <!-- Bottom Tab Link End -->
+
+      {% include "mobile/sidebar.html" %}
+  </main>
+
+  <!-- ==== js dependencies start ==== -->
+    <script src="/static/m/js/index.js"></script>
+    <script src="/static/m/js/plugins/plugins.js"></script>
+    <script src="/static/m/js/main.js"></script>
+    <script src="/static/m/js/plugins/plugin-custom.js"></script>
+  </body>
+</html>

@@ -1,0 +1,30 @@
+{% extends "app.html" %}
+
+{% block app %}
+<div class="px-6">
+    <div class="bg-n20 dark:bg-blackN30 dark:border-blackN50 border border-n30 rounded-xl p-5 flex flex-col gap-6">
+        {% for stat in match_info.statistics %}
+        <div class="">
+            <div class="flex justify-between items-center">
+                <p class="text-sm bg-p1 rounded-[4px] text-white px-1 font-semibold">{{ stat.home }}</p>
+                <p class="font-semibold">{{ stat.type }}</p>
+                <p class="text-sm bg-n900 rounded-[4px] text-white px-1 font-semibold">{{ stat.away }}</p>
+            </div>
+            <div class="flex justify-between items-center w-full gap-2 pt-3">
+                <div class="w-1/2 bg-n30 dark:bg-blackN40 rounded-full h-2 relative">
+                    <div class="h-2 bg-p1 absolute lineAnimation left-0 top-0 rounded-full" style="width: {{ stat.home_percentage }}%"></div>
+                </div>
+                <div class="w-1/2 bg-n30 dark:bg-blackN40 rounded-full h-2 relative">
+                    <div class="h-2 bg-n900 dark:bg-blackN60 absolute lineAnimation right-0 top-0 rounded-full" style="width: {{ stat.away_percentage }}%"></div>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+</div>
+<div class="flex justify-center items-center w-full mt-3">
+    <a href="https://www.betway.com.ng/?btag=P105314-PR25154-CM79705-TS2010123" target="_blank" rel="nofollow">
+        <img src="https://secure.betwaypartnersafrica.com/imagehandler/525c9174-9834-4a89-8083-7d203fbc5281/" border="0" alt="Ad 1"/>
+    </a>
+</div>
+{% endblock app %}

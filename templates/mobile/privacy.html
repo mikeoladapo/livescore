@@ -1,0 +1,68 @@
+{% extends "mobile/app.html" %}
+
+{% block app %}
+<div class="flex justify-between items-center pb-12">
+    <div class="flex justify-start items-center gap-4">
+        <a
+            href="{% url 'm_settings' %}"
+            class="relative text-white bg-p1 rounded-full size-9 flex justify-center items-center"
+            >
+        <i class="ph ph-caret-left text-xl"></i>
+        </a>
+        <h1 class="heading-1 font-semibold">Privacy Policy for 720scores</h1>
+    </div>
+</div>
+<div class="h-[80vh] overflow-auto">
+    <p class="pt-3 text-n500 dark:text-blackN500">Read the privacy policy for the world's number one destination for live scores for football.</p>
+
+    <h3 class="text-lg font-semibold">Introduction</h3>
+    <p class="pt-3 text-n500 dark:text-blackN500">
+        We value your privacy and are committed to protecting your personal information. This privacy policy explains how we collect, use, and disclose information when you use our website.
+    </p>
+    <h3 class="text-lg font-semibold">Information We Collect</h3>
+    <p class="pt-3 text-n500 dark:text-blackN500">
+        We do not collect any personal information from users. Our website is designed to provide live scores and football-related data without requiring user registration or personal data input.
+    </p>
+    <h3 class="text-lg font-semibold">Google Analytics</h3>
+    <p class="pt-3 text-n500 dark:text-blackN500">
+        We use Google Analytics to collect anonymous website usage data, such as page views, referral sources, and browsing patterns. This information helps us understand how our website is used and improve our services. Google Analytics uses cookies to collect this data, and you can opt-out by adjusting your browser settings.
+    </p>
+    <h3 class="text-lg font-semibold">Data Retention</h3>
+    <p class="pt-3 text-n500 dark:text-blackN500">
+        Since we don't collect personal information, we don't retain any user data.
+    </h2>
+    <h3 class="text-lg font-semibold">Data Security</h3>
+    <p class="pt-3 text-n500 dark:text-blackN500">
+        We take reasonable measures to ensure our website's security, including using HTTPS encryption (SSL) and regular security updates.
+    </p>
+    <h3 class="text-lg font-semibold">GDPR Compliance</h3>
+    <p class="pt-3 text-n500 dark:text-blackN500">
+        We comply with the General Data Protection Regulation (GDPR) by:
+        <ul>
+            <li>Not collecting personal data</li>
+            <li>Using anonymous analytics tools</li>
+            <li>Providing this privacy policy</li>
+        </ul>
+    </p>
+    <h3 class="text-lg font-semibold">Changes to this Privacy Policy</h3>
+    <p class="pt-3 text-n500 dark:text-blackN500">
+        We may update this privacy policy from time to time. We will notify you of significant changes by posting a notice on our website.
+    </p>
+    <h3 class="text-lg font-semibold">Data Sources</h3>
+    <p class="pt-3 text-n500 dark:text-blackN500">
+        We use third-party data providers to fetch football livescores and related data. These providers may collect and process data according to their own privacy policies. By using our website, you acknowledge that we may share anonymous usage data with our data providers to improve their services.
+    </h2>
+    <h3 class="text-lg font-semibold">Data Provider Privacy Policies</h3>
+    <p class="pt-3 text-n500 dark:text-blackN500">
+        Please find links to our data providers' privacy policies below:
+        <ul>
+            <li><a href="https://www.api-football.com/privacy" target="_blank">https://www.api-football.com/privacy<a/></li>
+            <li><a href="https://allsportsapi.com/terms-of-use" target="_blank">https://allsportsapi.com/terms-of-use</a></li>
+        </ul>
+    </p>
+    <h3 class="text-lg font-semibold">Contact Us</h3>
+    <p class="pt-3 text-n500 dark:text-blackN500">
+        If you have questions or concerns about our privacy policy, please contact us at <a href="mailto:support@720scores.com.ng ">support@720scores.com.ng</a>
+    </p>
+</div>
+{% endblock app %}

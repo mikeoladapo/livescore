@@ -1,0 +1,1312 @@
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    background: url('/static/images/background.jpg') repeat center center fixed;
+    background-size: cover;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    overflow-x: hidden;
+    font-size: 12px;
+    flex-direction: column;
+    align-items: center;
+    color: #ffffff;
+}
+
+body a {
+    text-decoration: none;
+    color: #e65c00;
+}
+
+header {
+    background-color: rgba(0, 0, 0, 0.7);
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
+    width: 100%;
+}
+
+header .nav-icons {
+    display: flex;
+    align-items: start;
+}
+
+header .nav-icons span {
+    font-size: 20px;
+    cursor: pointer;
+    margin-right: 30px;
+}
+
+header .nav-icons .logo img {
+    height: 40px;
+    width: 70%;
+}
+
+.logo-alt img {
+    position: absolute;
+    top: 70px;
+    right: 140px;
+    height: 20% !important;
+    width: 10% !important;
+}
+
+
+/* Side navigation */
+
+.side-nav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 3px;
+    /* Styling for scrollbar */
+    scrollbar-width: thin;
+    /* For Firefox */
+    scrollbar-color: rgba(255, 255, 255, 0.5) rgba(0, 0, 0, 0.5);
+    /* For Firefox */
+}
+
+.side-nav::-webkit-scrollbar {
+    width: 8px;
+    /* Width of vertical scrollbar */
+}
+
+.side-nav::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.1);
+    /* Color of scrollbar track */
+}
+
+.side-nav::-webkit-scrollbar-thumb {
+    background-color: rgba(255, 255, 255, 0.5);
+    /* Color of scrollbar thumb */
+    border-radius: 10px;
+    /* Rounded corners of scrollbar thumb */
+}
+
+.side-nav::-webkit-scrollbar-thumb:hover {
+    background-color: rgba(255, 255, 255, 0.7);
+    /* Color of scrollbar thumb on hover */
+}
+
+.side-nav-content {
+    padding: 5px 15px;
+    color: #ffffff;
+}
+
+.side-nav a {
+    padding: 30px 15px;
+    text-decoration: none;
+    font-size: 13px;
+    color: #ffffff;
+    display: flex;
+    font-weight: 700;
+    align-items: center;
+    transition: 0.3s;
+    border-radius: 8px;
+}
+
+.side-nav a:hover {
+    color: #f1f1f1;
+}
+
+
+/* Logo styles */
+
+.side-nav .logo {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 0 !important;
+    background-color: transparent;
+    margin-bottom: 30px;
+    margin-top: 20px;
+}
+
+.side-nav .logo img {
+    height: 25px;
+    /* Adjust height as needed */
+    margin-right: 10px;
+}
+
+
+/* Icon styles */
+
+.side-nav a i {
+    margin-right: 10px;
+}
+
+.side-nav .close-btn {
+    float: right;
+    font-size: 14px;
+    margin-right: 2px;
+    padding: 5px !important;
+    cursor: pointer;
+}
+
+.side-nav .close-btn:hover {
+    color: #ddd;
+}
+
+.side-nav h2 {
+    font-size: 11px;
+    font-weight: 700;
+    margin-top: 40px !important;
+    margin-bottom: 10px;
+    color: #ffffff;
+    text-transform: uppercase;
+}
+
+
+/* Add a black background color to the navigation links on hover */
+
+.side-nav a:hover {
+    background-color: #000;
+    color: white;
+    border-radius: 8x;
+}
+
+
+/* Font Awesome Icons */
+
+.fas {
+    font-size: 18px;
+}
+
+.header-icons {
+    display: flex;
+    align-items: start;
+}
+
+.header-icons a {
+    display: flex;
+    align-items: center;
+    color: #ffffff;
+    text-decoration: none;
+    margin-right: 20px;
+    font-weight: 600;
+    font-size: 13px;
+}
+
+.header-icons a img {
+    height: 20px;
+    margin-right: 5px;
+}
+
+.header-icons .active-nav-link {
+    color: #ff6600;
+    /* Change to your desired active color */
+    font-weight: bold;
+    /* Optionally bold the active item */
+}
+
+.header-icons .svg-icon {
+    width: 24px;
+    height: 24px;
+    fill: currentColor;
+    /* Allows the SVG to inherit text color */
+}
+
+.header-icons .active-nav-link .svg-icon {
+    filter: hue-rotate(180deg);
+    /* Example of changing SVG color */
+}
+
+.header-icons a:last-child {
+    margin-right: 0;
+}
+
+main {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 0 20px;
+    width: 75%;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10%;
+}
+
+.content-box {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.content-box header {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.left,
+.center,
+.right {
+    padding: 8px;
+    border: 1px solid #6f6f6f73;
+    border-radius: 12px;
+}
+
+.left {
+    width: 20%;
+}
+
+.sidebar-section {
+    margin-bottom: 20px;
+}
+
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    border-bottom: 1px solid #333;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.arrow {
+    font-size: 12px;
+    color: #888;
+}
+
+.sidebar-item {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    margin-top: 5px;
+    border-radius: 5px;
+    background-color: #111;
+    transition: background-color 0.3s;
+    cursor: pointer;
+}
+
+.sidebar-item:hover {
+    background-color: #222;
+}
+
+.sidebar-item img {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+.sidebar-item span {
+    font-size: 11px;
+}
+
+.sidebar-item .subtext {
+    margin-left: auto;
+    color: #888;
+    font-size: 9px;
+    position: relative;
+    top: 10px;
+    left: 5px;
+}
+
+.right {
+    width: 30%;
+}
+
+.center {
+    width: 50%;
+    text-align: center;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.news_main {
+    width: 70%;
+    text-align: center;
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.section {
+    margin-bottom: 20px;
+}
+
+.section h3 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    margin: 0;
+    padding: 10px 0;
+    border-bottom: 1px solid #ffffff;
+}
+
+.section .arrow {
+    font-size: 14px;
+    transition: transform 0.3s;
+}
+
+.section-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.section-content a.section-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-image: url('/static/images/background.jpg') !important;
+    margin-bottom: 5px;
+    padding: 5px;
+    font-size: 11px !important;
+    text-decoration: none;
+    color: #fff;
+    font-weight: 400;
+    transition: color 0.2s ease, background-color 0.2s ease;
+    border-radius: 5px;
+}
+
+.section-content a.section-item img {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+    border-radius: 5px;
+    transition: transform 0.2s ease;
+}
+
+.section-content a.section-item .league-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-grow: 1;
+}
+
+.section-content a.section-item .league-info .league-name {
+    font-weight: 600;
+}
+
+.section-content a.section-item .league-info .country-name {
+    font-size: 8px !important;
+    font-weight: 400 !important;
+    text-align: center !important;
+}
+
+.section-content a.section-item:hover {
+    color: #fff;
+    /* Uncomment if you want a hover background color */
+    /* background-color: #007bff; */
+}
+
+.section-content a.section-item img:hover {
+    transform: scale(1.1);
+}
+
+.score-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.nav-item {
+    cursor: pointer;
+    padding: 5px;
+    width: 40px;
+    border-radius: 5px;
+    /* background-color: rgba(255, 255, 255, 0.1); */
+    color: #ffffff;
+    font-size: 11px;
+    font-weight: 600;
+    transition: background-color 0.3s ease;
+}
+
+.nav-item span {
+    font-size: 9px;
+    font-weight: 500;
+}
+
+.nav-item:hover,
+.nav-item.active {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+.nav-item svg {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+    vertical-align: middle;
+}
+
+.promo {
+    background-color: yellow;
+    color: black;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+}
+
+.scores .group {
+    margin-bottom: 20px;
+}
+
+.group h4 {
+    margin: 0;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.group-logo {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+.group-title {
+    flex-grow: 1;
+}
+
+span.group-country-name {
+    font-size: 9px !important;
+    color: #bbb;
+    margin-left: auto;
+}
+
+.match-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.match {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background-color: #1c1c1c;
+    border-radius: 5px;
+    margin-bottom: 5px;
+}
+
+.team {
+    display: flex;
+    align-items: center;
+}
+
+.team-logo {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+.team span {
+    flex-grow: 1;
+}
+
+.score {
+    width: 20px;
+    text-align: center;
+}
+
+.match-info {
+    display: flex;
+    align-items: center;
+}
+
+.status {
+    margin-right: 5px;
+}
+
+.time {
+    margin-right: 5px;
+}
+
+.live-dot {
+    width: 10px;
+    height: 10px;
+    background-color: green;
+    border-radius: 50%;
+    animation: blink 1s infinite;
+}
+
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+.match-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #333;
+    border-radius: 12px;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.match-header .team {
+    display: flex;
+    flex-direction: column;
+    /* Change from row to column */
+    align-items: center;
+}
+
+.match-header .team span {
+    margin-top: 5px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.match-header .team img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+
+.match-header .match-time {
+    text-align: center;
+    font-size: 24px;
+}
+
+.match-header .match-time span {
+    display: block;
+}
+
+.match-header .match-time span:first-child {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.match-header .match-time span:last-child {
+    font-size: 12px;
+    margin-top: 5px;
+    color: #bbb;
+}
+
+.tabs {
+    display: flex;
+    /* border-bottom: 1px solid #333; */
+    justify-content: center;
+}
+
+.tab-button {
+    padding: 10px 20px;
+    cursor: pointer;
+    color: #999;
+    font-weight: bold;
+}
+
+.tab-button.active {
+    background-color: #ff8c00;
+    color: #000000;
+    /* Active tab color */
+    border: none;
+    /* Active tab underline */
+}
+
+.tab-content {
+    padding: 20px;
+    background-color: #222;
+    color: #fff;
+}
+
+.tab-pane {
+    display: none;
+}
+
+.tab-pane.active {
+    display: block;
+}
+
+.match-info {
+    padding: 8px;
+    background-color: #222;
+    color: #fff;
+    border: 1px solid #333;
+}
+
+.match-info h5 {
+    margin-bottom: 10px;
+    position: relative;
+    font-weight: bold;
+    color: #999;
+    width: 40%;
+    bottom: 40px;
+    left: -20px;
+}
+
+.match-info .info-details {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.match-info .info-item {
+    display: flex;
+    align-items: center;
+}
+
+.info-item img.info-icon {
+    margin-right: 10px;
+    width: 20px;
+}
+
+.match-info .info-text {
+    font-size: 11px;
+    color: #fff;
+    margin-right: 10px;
+}
+
+.line-ups {
+    /* margin-top: 5px;
+    width: 100%;
+    padding: 10px; */
+    position: relative;
+    width: 100%;
+    height: 600px;
+    /* Adjust as needed */
+}
+
+
+/* Style the tab buttons */
+
+.tablink {
+    background-color: #555;
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+    border: none;
+    display: inline-block;
+}
+
+.tablink:hover {
+    background-color: #777;
+}
+
+
+/* Style the tab content */
+
+.tabcontent {
+    display: none;
+    padding: 20px;
+    border-top: none;
+}
+
+
+/* Default active tab */
+
+.tabcontent:first-child {
+    display: block;
+}
+
+.line-ups .team-s {
+    width: 100%;
+    background-color: #222;
+    color: #fff;
+    padding: 5px;
+    border: 1px solid #333;
+}
+
+.line-ups .team-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.line-ups .team-s h5 {
+    font-size: 16px;
+    color: #999;
+    margin-bottom: 10px;
+}
+
+.line-ups .substitutes {
+    margin-top: 10px;
+}
+
+.hold-players {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.line-ups .player {
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    text-align: center;
+    transform: translate(-50%, -50%);
+    flex: 1 1;
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 0%;
+}
+
+.player span {
+    display: block;
+    font-size: 10px;
+    line-height: 1.2;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.formation {
+    position: relative;
+    width: 100%;
+    height: 600px;
+    /* Adjust as needed */
+    background: url('/static/images/stadium.svg') no-repeat center center;
+    background-size: cover;
+}
+
+.goalkeeper,
+.defender,
+.midfielder,
+.forward {
+    display: flex;
+    /* justify-content: center; */
+    align-items: flex-start;
+    /* margin-bottom: 10px; */
+}
+
+.goalkeeper .player {
+    background-color: yellow;
+}
+
+.defender .player {
+    background-color: green;
+}
+
+.midfielder .player {
+    background-color: blue;
+}
+
+.forward .player {
+    background-color: red;
+}
+
+
+/* Substitutes style */
+
+.substitutes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.substitute-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #f0f0f0;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.strong {
+    font-weight: bold;
+}
+
+.news-items {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.news-item {
+    display: flex;
+    margin-bottom: 5px;
+    background-color: #111;
+    border-radius: 10px;
+    justify-content: flex-start;
+    overflow: hidden;
+    transition: background-color 0.3s;
+}
+
+.news-item:hover {
+    background-color: #222222b0;
+}
+
+.news-item-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.news-item img {
+    padding: 5px;
+    width: 150px;
+    height: 100px;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+.news-content {
+    padding: 0 20px 0 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+}
+
+.news-content h3 {
+    margin: 0 0 0 5px;
+    font-size: 12px;
+    text-align: left;
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+
+a.tag {
+    padding: 5px 10px;
+    background-color: #000;
+    border-radius: 5px;
+    font-size: 12px;
+}
+
+.news-container {
+    width: 100%;
+    max-width: 800px;
+    margin: 5px auto;
+    /* background-color: #2c2c2c; */
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.news-container .news-header {
+    padding: 20px;
+    background-color: #333;
+}
+
+.news-container .news-header h1 {
+    margin: 0;
+    font-size: 16px;
+    color: #fff;
+}
+
+.news-container .news-meta {
+    display: flex;
+    justify-content: space-between;
+    font-size: 14px;
+    font-weight: 600;
+    color: #aaa;
+    margin-top: 10px;
+}
+
+.news-container .news-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.news-container .news-content {
+    margin-top: 10px;
+    text-align: justify;
+}
+
+.news-container .news-content p {
+    margin: 0 0 20px;
+    line-height: 1.6;
+}
+
+.date-posted {
+    text-align: right;
+    font-size: 11px;
+    font-weight: bold;
+    color: #999;
+}
+
+.news-container .news-detail {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 10px;
+    text-align: justify;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+.news-detail img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.news-detail h2 {
+    margin-top: 0;
+}
+
+.ad {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 20px;
+    padding: 10px;
+    /* border: 1px solid #ddd; */
+    border-radius: 4px;
+}
+
+.ad img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+.ad h3 {
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+
+.ad p {
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.ad-section {
+    width: 100%;
+    max-width: 100%;
+    /* margin: 20px 0; */
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+.ad-link {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: url('https://via.placeholder.com/1080x100') repeat center center;
+    background-size: cover;
+    text-decoration: none;
+}
+
+.ad-section-box {
+    width: 85%;
+    max-width: 100%;
+    /* margin: 20px 0; */
+    height: 200px;
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+}
+
+.ad-link-box {
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: url('https://via.placeholder.com/300x300') repeat center center;
+    background-size: cover;
+    text-decoration: none;
+}
+
+.ad-content {
+    /* position: absolute; */
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+}
+
+.ad-content h2 {
+    margin: 0;
+    font-size: 16px;
+}
+
+.ad-content p {
+    margin: 5px 0 0;
+    font-size: 12px;
+}
+
+
+/* Filter buttons container */
+
+.filter-buttons {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+
+/* Individual filter button */
+
+.filter-buttons button {
+    padding: 5px;
+    border-radius: 12px;
+    margin: 0 5px;
+    border: none;
+    background-color: #ff6600;
+    cursor: pointer;
+    color: #000;
+    transition: background-color 0.3s ease;
+}
+
+
+/* Hover state for filter buttons */
+
+.filter-buttons button:hover {
+    background-color: #e0e0e0;
+}
+
+
+/* Active state for filter buttons */
+
+.filter-buttons button.active {
+    background-color: #ff6600;
+    color: #fff;
+}
+
+
+/* No matches message */
+
+.no-matches {
+    text-align: center;
+    font-size: 18px;
+    color: #ccc;
+    margin-top: 20px;
+}
+
+footer {
+    background-color: rgba(0, 0, 0, 0.7);
+    width: 100vw;
+    text-align: center;
+    padding: 10px;
+    color: #ffffff;
+    position: static;
+    bottom: 0;
+    margin-top: 40px;
+}
+
+
+/* CSS for loading icon */
+
+.loading-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    /* Adjust height as needed */
+    font-size: 20px;
+    /* Adjust font size as needed */
+    color: #ff6600;
+    /* Text color */
+}
+
+.loading-icon .spinner {
+    width: 20px;
+    /* Size of the spinner */
+    height: 20px;
+    border: 4px solid #ff66007f;
+    /* Border color */
+    border-left-color: #6e2100;
+    /* Spinner color */
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    /* Animation for spinning */
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@media (max-width: 768px) {
+    .content-box {
+        flex-direction: column;
+    }
+    .left,
+    .center,
+    .right {
+        width: 100%;
+    }
+    .header-icons a {
+        font-size: 12px;
+    }
+    .header-icons a img {
+        height: 16px;
+    }
+    .logo img {
+        height: 30px;
+    }
+}
+
+
+/* Match details container */
+
+#match-details-container {
+    display: none;
+    margin-top: 20px;
+}
+
+.match-section {
+    display: none;
+}
+
+.match-section.active {
+    display: block;
+}
+
+
+/* Teams container */
+
+.teams-container.hidden {
+    display: none;
+}
+
+.policy-header,
+.contact-header,
+.advert-header {
+    /* background-color: #333; */
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.policy-header h1,
+.contact-header h1,
+.advert-header h1 {
+    margin: 0;
+    font-size: 16px;
+    border-bottom: 1px solid #333;
+}
+
+.policy-header p,
+.contact-header p,
+.advert-header p {
+    margin: 10px 0 0;
+    font-size: 12px;
+}
+
+.policy-content,
+.advert-content {
+    background-color: #2b2b2b;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+    text-align: justify;
+}
+
+.policy-content h2,
+.advert-content h2 {
+    font-size: 18px;
+    border-bottom: 1px solid #444;
+    padding-bottom: 5px;
+    margin-top: 20px;
+    text-align: left;
+}
+
+.policy-content p,
+.advert-content p {
+    font-size: 11px;
+    margin: 10px 0;
+    line-height: 1.6;
+    text-align: justify !important;
+}
+
+.policy-content ul,
+.advert-content ul {
+    list-style-type: square;
+}
+
+.policy-content ul li,
+.advert-content ul li {
+    font-weight: 600;
+    font-size: 10px;
+}
+
+.form-container {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: transparent;
+    border-radius: 8px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 80%;
+    padding: 10px;
+    border: 1px solid #444;
+    border-radius: 4px;
+    background-color: #333;
+    color: #fff;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+    color: #888;
+}
+
+.form-group select {
+    appearance: none;
+    /* background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath fill='%23fff' fill-rule='evenodd' d='M5 6l5-6H0z'/%3E%3C/svg%3E"); */
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 10px;
+}
+
+.form-group textarea {
+    resize: vertical;
+    height: 100px;
+    width: 80%;
+}
+
+.btn-send {
+    margin: 10px auto;
+    width: 80%;
+    padding: 10px;
+    background-color: #ff6600;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.btn-send:hover {
+    background-color: #e65c00;
+}

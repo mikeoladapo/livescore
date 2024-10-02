@@ -1,0 +1,158 @@
+<!-- Lineups Area Start -->
+<div class="px-6 pt-8">
+    <div class="bg-n20 dark:bg-blackN30 border border-n30 dark:border-blackN50 rounded-2xl">
+        <div class="bg-p1 py-3 px-4 rounded-t-2xl">
+            <p class="text-white font-semibold">Starting XI</p>
+        </div>
+        <div class="p-4 grid grid-cols-2 gap-5">
+            <div>
+                <p class="text-lg font-semibold">{{ match_info.home_team.name }}</p>
+                <ul>
+                    {% for player in match_info.lineups.home_starting_xi %}
+                    <li>{{ player.player.name }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+            <div>
+                <p class="text-lg font-semibold">{{ match_info.away_team.name }}</p>
+                <ul>
+                    {% for player in match_info.lineups.away_starting_xi %}
+                    <li>{{ player.player.name }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Lineups Area End -->
+
+<!-- Substitutions Area Start -->
+<div class="px-6 pt-8">
+    <div class="bg-n20 dark:bg-blackN30 border border-n30 dark:border-blackN50 rounded-2xl">
+        <div class="bg-p1 py-3 px-4 rounded-t-2xl">
+            <p class="text-white font-semibold">Substitutions</p>
+        </div>
+        <div class="p-4 grid grid-cols-2 gap-5">
+            {% for sub in match_info.lineups.substitutions %}
+            <div class="col-span-1 flex justify-start items-center gap-3">
+                <p>{{ sub.minute }}'</p>
+                <div class="flex justify-start items-start gap-2 flex-col">
+                    <div class="flex justify-start items-center gap-2">
+                        <div class="flex justify-center items-center p-2 bg-p1 text-white rounded-sm w-4 h-5 text-sm">
+                            <i class="ph ph-arrow-down"></i>
+                        </div>
+                        <p class="text-xs">{{ sub.player_out.name }}</p>
+                    </div>
+                    <div class="flex justify-start items-center gap-2">
+                        <div class="flex justify-center items-center p-2 bg-[#77ED8B] text-white rounded-sm w-4 h-5 text-sm">
+                            <i class="ph ph-arrow-up"></i>
+                        </div>
+                        <p class="text-xs">{{ sub.player_in.name }}</p>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+<!-- Substitutions Area End -->
+<div class="flex justify-center items-center w-full mt-3">
+    <a href="https://www.betway.com.ng/?btag=P105314-PR25154-CM79705-TS2010123" target="_blank" rel="nofollow">
+        <img src="https://secure.betwaypartnersafrica.com/imagehandler/525c9174-9834-4a89-8083-7d203fbc5281/" border="0" alt="Ad 1"/>
+    </a>
+</div>
+<!-- Substitution Players Start -->
+{% comment %} <div class="px-6 pt-8">
+    <div class="bg-n20 dark:bg-blackN30 border border-n30 dark:border-blackN50 rounded-2xl">
+        <div class="bg-p1 py-3 px-4 rounded-t-2xl">
+            <p class="text-white font-semibold">Substitution Players</p>
+        </div>
+        <div class="p-4 grid grid-cols-2 gap-5">
+            <div class="flex justify-start items-center gap-2">
+                <div class="size-7 border border-r75 rounded-full flex justify-center items-center text-xs bg-r50 dark:bg-blackN30 dark:border-blackN50">
+                    8
+                </div>
+                <p class="text-xs">Howard Peters</p>
+            </div>
+            <div class="flex justify-start items-center gap-2">
+                <div class="size-7 border border-r75 rounded-full flex justify-center items-center text-xs bg-r50 dark:bg-blackN30 dark:border-blackN50">
+                    7
+                </div>
+                <p class="text-xs">Mina Fox</p>
+            </div>
+            <div class="flex justify-start items-center gap-2">
+                <div class="size-7 border border-r75 rounded-full flex justify-center items-center text-xs bg-r50 dark:bg-blackN30 dark:border-blackN50">
+                    9
+                </div>
+                <p class="text-xs">Gertrude McGee</p>
+            </div>
+            <div class="flex justify-start items-center gap-2">
+                <div class="size-7 border border-r75 rounded-full flex justify-center items-center text-xs bg-r50 dark:bg-blackN30 dark:border-blackN50">
+                    16
+                </div>
+                <p class="text-xs">Betty Alvarez</p>
+            </div>
+            <div class="flex justify-start items-center gap-2">
+                <div class="size-7 border border-r75 rounded-full flex justify-center items-center text-xs bg-r50 dark:bg-blackN30 dark:border-blackN50">
+                    17
+                </div>
+                <p class="text-xs">Cole Walker</p>
+            </div>
+            <div class="flex justify-start items-center gap-2">
+                <div class="size-7 border border-r75 rounded-full flex justify-center items-center text-xs bg-r50 dark:bg-blackN30 dark:border-blackN50">
+                    19
+                </div>
+                <p class="text-xs">Andrew Reeves</p>
+            </div>
+            <div class="flex justify-start items-center gap-2">
+                <div class="size-7 border border-r75 rounded-full flex justify-center items-center text-xs bg-r50 dark:bg-blackN30 dark:border-blackN50">
+                    12
+                </div>
+                <p class="text-xs">Pearl Norris</p>
+            </div>
+            <div class="flex justify-start items-center gap-2">
+                <div class="size-7 border border-r75 rounded-full flex justify-center items-center text-xs bg-r50 dark:bg-blackN30 dark:border-blackN50">
+                    14
+                </div>
+                <p class="text-xs">Lou Glover</p>
+            </div>
+            <div class="flex justify-start items-center gap-2">
+                <div class="size-7 border border-r75 rounded-full flex justify-center items-center text-xs bg-r50 dark:bg-blackN30 dark:border-blackN50">
+                    22
+                </div>
+                <p class="text-xs">Mike Maxwell</p>
+            </div>
+            <div class="flex justify-start items-center gap-2">
+                <div class="size-7 border border-r75 rounded-full flex justify-center items-center text-xs bg-r50 dark:bg-blackN30 dark:border-blackN50">
+                    17
+                </div>
+                <p class="text-xs">Joshua Fletcher</p>
+            </div>
+            <div class="flex justify-start items-center gap-2">
+                <div class="size-7 border border-r75 rounded-full flex justify-center items-center text-xs bg-r50 dark:bg-blackN30 dark:border-blackN50">
+                    18
+                </div>
+                <p class="text-xs">Olga Wilkerson</p>
+            </div>
+            <div class="flex justify-start items-center gap-2">
+                <div class="size-7 border border-r75 rounded-full flex justify-center items-center text-xs bg-r50 dark:bg-blackN30 dark:border-blackN50">
+                    22
+                </div>
+                <p class="text-xs">Pauline Rice</p>
+            </div>
+            <div class="flex justify-start items-center gap-2">
+                <div class="size-7 border border-r75 rounded-full flex justify-center items-center text-xs bg-r50 dark:bg-blackN30 dark:border-blackN50">
+                    25
+                </div>
+                <p class="text-xs">Harriett Phillips</p>
+            </div>
+            <div class="flex justify-start items-center gap-2">
+                <div class="size-7 border border-r75 rounded-full flex justify-center items-center text-xs bg-r50 dark:bg-blackN30 dark:border-blackN50">
+                    30
+                </div>
+                <p class="text-xs">Rosetta Aguilar</p>
+            </div>
+        </div>
+    </div>
+</div> {% endcomment %}
+<!-- Substitution Players End -->

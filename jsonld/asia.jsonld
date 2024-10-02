@@ -1,0 +1,411 @@
+{
+  "@context": "https://schema.org",
+  "@type": "SportsOrganization",
+  "name": "720scores",
+  "url": "https://720scores.com.ng",
+  "logo": "https://720scores.com.ng/logo.png",
+  "description": "Live scores and updates from around the world",
+  "keywords": ["live scores", "football", "match result", "league table"],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Asian Football Leagues",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "name": "Korea Republic K League Classic",
+        "description": "Top-tier Korean football league",
+        "keywords": ["Korean football", "K League Classic", "Korean soccer"]
+      },
+      {
+        "@type": "Offer",
+        "name": "Iran Persian Gulf Pro League",
+        "description": "Top-tier Iranian football league",
+        "keywords": ["Iranian football", "Persian Gulf Pro League", "Iranian soccer"]
+      },
+      {
+        "@type": "Offer",
+        "name": "Australia A-League",
+        "description": "Top-tier Australian football league",
+        "keywords": ["Australian football", "A-League", "Australian soccer"]
+      },
+      {
+        "@type": "Offer",
+        "name": "China PR CSL",
+        "description": "Top-tier Chinese football league",
+        "keywords": ["Chinese football", "CSL", "Chinese soccer"]
+      },
+      {
+        "@type": "Offer",
+        "name": "Japan J1 League",
+        "description": "Top-tier Japanese football league",
+        "keywords": ["Japanese football", "J1 League", "Japanese soccer"]
+      },
+      {
+        "@type": "Offer",
+        "name": "United Arab Emirates Arabian Gulf League",
+        "description": "Top-tier UAE football league",
+        "keywords": ["UAE football", "Arabian Gulf League", "UAE soccer"]
+      },
+      {
+        "@type": "Offer",
+        "name": "Saudi Arabia Pro League",
+        "description": "Top-tier Saudi Arabian football league",
+        "keywords": ["Saudi Arabian football", "Pro League", "Saudi Arabian soccer"]
+      },
+      {
+        "@type": "Offer",
+        "name": "Australia National Premier Leagues",
+        "description": "Second-tier Australian football league",
+        "keywords": ["Australian football", "National Premier Leagues", "Australian soccer"]
+      },
+      {
+        "@type": "Offer",
+        "name": "Iran Azadegan League",
+        "description": "Second-tier Iranian football league",
+        "keywords": ["Iranian football", "Azadegan League", "Iranian soccer"]
+      },
+      {
+        "@type": "Offer",
+        "name": "Qatar Stars League",
+        "description": "Top-tier Qatari football league",
+        "keywords": ["Qatari football", "Stars League", "Qatari soccer"]
+      },
+      {
+        "@type": "Offer",
+        "name": "Korea Republic K League Challenge",
+        "description": "Second-tier Korean football league",
+        "keywords": ["Korean football", "K League Challenge", "Korean soccer"]
+      },
+      {
+        "@type": "Offer",
+        "name": "Iraq Iraqi League",
+        "description": "Top-tier Iraqi football league",
+        "keywords": ["Iraqi football", "Iraqi League", "Iraqi soccer"]
+      },
+      {
+        "@type": "Offer",
+        "name": "Kuwait Premier League",
+        "description": "Top-tier Kuwaiti football league",
+        "keywords": ["Kuwaiti football", "Premier League", "Kuwaiti soccer"]
+      },
+      {
+        "@type": "Offer",
+        "name": "Uzbekistan PFL",
+        "description": "Top-tier Uzbekistani football league",
+        "keywords": ["Uzbekistani football", "PFL", "Uzbekistani soccer"]
+      },
+      {
+        "@type": "Offer",
+        "name": "Bahrain Premier League",
+        "description": "Top-tier Bahraini football league",
+        "keywords": ["Bahraini football", "Premier League", "Bahraini soccer"]
+      },
+{
+        "@type": "Offer",
+        "name": "Thailand Thai League",
+        "description": "Top-tier Thai football league",
+        "keywords": ["Thai football", "Thai League", "Thai soccer"]
+      },
+      {
+        "@type": "Offer",
+        "name": "Japan J2 League",
+        "description": "Second-tier Japanese football league",
+        "keywords": ["Japanese football", "J2 League", "Japanese soccer"]
+      },
+      {
+        "@type": "Offer",
+        "name": "Jordan League",
+        "description": "Top-tier Jordanian football league",
+        "keywords": ["Jordanian football", "Jordan League", "Jordanian soccer"]
+      },
+      {
+        "@type": "Offer",
+        "name": "Oman Professional League",
+        "description": "Top-tier Omani football league",
+        "keywords": ["Omani football", "Professional League", "Omani soccer"]
+      },
+      {
+        "@type": "Offer",
+        "name": "Syria Premier League",
+        "description": "Top-tier Syrian football league",
+        "keywords": ["Syrian football", "Premier League", "Syrian soccer"]
+      },
+      {
+        "@type": "Offer",
+        "name": "Korea Republic National League",
+        "description": "Third-tier Korean football league",
+        "keywords": ["Korean football", "National League", "Korean soccer"]
+      },
+      {
+        "@type": "Offer",
+        "name": "Qatar Q League",
+        "description": "Second-tier Qatari football league",
+        "keywords": ["Qatari football", "Q League", "Qatari soccer"]
+      },
+      {
+        "@type": "Offer",
+        "name": "Saudi Arabia Division 1",
+        "description": "Second-tier Saudi Arabian football league",
+        "keywords": ["Saudi Arabian football", "Division 1", "Saudi Arabian soccer"]
+      },
+      {
+        "@type": "Offer",
+        "name": "United Arab Emirates Division 1",
+        "description": "Second-tier UAE football league",
+        "keywords": ["UAE football", "Division 1", "UAE soccer"]
+      },
+      {
+        "@type": "Offer",
+        "name": "China PR China League One",
+        "description": "Second-tier Chinese football league",
+        "keywords": ["Chinese football", "China League One", "Chinese soccer"]
+      },
+      {
+        "@type": "Offer",
+        "name": "Lebanon Premier League",
+        "description": "Top-tier Lebanese football league",
+        "keywords": ["Lebanese football", "Premier League", "Lebanese soccer"]
+      },
+      {
+        "@type": "Offer",
+        "name": "Uzbekistan 1st Division",
+        "description": "Second-tier Uzbekistani football league",
+        "keywords": ["Uzbekistani football", "1st Division", "Uzbekistani soccer"]
+      },
+      {
+        "@type": "Offer",
+        "name": "Japan J3 League",
+        "description": "Third-tier Japanese football league",
+        "keywords": ["Japanese football", "J3 League", "Japanese soccer"]
+      },
+      {
+        "@type": "Offer",
+        "name": "Palestine West Bank League",
+        "description": "Top-tier Palestinian football league",
+        "keywords": ["Palestinian football", "West Bank League", "Palestinian soccer"]
+      },
+{
+        "@type": "Offer",
+        "name": "Japan Japan Football League",
+        "description": "Fourth-tier Japanese football league",
+        "keywords": ["Japanese football", "Japan Football League", "Japanese soccer"]
+      },
+      {
+        "@type": "Offer",
+        "name": "Thailand Thai League 2",
+        "description": "Second-tier Thai football league",
+        "keywords": ["Thai football", "Thai League 2", "Thai soccer"]
+      },
+      {
+        "@type": "Offer",
+        "name": "India Indian Super League",
+        "description": "Top-tier Indian football league",
+        "keywords": ["Indian football", "Indian Super League", "Indian soccer"]
+      },
+      {
+        "@type": "Offer",
+        "name": "Bahrain Second Division",
+        "description": "Second-tier Bahraini football league",
+        "keywords": ["Bahraini football", "Second Division", "Bahraini soccer"]
+      },
+      {
+        "@type": "Offer",
+        "name": "Saudi Arabia Division 2",
+        "description": "Third-tier Saudi Arabian football league",
+        "keywords": ["Saudi Arabian football", "Division 2", "Saudi Arabian soccer"]
+      },
+      {
+        "@type": "Offer",
+        "name": "Vietnam V.League 1",
+        "description": "Top-tier Vietnamese football league",
+        "keywords": ["Vietnamese football", "V.League 1", "Vietnamese soccer"]
+      },
+      {
+        "@type": "Offer",
+        "name": "Jordan 1st Division",
+        "description": "Second-tier Jordanian football league",
+        "keywords": ["Jordanian football", "1st Division", "Jordanian soccer"]
+      },
+      {
+        "@type": "Offer",
+        "name": "Malaysia Super League",
+        "description": "Top-tier Malaysian football league",
+        "keywords": ["Malaysian football", "Super League", "Malaysian soccer"]
+      },
+      {
+        "@type": "Offer",
+        "name": "Korea Republic K3 League Advanced",
+        "description": "Third-tier Korean football league",
+        "keywords": ["Korean football", "K3 League Advanced", "Korean soccer"]
+      },
+      {
+        "@type": "Offer",
+        "name": "Indonesia Liga 1",
+        "description": "Top-tier Indonesian football league",
+        "keywords": ["Indonesian football", "Liga 1", "Indonesian soccer"]
+      },
+      {
+        "@type": "Offer",
+        "name": "Turkmenistan Ýokary Liga",
+        "description": "Top-tier Turkmenistani football league",
+        "keywords": ["Turkmenistani football", "Ýokary Liga", "Turkmenistani soccer"]
+      },
+      {
+        "@type": "Offer",
+        "name": "Hong Kong Premier League",
+        "description": "Top-tier Hong Kong football league",
+        "keywords": ["Hong Kong football", "Premier League", "Hong Kong soccer"]
+      },
+      {
+        "@type": "Offer",
+        "name": "Singapore S.League",
+        "description": "Top-tier Singaporean football league",
+        "keywords": ["Singaporean football", "S.League", "Singaporean soccer"]
+      },
+      {
+        "@type": "Offer",
+        "name": "Thailand Thai League 3",
+        "description": "Third-tier Thai football league",
+        "keywords": ["Thai football", "Thai League 3", "Thai soccer"]
+      },
+      {
+        "@type": "Offer",
+        "name": "India I-League",
+        "description": "Second-tier Indian football league",
+        "keywords": ["Indian football", "I-League", "Indian soccer"]
+      },
+      {
+        "@type": "Offer",
+        "name": "Thailand Thai League 4",
+        "description": "Fourth-tier Thai football league",
+        "keywords": ["Thai football", "Thai League 4", "Thai soccer"]
+      },
+{
+        "@type": "Offer",
+        "name": "Yemen Yemeni League",
+        "description": "Top-tier Yemeni football league",
+        "keywords": ["Yemeni football", "Yemeni League", "Yemeni soccer"]
+      },
+      {
+        "@type": "Offer",
+        "name": "India I-League 2nd Division",
+        "description": "Third-tier Indian football league",
+        "keywords": ["Indian football", "I-League 2nd Division", "Indian soccer"]
+      },
+      {
+        "@type": "Offer",
+        "name": "Indonesia Liga 2",
+        "description": "Second-tier Indonesian football league",
+        "keywords": ["Indonesian football", "Liga 2", "Indonesian soccer"]
+      },
+      {
+        "@type": "Offer",
+        "name": "Vietnam V.League 2",
+        "description": "Second-tier Vietnamese football league",
+        "keywords": ["Vietnamese football", "V.League 2", "Vietnamese soccer"]
+      },
+      {
+        "@type": "Offer",
+        "name": "Uzbekistan Pro League B",
+        "description": "Second-tier Uzbekistani football league",
+        "keywords": ["Uzbekistani football", "Pro League B", "Uzbekistani soccer"]
+      },
+      {
+        "@type": "Offer",
+        "name": "Malaysia Premier League",
+        "description": "Second-tier Malaysian football league",
+        "keywords": ["Malaysian football", "Premier League", "Malaysian soccer"]
+      },
+      {
+        "@type": "Offer",
+        "name": "Bangladesh Premier League",
+        "description": "Top-tier Bangladeshi football league",
+        "keywords": ["Bangladeshi football", "Premier League", "Bangladeshi soccer"]
+      },
+      {
+        "@type": "Offer",
+        "name": "Tajikistan Vysshaya Liga",
+        "description": "Top-tier Tajikistani football league",
+        "keywords": ["Tajikistani football", "Vysshaya Liga", "Tajikistani soccer"]
+      },
+      {
+        "@type": "Offer",
+        "name": "Maldives Dhivehi Premier League",
+        "description": "Top-tier Maldivian football league",
+        "keywords": ["Maldivian football", "Dhivehi Premier League", "Maldivian soccer"]
+      },
+      {
+        "@type": "Offer",
+        "name": "Vietnam Second Division",
+        "description": "Third-tier Vietnamese football league",
+        "keywords": ["Vietnamese football", "Second Division", "Vietnamese soccer"]
+      },
+      {
+        "@type": "Offer",
+        "name": "Myanmar National League",
+        "description": "Top-tier Burmese football league",
+        "keywords": ["Burmese football", "National League", "Burmese soccer"]
+      },
+      {
+        "@type": "Offer",
+        "name": "Kyrgyzstan Top Liga",
+        "description": "Top-tier Kyrgyzstani football league",
+        "keywords": ["Kyrgyzstani football", "Top Liga", "Kyrgyzstani soccer"]
+      },
+      {
+        "@type": "Offer",
+        "name": "Hong Kong HKFA 1st Division",
+        "description": "Second-tier Hong Kong football league",
+        "keywords": ["Hong Kong football", "HKFA 1st Division", "Hong Kong soccer"]
+      },
+      {
+        "@type": "Offer",
+        "name": "Malaysia FAM League",
+        "description": "Third-tier Malaysian football league",
+        "keywords": ["Malaysian football", "FAM League", "Malaysian soccer"]
+      },
+      {
+        "@type": "Offer",
+        "name": "Laos Lao League",
+        "description": "Top-tier Laotian football league",
+        "keywords": ["Laotian football", "Lao League", "Laotian soccer"]
+      },
+{
+        "@type": "Offer",
+        "name": "Bhutan National League",
+        "description": "Top-tier Bhutanese football league",
+        "keywords": ["Bhutanese football", "National League", "Bhutanese soccer"]
+      },
+      {
+        "@type": "Offer",
+        "name": "Pakistan Premier League",
+        "description": "Top-tier Pakistani football league",
+        "keywords": ["Pakistani football", "Premier League", "Pakistani soccer"]
+      },
+      {
+        "@type": "Offer",
+        "name": "Mongolia Premier League",
+        "description": "Top-tier Mongolian football league",
+        "keywords": ["Mongolian football", "Premier League", "Mongolian soccer"]
+      },
+      {
+        "@type": "Offer",
+        "name": "Pakistan 2nd Division",
+        "description": "Second-tier Pakistani football league",
+        "keywords": ["Pakistani football", "2nd Division", "Pakistani soccer"]
+      },
+      {
+        "@type": "Offer",
+        "name": "Bhutan Thimphu League",
+        "description": "Second-tier Bhutanese football league",
+        "keywords": ["Bhutanese football", "Thimphu League", "Bhutanese soccer"]
+      },
+      {
+        "@type": "Offer",
+        "name": "Macao Primeira Divisão",
+        "description": "Top-tier Macanese football league",
+        "keywords": ["Macanese football", "Primeira Divisão", "Macanese soccer"]
+      },
+    ]
+  }
+}

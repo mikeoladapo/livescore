@@ -1,0 +1,186 @@
+{% extends "mobile/app.html" %}
+
+{% block app %}
+<div class="flex justify-between items-center">
+    <div class="flex justify-start items-center gap-4">
+        <a
+            href="{% url 'index' %}"
+            class="relative text-white bg-p1 rounded-full size-9 flex justify-center items-center"
+            >
+        <i class="ph ph-caret-left text-xl"></i>
+        </a>
+        <h1 class="heading-1 font-semibold">Settings</h1>
+    </div>
+</div>
+<div
+    class="pt-12 flex justify-between items-center pb-8 border-b border-dashed border-n50"
+    >
+    <div class="flex justify-start items-center gap-4">
+        <img
+            src="/static/m/images/favicon.png"
+            class="size-16 rounded-full"
+            alt=""
+            />
+        <div class="">
+            <h2 class="heading-2 font-semibold">720Scores</h2>
+            <p class="text-n500 dark:text-blackN500 pt-1">Welcome to 720scores</p>
+        </div>
+    </div>
+    {% comment %} <a
+        href="personal-info.html"
+        class="text-xl size-11 rounded-full border border-r75 text-p1 flex justify-center items-center"
+        >
+    <i class="ph ph-pencil-simple-line"></i>
+    </a> {% endcomment %}
+</div>
+<div class="pt-8 flex flex-col gap-5">
+    {% comment %} <a
+        href="notifications-settings.html"
+        class="flex justify-between items-center pb-5 border-b border-dashed border-n50"
+        >
+        <div class="flex justify-start items-center gap-4">
+            <div
+                class="text-xl size-11 rounded-full border border-r75 text-p1 flex justify-center items-center bg-r50 dark:bg-blackN30 dark:border-blackN50"
+                >
+                <i class="ph ph-bell"></i>
+            </div>
+            <p class="font-semibold">Notifications</p>
+        </div>
+        <div class="">
+            <i class="ph ph-caret-right text-xl"></i>
+        </div>
+    </a> {% endcomment %}
+    <a
+        href="{% url 'g_settings' %}"
+        class="flex justify-between items-center pb-5 border-b border-dashed border-n50"
+        >
+        <div class="flex justify-start items-center gap-4">
+            <div
+                class="text-xl size-11 rounded-full border border-r75 text-p1 flex justify-center items-center bg-r50 dark:bg-blackN30 dark:border-blackN50"
+                >
+                <i class="ph ph-squares-four"></i>
+            </div>
+            <p class="font-semibold">General</p>
+        </div>
+        <div class="">
+            <i class="ph ph-caret-right text-xl"></i>
+        </div>
+    </a>
+    {% comment %} <a
+        href="security.html"
+        class="flex justify-between items-center pb-5 border-b border-dashed border-n50"
+        >
+        <div class="flex justify-start items-center gap-4">
+            <div
+                class="text-xl size-11 rounded-full border border-r75 text-p1 flex justify-center items-center bg-r50 dark:bg-blackN30 dark:border-blackN50"
+                >
+                <i class="ph ph-shield-check"></i>
+            </div>
+            <p class="font-semibold">Security</p>
+        </div>
+        <div class="">
+            <i class="ph ph-caret-right text-xl"></i>
+        </div>
+    </a> {% endcomment %}
+    <div
+        class="flex justify-between items-center pb-5 border-b border-dashed border-n50"
+        >
+        <div class="flex justify-start items-center gap-4">
+            <div
+                class="text-xl size-11 rounded-full border border-r75 text-p1 flex justify-center items-center bg-r50 dark:bg-blackN30 dark:border-blackN50"
+                >
+                <i class="ph ph-eye"></i>
+            </div>
+            <p class="font-semibold">Light Mode</p>
+        </div>
+        <div
+            class="rounded-switch choose-mode bg-n40 w-10 h-5 rounded-full relative duration-500"
+            >
+            <div
+                class="absolute size-4 rounded-full bg-white top-0.5 left-0.5 duration-500"
+                ></div>
+        </div>
+    </div>
+    <a
+        href="{% url 'm_help' %}"
+        class="flex justify-between items-center pb-5 border-b border-dashed border-n50"
+        >
+        <div class="flex justify-start items-center gap-4">
+            <div
+                class="text-xl size-11 rounded-full border border-r75 text-p1 flex justify-center items-center bg-r50 dark:bg-blackN30 dark:border-blackN50"
+                >
+                <i class="ph ph-headset"></i>
+            </div>
+            <p class="font-semibold">Help Center</p>
+        </div>
+        <div class="">
+            <i class="ph ph-caret-right text-xl"></i>
+        </div>
+    </a>
+    {% comment %} <a
+        href="language.html"
+        class="flex justify-between items-center pb-5 border-b border-dashed border-n50"
+        >
+        <div class="flex justify-start items-center gap-4">
+            <div
+                class="text-xl size-11 rounded-full border border-r75 text-p1 flex justify-center items-center bg-r50 dark:bg-blackN30 dark:border-blackN50"
+                >
+                <i class="ph ph-translate"></i>
+            </div>
+            <p class="font-semibold">Language</p>
+        </div>
+        <div class="">
+            <i class="ph ph-caret-right text-xl"></i>
+        </div>
+    </a> {% endcomment %}
+    <a
+        href="{% url 'm_tos' %}"
+        class="flex justify-between items-center pb-5 border-b border-dashed border-n50"
+        >
+        <div class="flex justify-start items-center gap-4">
+            <div
+                class="text-xl size-11 rounded-full border border-r75 text-p1 flex justify-center items-center bg-r50 dark:bg-blackN30 dark:border-blackN50"
+                >
+                <i class="ph ph-file"></i>
+            </div>
+            <p class="font-semibold">Terms & Conditions</p>
+        </div>
+        <div class="">
+            <i class="ph ph-caret-right text-xl"></i>
+        </div>
+    </a>
+    {% comment %} <div class="flex justify-between items-center pb-5 logoutModalButton">
+        <div class="flex justify-start items-center gap-4 cursor-pointer">
+            <div
+                class="text-xl size-11 rounded-full border border-r75 text-p1 flex justify-center items-center bg-r50 dark:bg-blackN30 dark:border-blackN50"
+                >
+                <i class="ph ph-sign-out"></i>
+            </div>
+            <p class="font-semibold text-p1">Logout</p>
+        </div>
+    </div> {% endcomment %}
+</div>
+<div class="flex justify-center items-center w-full mt-3">
+    <a href="https://www.betway.com.ng/lobby/casino/?btag=P105314-PR37371-CM104006-TS2010123&"; target="_blank" rel="nofollow">
+        <img src="https://secure.betwaypartnersafrica.com/imagehandler/a71e5297-9c4e-4b80-9a82-843895fe5759/" border="0"  alt="" />
+    </a>
+</div>
+{% comment %} <div class="logoutModal hidden bg-black/40 dark:bg-white/20">
+    <div class="bg-white dark:bg-black rounded-xl px-6 py-8 w-[340px]">
+        <h1
+            class="heading-1 font-semibold text-p1 pb-4 border-b border-dashed border-n50 dark:border-blackN50 text-center dark:text-white"
+            >
+            Log Out
+        </h1>
+        <p class="pt-4 text-n500 dark:text-blackN500 text-center">
+            Are you sure you want to log out?
+        </p>
+        <div class="flex justify-between items-center gap-4 pt-8">
+            <button class="logoutCloseButton primaryButtonOutline block">
+            Cancel
+            </button>
+            <a href="sign-in.html" class="primaryButton">Yes, Logout</a>
+        </div>
+    </div>
+</div> {% endcomment %}
+{% endblock app %}

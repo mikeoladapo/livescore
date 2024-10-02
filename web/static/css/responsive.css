@@ -1,0 +1,471 @@
+/* Mobile First / Smaller to Larger */
+/* X-Small devices (portrait phones, less than 576px) */
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 320px) {
+    .container-fluid, .container {
+        background-color: transparent;
+    }
+
+    .field .goalkeepers, .field .defenders, .field .midfielders, .field .forwards {
+        display: flex;
+        justify-content: center;
+        gap: 25px;
+        /* padding-left: 25px; */
+        margin: 5px auto;
+    }
+}
+
+/* Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {}
+
+/* Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {}
+
+/* X-Large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {}
+
+/* XX-Large devices (larger desktops, 1400px and up) */
+@media (min-width: 1400px) {}
+
+/* Desktop First / Larger to Smaller */
+@media (max-width: 424px) {
+    .container-fluid, .container {
+        background-color: transparent;
+    }
+
+    .field .goalkeepers, .field .defenders, .field .midfielders, .field .forwards {
+        display: flex;
+        justify-content: center;
+        gap: 25px;
+        /* padding-left: 25px; */
+        margin: 5px auto;
+    }
+}
+
+/* X-Small devices (portrait phones, less than 576px) */
+@media (max-width: 575.98px) {
+    .container-fluid, .container {
+        background-color: transparent;
+    }
+
+    .navbar-brand img {
+        height: 25px;
+        position: sticky;
+        left: 0;
+    }
+
+    .btn-black {
+        background-color: #000;
+        color: #fff;
+        border: 1px solid #000;
+        transition: background-color 0.3s, color 0.3s;
+        margin-top: 10px;
+    }
+
+    .top-tournaments, .top-bookmakers {
+        width: 70%;
+        background-color: #2c2c2c;
+        padding: 15px;
+        border-radius: 5px;
+        margin: 2px auto;
+    }
+
+    .match-info .match-time {
+        font-size: 12px;
+    }
+
+    .competition .list-group-item .team img {
+        width: 15px;
+    }
+
+    .competition .list-group-item .team {
+        width: 15px;
+    }
+
+    .competition .list-group-item .team {
+        font-size: 12px;
+    }
+
+    .competition .list-group-item .score {
+        font-size: 10px;
+    }
+
+    .day-header {
+        display: block;
+        /* justify-content: space-between; */
+        align-items: center;
+        background-color: #343a40;
+        color: #fff;
+        padding: 5px 10px;
+        border-radius: 5px 5px 0 0;
+    }
+
+    .day-header h5 {
+        margin: 0;
+        font-size: 11px;
+        font-weight: 600;
+        text-transform: uppercase;
+        margin-bottom: 4px;
+        text-align: center;
+    }
+
+    .btn-group .btn {
+        background-color: #6c757d;
+        color: #fff;
+        font-size: 12px;
+        border: none;
+        font-weight: 600;
+    }
+
+    .btn-group .btn:hover {
+        background-color: #5a6268;
+    }
+
+    .btn-group .btn:focus, .btn-group .btn:active {
+        outline: none;
+        box-shadow: none;
+        border-bottom: 1px solid #ff4500;
+    }
+
+    .btn {
+        color: #e0e0e0;
+    }
+
+    .policy-header, .contact-header, .advert-header {
+        /* background-color: #333; */
+        padding: 5px;
+        border-radius: 5px;
+        text-align: center;
+    }
+
+    .policy-content, .advert-content {
+        background-color: #2b2b2b;
+        padding: 5px;
+        border-radius: 8px;
+        margin-top: 20px;
+        text-align: left;
+    }
+
+    .policy-content h2, .advert-content h2 {
+        font-size: 15px;
+        border-bottom: 1px solid #444;
+        padding-bottom: 5px;
+        margin-top: 20px;
+        text-align: center;
+    }
+
+    .policy-content p, .advert-content p {
+        font-size: 12px;
+        margin: 10px 0;
+        line-height: 1.6;
+        text-align: left !important;
+    }
+
+    .form-container {
+        max-width: 100%;
+        margin: 20px auto;
+        padding: 5px;
+        background-color: transparent;
+        border-radius: 5px;
+    }
+
+    form {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .form-group {
+        margin-bottom: 15px;
+    }
+
+    .form-group label {
+        display: block;
+        margin-bottom: 5px;
+        font-weight: bold;
+        font-size: 12px;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        width: 100%;
+        padding: 5px;
+        border: 1px solid #444;
+        border-radius: 4px;
+        font-size: 12px;
+        background-color: #333;
+        color: #fff;
+    }
+
+    .form-group input::placeholder,
+    .form-group textarea::placeholder {
+        color: #888;
+    }
+
+    .form-group select {
+        appearance: none;
+        /* background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6' viewBox='0 0 10 6'%3E%3Cpath fill='%23fff' fill-rule='evenodd' d='M5 6l5-6H0z'/%3E%3C/svg%3E"); */
+        background-repeat: no-repeat;
+        background-position: right 10px center;
+        background-size: 10px;
+    }
+
+    .form-group textarea {
+        resize: vertical;
+        height: 100px;
+        width: 100%;
+    }
+
+    .btn-send {
+        margin: 10px auto;
+        width: 100%;
+        padding: 5px;
+        background-color: #ff6600;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        font-size: 14px;
+        font-weight: 600;
+        cursor: pointer;
+    }
+
+    /* News */
+    .news-item {
+        border: none;
+        border-radius: 5px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+    }
+
+    .news-item:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    .news-img-top {
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        object-fit: contain;
+        height: 150px;
+        background-color: #000;
+        transition: transform .2s;
+        /* Animation */
+    }
+
+    img.news-img-top:hover {
+        transform: scale(1.1);
+    }
+
+    .news-title {
+        font-size: 12px;
+        font-weight: 600;
+        gap: 0;
+    }
+
+    .news-text {
+        font-size: 11px;
+        color: #6c757d;
+    }
+
+    .btn-news {
+        display: flex;
+        justify-content: space-evenly;
+        background-color: #000;
+        border: 1px solid #eee;
+        transition: background-color 0.2s ease-in-out;
+        padding: 2px 5px;
+        text-decoration: none;
+        color: #eee;
+        font-size: 10px;
+        border-radius: 5px;
+    }
+
+    /* News Detail Styling */
+    .news-detail {
+        border: none;
+        border-radius: 5px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .news-detail .card-img-top {
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        object-fit: contain;
+        width: 100%;
+        height: 150px;
+    }
+
+    .news-detail .card-title {
+        font-size: 14px;
+        font-weight: bold;
+        text-transform: uppercase;
+    }
+
+    .news-detail .card-text {
+        font-size: 12px;
+        line-height: 1.6;
+        text-align: left;
+    }
+
+    .text-desc {
+        display: flex;
+        justify-content: space-between;
+        color: #ccc !important;
+        font-size: 10px !important;
+        border-top: thin solid #888;
+        border-bottom: thin solid #888;
+    }
+
+    .text-desc img {
+        width: 15px;
+        border-radius: 50%;
+    }
+
+    .news-detail .text-muted {
+        font-size: 12px;
+    }
+
+    .head-to-head {
+        padding: 10px;
+        border-radius: 4px;
+    }
+
+    .h2h-table {
+        width: 100% !important;
+        border-collapse: collapse;
+        /* margin: 0 auto; */
+        table-layout: auto;
+    }
+
+    .h2h-table th {
+        padding: 0px;
+        font-size: 10px;
+        border-bottom: 1px solid #445566;
+    }
+
+    .h2h-table td {
+        padding: 10px;
+        font-size: 10px;
+        border-bottom: 1px solid #445566;
+    }
+
+    .h2h-table td img {
+        width: 10px;
+        height: 10px;
+        vertical-align: middle;
+        margin-right: 10px;
+    }
+
+    .field .player {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 15px;
+        height: 15px;
+        background-color: #3498db;
+        color: #fff;
+        border-radius: 50%;
+        text-align: center;
+        font-size: 10px;
+        font-weight: 600;
+        /* padding: 10px; */
+    }
+
+    .field .player-name {
+        color: #fff;
+        font-size: 10px;
+        font-weight: 600;
+        text-align: center;
+    }
+
+    .player-container {
+        border-radius: 50%;
+        width: 15px;
+        height: 15px;
+    }
+
+    .field .goalkeepers, .field .defenders, .field .midfielders, .field .forwards {
+        display: flex;
+        justify-content: center;
+        gap: 40px;
+        /* padding-left: 25px; */
+        margin: 5px auto;
+    }
+
+    .substitutes {
+        background-color: #1c1e22;
+        border-radius: 5px;
+        padding: 10px;
+        margin-top: 10px;
+        color: #fff;
+    }
+
+    .substitutes-header {
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .substitutes-header h5 {
+        margin: 0;
+        font-size: 12px;
+        font-weight: bold;
+    }
+
+    .substitutes-lists {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .substitutes-home, .substitutes-away {
+        width: 48%;
+    }
+
+    .substitute {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 5px 10px;
+        background-color: #2a2d32;
+        border-radius: 3px;
+        margin-bottom: 8px;
+    }
+
+    .substitutes-home .substitute {
+        flex-direction: row;
+    }
+
+    .substitutes-away .substitute {
+        flex-direction: row-reverse;
+    }
+
+    .substitute .number {
+        font-weight: bold;
+        width: 30px;
+        text-align: center;
+    }
+
+    .substitute .player {
+        flex-grow: 1;
+        padding: 0 10px;
+    }
+
+    .substitute .icon {
+        width: 20px;
+        text-align: center;
+    }
+}
+
+/* Small devices (landscape phones, less than 768px) */
+@media (max-width: 767.98px) {}
+
+/* Medium devices (tablets, less than 992px) */
+@media (max-width: 991.98px) {}
+
+/* Large devices (desktops, less than 1200px) */
+@media (max-width: 1199.98px) {}
+
+/* X-Large devices (large desktops, less than 1400px) */
+@media (max-width: 1399.98px) {}
+
+/* XX-Large devices (larger desktops) */
+/* No media query since the xxl breakpoint has no upper bound on its width */

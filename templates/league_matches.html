@@ -1,0 +1,178 @@
+{% extends "mobile/app.html" %}
+
+{% block app %}
+    <!-- Tablist start -->
+    <div class="liveMatchTab px-6">
+        <ul class="tab-button flex justify-between items-center text-lg font-semibold">
+            <li id="tabOne" class="activeTabButton tabButton w-full text-center pb-4 border-b-2 border-n70">
+                <p data-tab="tabOne_data"> Fixtures </p>
+            </li>
+            <li id="tabTwo" class="tabButton w-full text-center pb-4 border-b-2 border-n70">
+                <p data-tab="tabTwo_data"> Results </p>
+            </li>
+        </ul>
+        <div class="pt-8">
+            <div class="tab-content activeTab" id="tabOne_data">
+                <!-- Fixtures Content Start -->
+                <div class="flex flex-col gap-5">
+                    <!-- Content for Fixtures -->
+                    <!-- Example Fixture -->
+                    <div class="flex justify-between items-center">
+                        <p class="font-semibold text-n500">Today, {{current_datetime}} </p>
+                    </div>
+                    <div class="p-5 rounded-xl bg-white flex justify-between items-center gap-6 border border-n30 dark:bg-blackN30">
+                        <div class="w-full">
+                            <div class="flex justify-between items-center pb-4">
+                                <div class="flex justify-start items-center gap-3">
+                                    <img src="{{home_team_logo}}" class="size-10" alt="">
+                                    <p class="text-sm relative font-semibold"> {{home_team}} </p>
+                                </div>
+                            </div>
+                            <div class="border-t border-dashed border-n50">
+                                <p class="text-sm font-semibold -mt-[10px] bg-white px-2 w-fit ml-10 dark:bg-blackN30">{{venue}} - {{fixture_date}} </p>
+                            </div>
+                            <div class="flex justify-between items-center pt-2">
+                                <div class="flex justify-start items-center gap-3">
+                                    <img src="{{away_team_logo}}" class="size-10" alt="">
+                                    <p class="text-sm relative font-semibold">{{away_team}}</p>
+                                </div>
+                            </div>
+
+
+                            <div class="flex justify-between items-center pb-4">
+                                <div class="flex justify-start items-center gap-3">
+                                    <img src="{{home_team2_logo}}" class="size-10" alt="">
+                                    <p class="text-sm relative font-semibold"> {{home_team2}} </p>
+                                </div>
+                            </div>
+                            <div class="border-t border-dashed border-n50">
+                                <p class="text-sm font-semibold -mt-[10px] bg-white px-2 w-fit ml-10 dark:bg-blackN30">{{venue2}} - {{fixture_date2}}</p>
+                            </div>
+                            <div class="flex justify-between items-center pt-2">
+                                <div class="flex justify-start items-center gap-3">
+                                    <img src="{{away_team2_logo}}" class="size-10" alt="">
+                                    <p class="text-sm relative font-semibold">{{away_team2}}</p>
+                                </div>
+                            </div>
+
+
+                            <div class="flex justify-between items-center pb-4">
+                                <div class="flex justify-start items-center gap-3">
+                                    <img src="{{home_team3_logo}}" class="size-10" alt="">
+                                    <p class="text-sm relative font-semibold"> {{home_team3}} </p>
+                                </div>
+                            </div>
+                            <div class="border-t border-dashed border-n50">
+                                <p class="text-sm font-semibold -mt-[10px] bg-white px-2 w-fit ml-10 dark:bg-blackN30">{{venue3}} - {{fixture_date3}}</p>
+                            </div>
+                            <div class="flex justify-between items-center pt-2">
+                                <div class="flex justify-start items-center gap-3">
+                                    <img src="{{away_team3_logo}}" class="size-10" alt="}" >
+                                    <p class="text-sm relative font-semibold">{{away_team3}}</p>
+                                </div>
+                            </div>
+                        </div>
+                        <button>
+                            <i class="ph ph-star text-o300 text-2xl"></i>
+                        </button>
+                    </div>
+                    <!-- Add more fixture content as needed -->
+                </div>
+                <!-- Fixtures Content End -->
+            </div>
+            <div class="tab-content hiddenTab" id="tabTwo_data">
+                <!-- Results Content Start -->
+                <div class="flex flex-col gap-5">
+                    <!-- Content for Results -->
+                    <!-- Example Result -->
+                    <div class="p-5 rounded-xl bg-white flex justify-between items-center gap-6 border border-n30 dark:bg-blackN30">
+                        <div class="w-full">
+                            <div class="flex justify-between items-center pb-4">
+                                <div class="flex justify-start items-center gap-3">
+                                    <img src="{{phome_team1_logo}}" class="size-10" alt="">
+                                    <p class="text-sm relative font-semibold">{{phome_team1}}</p>
+                                </div>
+                                <p class="font-semibold">1</p>
+                            </div>
+                            <div class="border-t border-dashed border-n50">
+                                <p class="text-sm font-semibold -mt-[10px] bg-white px-2 w-fit ml-10 dark:bg-blackN30">Full time</p>
+                            </div>
+                            <div class="flex justify-between items-center pt-2">
+                                <div class="flex justify-start items-center gap-3">
+                                    <img src="{{paway_team1_logo}}" class="size-10" alt="">
+                                    <p class="text-sm relative font-semibold">{{paway_team1}}</p>
+                                </div>
+                                <p class="font-semibold">2</p>
+                            </div>
+                        </div>
+                        <button>
+                            <i class="ph ph-star text-o300 text-2xl"></i>
+                        </button>
+
+
+                        <div class="w-full">
+                            <div class="flex justify-between items-center pb-4">
+                                <div class="flex justify-start items-center gap-3">
+                                    <img src="{{phome_team2_logo}}" class="size-10" alt="">
+                                    <p class="text-sm relative font-semibold">{{phome_team2}}</p>
+                                </div>
+                                <p class="font-semibold">1</p>
+                            </div>
+                            <div class="border-t border-dashed border-n50">
+                                <p class="text-sm font-semibold -mt-[10px] bg-white px-2 w-fit ml-10 dark:bg-blackN30">Full time</p>
+                            </div>
+                            <div class="flex justify-between items-center pt-2">
+                                <div class="flex justify-start items-center gap-3">
+                                    <img src="{{paway_team2_logo}}" class="size-10" alt="{">
+                                    <p class="text-sm relative font-semibold">{{paway_team2}}</p>
+                                </div>
+                                <p class="font-semibold">2</p>
+                            </div>
+                        </div>
+                        <button>
+                            <i class="ph ph-star text-o300 text-2xl"></i>
+                        </button>
+                    
+                    </div>
+                    <!-- Add more result content as needed -->
+                </div>
+                <!-- Results Content End -->
+            </div>
+        </div>
+    </div>
+    <!-- Tablist end -->
+
+
+    <script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const tabs = document.querySelectorAll('.tabButton a');
+        const contents = document.querySelectorAll('.tab-content');
+
+        tabs.forEach(tab => {
+            tab.addEventListener('click', function (event) {
+                event.preventDefault();
+
+                // Remove active class from all tabs
+                tabs.forEach(item => item.parentElement.classList.remove('activeTabButton'));
+                tabs.forEach(item => item.parentElement.classList.add('border-n70'));
+
+                // Add active class to the clicked tab
+                tab.parentElement.classList.add('activeTabButton');
+                tab.parentElement.classList.remove('border-n70');
+
+                // Hide all content sections
+                contents.forEach(content => content.classList.add('hiddenTab'));
+                contents.forEach(content => content.classList.remove('activeTab'));
+
+                // Show the content section related to the clicked tab
+                const tabContentId = tab.getAttribute('data-tab');
+                const activeContent = document.getElementById(tabContentId);
+                activeContent.classList.add('activeTab');
+                activeContent.classList.remove('hiddenTab');
+            });
+        });
+    });
+    </script>
+
+
+{% endblock %}

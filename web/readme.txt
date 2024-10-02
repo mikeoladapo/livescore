@@ -1,0 +1,1 @@
+This app is responsible for handling most of the web traffic and routing I think

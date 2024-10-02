@@ -1,0 +1,195 @@
+{
+  "@context": "https://schema.org",
+  "@type": "SportsOrganization",
+  "name": "720scores",
+  "url": "https://720scores.com.ng",
+  "logo": "https://720scores.com.ng/logo.png",
+  "description": "Live scores and updates from around the world",
+  "keywords": ["live scores", "football", "match result", "league table"],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "African Football Leagues",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "name": "Morocco-Botola Pro",
+        "description": "Top-tier Moroccan football league",
+        "keywords": ["Moroccan football", "Botola Pro", "Morocco soccer"]
+      },
+      {
+        "@type": "Offer",
+        "name": "Tunisia-Ligue 1",
+        "description": "Top-tier Tunisian football league",
+        "keywords": ["Tunisian football", "Ligue 1", "Tunisia soccer"]
+      },
+      {
+        "@type": "Offer",
+        "name": "Algeria-Ligue 1",
+        "description": "Top-tier Algerian football league",
+        "keywords": ["Algerian football", "Ligue 1", "Algeria soccer"]
+      },
+      {
+        "@type": "Offer",
+        "name": "Egypt-Premier League",
+        "description": "Top-tier Egyptian football league",
+        "keywords": ["Egyptian football", "Premier League", "Egypt soccer"]
+      },
+      {
+        "@type": "Offer",
+        "name": "Nigeria-NPFL",
+        "description": "Top-tier Nigerian football league",
+        "keywords": ["Nigerian football", "NPFL", "Nigeria soccer"]
+      },
+      {
+        "@type": "Offer",
+        "name": "South Africa-PSL",
+        "description": "Top-tier South African football league",
+        "keywords": ["South African football", "PSL", "South Africa soccer"]
+      },
+      {
+        "@type": "Offer",
+        "name": "Côte d'Ivoire-Ligue 1",
+        "description": "Top-tier Ivorian football league",
+        "keywords": ["Ivorian football", "Ligue 1", "Côte d'Ivoire soccer"]
+      },
+      {
+        "@type": "Offer",
+        "name": "Ghana-Premier League",
+        "description": "Top-tier Ghanaian football league",
+        "keywords": ["Ghanaian football", "Premier League", "Ghana soccer"]
+      },
+      {
+        "@type": "Offer",
+        "name": "Morocco-Botola 2",
+        "description": "Second-tier Moroccan football league",
+        "keywords": ["Moroccan football", "Botola 2", "Morocco soccer"]
+      },
+      {
+        "@type": "Offer",
+        "name": "Algeria-Ligue 2",
+        "description": "Second-tier Algerian football league",
+        "keywords": ["Algerian football", "Ligue 2", "Algeria soccer"]
+      },
+      {
+        "@type": "Offer",
+        "name": "Senegal-Ligue 1",
+        "description": "Top-tier Senegalese football league",
+        "keywords": ["Senegalese football", "Ligue 1", "Senegal soccer"]
+      },
+      {
+        "@type": "Offer",
+        "name": "Angola-Girabola",
+        "description": "Top-tier Angolan football league",
+        "keywords": ["Angolan football", "Girabola", "Angola soccer"]
+      },
+      {
+        "@type": "Offer",
+        "name": "Congo DR-Super Ligue",
+        "description": "Top-tier Congolese football league",
+        "keywords": ["Congolese football", "Super Ligue", "Congo DR soccer"]
+      },
+      {
+        "@type": "Offer",
+        "name": "Tunisia-Ligue 2",
+        "description": "Second-tier Tunisian football league",
+        "keywords": ["Tunisian football", "Ligue 2", "Tunisia soccer"]
+      },
+      {
+        "@type": "Offer",
+        "name": "Zambia-Super League",
+        "description": "Top-tier Zambian football league",
+        "keywords": ["Zambian football", "Super League", "Zambia soccer"]
+      },
+{
+        "@type": "Offer",
+        "name": "Cameroon-Elite ONE",
+        "description": "Top-tier Cameroonian football league",
+        "keywords": ["Cameroonian football", "Elite ONE", "Cameroon soccer"]
+      },
+      {
+        "@type": "Offer",
+        "name": "Congo-Ligue 1",
+        "description": "Top-tier Congolese football league",
+        "keywords": ["Congolese football", "Ligue 1", "Congo soccer"]
+      },
+      {
+        "@type": "Offer",
+        "name": "Togo-Championnat National",
+        "description": "Top-tier Togolese football league",
+        "keywords": ["Togolese football", "Championnat National", "Togo soccer"]
+      },
+      {
+        "@type": "Offer",
+        "name": "Kenya-Premier League",
+        "description": "Top-tier Kenyan football league",
+        "keywords": ["Kenyan football", "Premier League", "Kenya soccer"]
+      },
+      {
+        "@type": "Offer",
+        "name": "Gambia-GFA League",
+        "description": "Top-tier Gambian football league",
+        "keywords": ["Gambian football", "GFA League", "Gambia soccer"]
+      },
+      {
+        "@type": "Offer",
+        "name": "Libya-Premier League",
+        "description": "Top-tier Libyan football league",
+        "keywords": ["Libyan football", "Premier League", "Libya soccer"]
+      },
+      {
+        "@type": "Offer",
+        "name": "Gabon-Championnat D1",
+        "description": "Top-tier Gabonese football league",
+        "keywords": ["Gabonese football", "Championnat D1", "Gabon soccer"]
+      },
+      {
+        "@type": "Offer",
+        "name": "Mali-Première Division",
+        "description": "Top-tier Malian football league",
+        "keywords": ["Malian football", "Première Division", "Mali soccer"]
+      },
+      {
+        "@type": "Offer",
+        "name": "Burkina Faso-1ère Division",
+        "description": "Top-tier Burkinabé football league",
+        "keywords": ["Burkinabé football", "1ère Division", "Burkina Faso soccer"]
+      },
+      {
+        "@type": "Offer",
+        "name": "Tanzania-Ligi kuu Bara",
+        "description": "Top-tier Tanzanian football league",
+        "keywords": ["Tanzanian football", "Ligi kuu Bara", "Tanzania soccer"]
+      },
+      {
+        "@type": "Offer",
+        "name": "Ethiopia-Premier League",
+        "description": "Top-tier Ethiopian football league",
+        "keywords": ["Ethiopian football", "Premier League", "Ethiopia soccer"]
+      },
+      {
+        "@type": "Offer",
+        "name": "South Africa-1st Division",
+        "description": "Second-tier South African football league",
+        "keywords": ["South African football", "1st Division", "South Africa soccer"]
+      },
+      {
+        "@type": "Offer",
+        "name": "Uganda-Premier League",
+        "description": "Top-tier Ugandan football league",
+        "keywords": ["Ugandan football", "Premier League", "Uganda soccer"]
+      },
+      {
+        "@type": "Offer",
+        "name": "Rwanda-National Soccer League",
+        "description": "Top-tier Rwandan football league",
+        "keywords": ["Rwandan football", "National Soccer League", "Rwanda soccer"]
+      },
+      {
+        "@type": "Offer",
+        "name": "Sudan-Sudani Premier League",
+        "description": "Top-tier Sudanese football league",
+        "keywords": ["Sudanese football", "Sudani Premier League", "Sudan soccer"]
+      },
+    ]
+  }
+}
