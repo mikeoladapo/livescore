@@ -1,8 +1,12 @@
 from django.conf import settings
-from django.shortcuts import get_object_or_404, render
+from django.contrib.auth import authenticate, login, logout
+from django.shortcuts import get_object_or_404, render , redirect
 from django.http import HttpResponse, JsonResponse
+from django.views.decorators.csrf import csrf_protect
 import requests
-
+from django.contrib.auth.decorators import login_required 
+from django.contrib import messages
+from .models import Article
 from datetime import datetime
 current_datetime = datetime.now()
 current_year = current_datetime.year
@@ -12,18 +16,55 @@ from django.utils.dateparse import parse_date
 
 BASE_URL = 'https://v3.football.api-sports.io'
 
+@csrf_protect
+def login_view(request):
+    if request.method  == "POST":
+        username = request.POST.get('username')
+        password = request.POST.get('password')
 
+        user = authenticate(username=username, password=password)  
+
+        if user is not None:
+            login(request, user)
+            return redirect('pc_index')
+        else:
+            context = {'message': None} 
+
+            if not username:
+                context['message'] = "Please enter your username."
+            elif not password:
+                context['message'] = "Please enter your password."
+            else:
+                context['message'] = "Invalid username or password."
+
+            return render(request, 'login.html', context)
+    return render(request, 'login.html')
+
+
+@login_required       
+def logout_view(request):
+    logout(request)
+    return redirect ('login')
+
+def get_news(request):
+    context = {
+        'news':Article.objects.all() 
+    }
+    return render(request,'news.html',context)
+
+@login_required         
 def get_live_matches(request):
     url = f"{BASE_URL}/fixtures?live=all"
     headers = {
         'x-apisports-key': settings.API_FOOTBALL_KEY
     }
     response = requests.get(url, headers=headers)
+    data = response.json()
     if response.status_code == 200:
-        return JsonResponse(response.json(), safe=False)
+        return JsonResponse(data, safe=False)
     return JsonResponse({'error': 'Unable to fetch live matches'}, status=response.status_code)
 
-
+@login_required 
 def get_live_matches2(request):
     url = f"{BASE_URL}/fixtures?live=all"
     headers = {
@@ -36,13 +77,13 @@ def get_live_matches2(request):
         return JsonResponse({'matches': matches}, safe=False)
     return JsonResponse({'error': 'Unable to fetch live matches'}, status=response.status_code)
 
-
+@login_required 
 def get_recent_updates(request):
     date_str = request.GET.get('date', None)
     if date_str:
         try:
             date = parse_date(date_str)
-            if not date:
+            if not date:  
                 raise ValueError
         except ValueError:
             return JsonResponse({'error': 'Invalid date format'}, status=400)
@@ -66,6 +107,7 @@ def get_recent_updates(request):
         return JsonResponse({'matches': matches}, safe=False)
     return JsonResponse({'error': 'Unable to fetch recent updates'}, status=response.status_code)
 
+@login_required 
 def format_matches(matches):
     league_ids = [1, 2, 39, 140, 135, 78, 61]              #World cup, Uefa champions league, Premier League, LaLiga, Serie A, Bundesliga, Ligue1 
     prioritized_matches = []
@@ -112,23 +154,23 @@ def format_matches(matches):
         ordered_matches = prioritized_matches + other_matches    
     return ordered_matches
 
-
+@login_required 
 def index(request):
     
     context = {
         'is_home': True,
-        
     }
-    return render(request, "mobile/index.html", context)
+    return render(request, "index.html", context)
 
 # Matches
+@login_required 
 def LiveMatches(request):
     context = {
         'is_home': False,
     }
-    return render(request, "mobile/live-match.html", context)
+    return render(request, "live-match.html", context)
 
-
+@login_required 
 def SingleMatch(request, match_id):
     match_url = f"{BASE_URL}/fixtures?id={match_id}"
     stats_url = f"{BASE_URL}/fixtures/statistics?fixture={match_id}"
@@ -158,10 +200,10 @@ def SingleMatch(request, match_id):
         if h2h_response.status_code == 200:
             h2h_data = h2h_response.json()
             match_info = format_match_info(match, stats_data['response'], h2h_data['response'], lineup_data['response'])
-            return render(request, 'mobile/match_detail.html', {'match_info': match_info, 'is_home': False})
+            return render(request, 'match_detail.html', {'match_info': match_info, 'is_home': False})
     return HttpResponse(status=404)
 
-
+@login_required 
 def format_match_info(match, statistics, h2h, lineups):
     # Check if statistics are available
     if statistics and len(statistics) >= 2:
@@ -216,7 +258,7 @@ def format_match_info(match, statistics, h2h, lineups):
         'lineups': format_lineups(lineups, match.get('events', []))
     }
 
-
+@login_required 
 def calculate_h2h_stats(h2h, home_team_id, away_team_id):
     total_matches = len(h2h)
     home_wins = sum(1 for match in h2h if match['teams']['home']['id'] == home_team_id and match['teams']['home']['winner'])
@@ -237,7 +279,7 @@ def calculate_h2h_stats(h2h, home_team_id, away_team_id):
             'draws': draws
         }
     }
-
+@login_required 
 def format_lineups(lineups, events):
     if not lineups:
         return {'home': None, 'away': None}
@@ -265,7 +307,7 @@ def format_lineups(lineups, events):
         'substitutions': substitutions
     }
 
-
+@login_required 
 def calculate_percentage(value1, value2):
     if value1 is not None:
         value1 = float(value1) if isinstance(value1, str) else value1
@@ -279,21 +321,14 @@ def calculate_percentage(value1, value2):
     if total == 0:
         return 50  # Default percentage if both values are zero
     return (value1 / total) * 100
-
-
-
-
-
-
-
-
-
-
+    
+    
+@login_required 
 def LeagueInfo(request, league_id):
     
-    top_scorers_url = f'{BASE_URL}/players/topscorers?season={current_year}&league={league_id}'                #Top scorers
-    Ffixtures_url = f'{BASE_URL}/fixtures?league={league_id}&season={current_year}'                  #Future 3 matches
-    Pfixtures_url = f'{BASE_URL}/fixtures?league={league_id}&season={current_year}'                  #Past 2 matches
+    top_scorers_url = f'{BASE_URL}/players/topscorers?season=2020&league={league_id}'                #Top scorers
+    Ffixtures_url = f'{BASE_URL}/fixtures?league={league_id}&season={current_year}&next=3'                  #Future 3 matches
+    Pfixtures_url = f'{BASE_URL}/fixtures?league={league_id}&season={current_year}&last=2'                  #Past 2 matches
     standings_url = f'{BASE_URL}/standings?league={league_id}&season={current_year}'                 #League standings
     
     params = {
@@ -465,63 +500,77 @@ def LeagueInfo(request, league_id):
         except (KeyError, IndexError, ValueError) as e:
             pass
 
+        #Future fixtures
                            
-        return render(request, "mobile/league.html", context)    
-
-
-# NEWS
+        return render(request, "league.html", context)          
+@login_required
 def newsPage(request):
-    
-    context = {
-        'is_home': False,
-        
+    news = {
+        'homepageArticles': [
+            {
+                'articles': Article.objects.prefetch_related('mainMedia', 'category').all()
+            }
+        ]
     }
-    return render(request, "mobile/news.html", context)
+    context = {
+        'news': news
+    }
+    return render(request, 'news.html', context)
 
-def newsDetailPage(request, slug, news_type):
+@login_required
+def newsDetailPage(request, slug):
+    article = get_object_or_404(Article, slug=slug)
     
     context = {
-        'is_home': False,
-        "news_type": news_type
+        'news': {
+            'article': article
+        },
+        'news_type': article.category.name if article.category else 'General' 
     }
-    return render(request, "mobile/news_detail.html", context)
+    
+    return render(request, 'news_detail.html', context)
+
+
 
 # Settings
+@login_required
 def Settings(request):
     context = {
         'is_home': False,
     }
-    return render(request, "mobile/settings.html", context)
+    return render(request, "settings.html", context)
 
-
+@login_required 
 def generalSettings(request):
     context = {
         'is_home': False,
     }
-    return render(request, "mobile/general-settings.html", context)
+    return render(request, "general-settings.html", context)
 
+@login_required 
 def helpSettings(request):
     context = {
         'is_home': False,
     }
-    return render(request, "mobile/help.html", context)
+    return render(request, "help.html", context)
 
-
+@login_required 
 def TOsSettings(request):
     context = {
         'is_home': False,
     }
-    return render(request, "mobile/tos.html", context)
+    return render(request, "tos.html", context)
 
-
+@login_required 
 def AdvertWithUs(request):
     context = {
         'is_home': False,
     }
-    return render(request, "mobile/advertise.html", context)
+    return render(request, "advertise.html", context)
 
+@login_required 
 def PrivacyPolicy(request):
     context = {
         'is_home': False,
     }
-    return render(request, "mobile/privacy.html", context)
+    return render(request, "privacy.html", context)

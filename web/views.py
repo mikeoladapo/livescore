@@ -503,24 +503,33 @@ def LeagueInfo(request, league_id):
         #Future fixtures
                            
         return render(request, "league.html", context)          
-
-
-
-# NEWS
 @login_required
 def newsPage(request):
-    context = {
-        'news': Article.objects.all()   
+    news = {
+        'homepageArticles': [
+            {
+                'articles': Article.objects.prefetch_related('mainMedia', 'category').all()
+            }
+        ]
     }
-    return render(request, "news.html", context)
+    context = {
+        'news': news
+    }
+    return render(request, 'news.html', context)
 
 @login_required
-def newsDetailPage(request, slug, news_type):
-    article = get_object_or_404(Article, slug=slug, news_type=news_type)
+def newsDetailPage(request, slug):
+    article = get_object_or_404(Article, slug=slug)
+    
     context = {
-        'news_detail': article,
+        'news': {
+            'article': article
+        },
+        'news_type': article.category.name if article.category else 'General' 
     }
-    return render(request, "news_detail.html", context)
+    
+    return render(request, 'news_detail.html', context)
+
 
 
 # Settings

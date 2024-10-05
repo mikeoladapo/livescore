@@ -2,7 +2,6 @@ from django.urls import re_path as path
 from .views import (
     login_view,
     logout_view,
-    get_news,
     get_live_matches,
     get_live_matches2,
     get_recent_updates,
@@ -10,6 +9,7 @@ from .views import (
     LiveMatches,
     SingleMatch,
     newsPage,
+    newsDetailPage,
     LeagueInfo,
     Settings,
     generalSettings,
@@ -28,7 +28,8 @@ urlpatterns = [
     path(r'^league-info/(?P<league_id>[\w-]+)/$', LeagueInfo, name='pc_league_info'),
     
     path(r'^news/$', newsPage, name='pc_news'),
-    #path(r'^news/(?P<slug>[\w-]+)/(?P<news_type>[\w-]+)/$', newsDetailPage, name='pc_news_detail'),
+    path(r'^news/(?P<slug>[\w-]+)/$', newsDetailPage, name='pc_news_detail'),
+
 
     path(r'^login/$', login_view, name='login'),
     path(r'^logout/$', logout_view, name='logout'),
