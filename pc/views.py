@@ -6,7 +6,7 @@ from django.views.decorators.csrf import csrf_protect
 import requests
 from django.contrib.auth.decorators import login_required 
 from django.contrib import messages
-from .models import Article
+from web.models import Article
 from datetime import datetime
 current_datetime = datetime.now()
 current_year = current_datetime.year
