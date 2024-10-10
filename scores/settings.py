@@ -23,9 +23,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-y-o5^j8%0tu=_y2y8k62o27)yrtznag^+yyjfn-77fr%)k3edm'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = [ '127.0.0.1', 'localhost']
+ALLOWED_HOSTS = [ '127.0.0.1', 'localhost', '192.168.43.77']
 
 
 
@@ -51,6 +51,7 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'web.middleware.device_detection.MobileRedirectMiddleware',
+    'web.middleware.device_detection.DeviceTemplateMiddleware',
 ]
 
 ROOT_URLCONF = 'scores.urls'
@@ -70,6 +71,8 @@ TEMPLATES = [
         },
     },
 ]
+
+
 
 WSGI_APPLICATION = 'scores.wsgi.application'
 
@@ -128,3 +131,6 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
 API_FOOTBALL_KEY =  '831dddbc9710ba8528492d76d5aac604' # 56c152eeae5b62818038f403f7ea050b  504b1029f068b01d77d0716f9fd65f80  189165364945c747f1ae2b6bba58fb9f,
+
+LOGIN_URL = 'login/'
+LOGIN_REDIRECT_URL = '/'

@@ -1,6 +1,6 @@
 from django.conf import settings
 from django.contrib.auth import authenticate, login, logout
-from django.shortcuts import get_object_or_404, render , redirect
+from django.shortcuts import get_object_or_404, redirect
 from django.http import HttpResponse, JsonResponse
 from django.views.decorators.csrf import csrf_protect
 import requests
@@ -11,20 +11,25 @@ from datetime import datetime
 current_datetime = datetime.now()
 current_year = current_datetime.year
 
+# Custom built render
+from core.shortcuts import render
+
 import pytz
 from django.utils.dateparse import parse_date
 
 BASE_URL = 'https://v3.football.api-sports.io'
+
+
 
 @csrf_protect
 def login_view(request):
     if request.method  == "POST":
         username = request.POST.get('username')
         password = request.POST.get('password')
-
+        print(request.POST, username, password)
         user = authenticate(username=username, password=password)  
 
-        if user is not None:
+        if user:
             login(request, user)
             return redirect('pc_index')
         else:
@@ -46,11 +51,13 @@ def logout_view(request):
     logout(request)
     return redirect ('login')
 
+
 def get_news(request):
     context = {
         'news':Article.objects.all() 
     }
     return render(request,'news.html',context)
+
 
 @login_required         
 def get_live_matches(request):
@@ -64,6 +71,7 @@ def get_live_matches(request):
         return JsonResponse(data, safe=False)
     return JsonResponse({'error': 'Unable to fetch live matches'}, status=response.status_code)
 
+
 @login_required 
 def get_live_matches2(request):
     url = f"{BASE_URL}/fixtures?live=all"
@@ -76,6 +84,7 @@ def get_live_matches2(request):
         matches = format_matches(data['response'])
         return JsonResponse({'matches': matches}, safe=False)
     return JsonResponse({'error': 'Unable to fetch live matches'}, status=response.status_code)
+
 
 @login_required 
 def get_recent_updates(request):
@@ -107,7 +116,7 @@ def get_recent_updates(request):
         return JsonResponse({'matches': matches}, safe=False)
     return JsonResponse({'error': 'Unable to fetch recent updates'}, status=response.status_code)
 
-@login_required 
+
 def format_matches(matches):
     league_ids = [1, 2, 39, 140, 135, 78, 61]              #World cup, Uefa champions league, Premier League, LaLiga, Serie A, Bundesliga, Ligue1 
     prioritized_matches = []
@@ -154,13 +163,14 @@ def format_matches(matches):
         ordered_matches = prioritized_matches + other_matches    
     return ordered_matches
 
+
 @login_required 
 def index(request):
-    
     context = {
         'is_home': True,
     }
     return render(request, "index.html", context)
+
 
 # Matches
 @login_required 
@@ -169,6 +179,7 @@ def LiveMatches(request):
         'is_home': False,
     }
     return render(request, "live-match.html", context)
+
 
 @login_required 
 def SingleMatch(request, match_id):
@@ -202,6 +213,7 @@ def SingleMatch(request, match_id):
             match_info = format_match_info(match, stats_data['response'], h2h_data['response'], lineup_data['response'])
             return render(request, 'match_detail.html', {'match_info': match_info, 'is_home': False})
     return HttpResponse(status=404)
+
 
 @login_required 
 def format_match_info(match, statistics, h2h, lineups):
@@ -258,6 +270,7 @@ def format_match_info(match, statistics, h2h, lineups):
         'lineups': format_lineups(lineups, match.get('events', []))
     }
 
+
 @login_required 
 def calculate_h2h_stats(h2h, home_team_id, away_team_id):
     total_matches = len(h2h)
@@ -279,6 +292,8 @@ def calculate_h2h_stats(h2h, home_team_id, away_team_id):
             'draws': draws
         }
     }
+    
+    
 @login_required 
 def format_lineups(lineups, events):
     if not lineups:
@@ -306,6 +321,7 @@ def format_lineups(lineups, events):
         },
         'substitutions': substitutions
     }
+
 
 @login_required 
 def calculate_percentage(value1, value2):
@@ -502,7 +518,9 @@ def LeagueInfo(request, league_id):
 
         #Future fixtures
                            
-        return render(request, "league.html", context)          
+        return render(request, "league.html", context)     
+    
+     
 @login_required
 def newsPage(request):
     news = {
@@ -516,6 +534,7 @@ def newsPage(request):
         'news': news
     }
     return render(request, 'news.html', context)
+
 
 @login_required
 def newsDetailPage(request, slug):

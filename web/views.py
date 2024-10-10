@@ -1,6 +1,6 @@
 from django.conf import settings
 from django.contrib.auth import authenticate, login, logout
-from django.shortcuts import get_object_or_404, render , redirect
+from django.shortcuts import get_object_or_404, redirect
 from django.http import HttpResponse, JsonResponse
 from django.views.decorators.csrf import csrf_protect
 import requests
@@ -11,10 +11,14 @@ from datetime import datetime
 current_datetime = datetime.now()
 current_year = current_datetime.year
 
+# Custom built render
+from core.shortcuts import render
+
 import pytz
 from django.utils.dateparse import parse_date
 
 BASE_URL = 'https://v3.football.api-sports.io'
+
 
 @csrf_protect
 def login_view(request):
@@ -107,7 +111,6 @@ def get_recent_updates(request):
         return JsonResponse({'matches': matches}, safe=False)
     return JsonResponse({'error': 'Unable to fetch recent updates'}, status=response.status_code)
 
-@login_required 
 def format_matches(matches):
     league_ids = [1, 2, 39, 140, 135, 78, 61]              #World cup, Uefa champions league, Premier League, LaLiga, Serie A, Bundesliga, Ligue1 
     prioritized_matches = []
@@ -156,7 +159,7 @@ def format_matches(matches):
 
 @login_required 
 def index(request):
-    
+    print('web')
     context = {
         'is_home': True,
     }
@@ -203,7 +206,7 @@ def SingleMatch(request, match_id):
             return render(request, 'match_detail.html', {'match_info': match_info, 'is_home': False})
     return HttpResponse(status=404)
 
-@login_required 
+
 def format_match_info(match, statistics, h2h, lineups):
     # Check if statistics are available
     if statistics and len(statistics) >= 2:
@@ -258,7 +261,7 @@ def format_match_info(match, statistics, h2h, lineups):
         'lineups': format_lineups(lineups, match.get('events', []))
     }
 
-@login_required 
+
 def calculate_h2h_stats(h2h, home_team_id, away_team_id):
     total_matches = len(h2h)
     home_wins = sum(1 for match in h2h if match['teams']['home']['id'] == home_team_id and match['teams']['home']['winner'])
@@ -279,7 +282,8 @@ def calculate_h2h_stats(h2h, home_team_id, away_team_id):
             'draws': draws
         }
     }
-@login_required 
+
+
 def format_lineups(lineups, events):
     if not lineups:
         return {'home': None, 'away': None}
@@ -307,7 +311,7 @@ def format_lineups(lineups, events):
         'substitutions': substitutions
     }
 
-@login_required 
+
 def calculate_percentage(value1, value2):
     if value1 is not None:
         value1 = float(value1) if isinstance(value1, str) else value1
@@ -321,7 +325,7 @@ def calculate_percentage(value1, value2):
     if total == 0:
         return 50  # Default percentage if both values are zero
     return (value1 / total) * 100
-    
+
     
 @login_required 
 def LeagueInfo(request, league_id):
@@ -503,6 +507,7 @@ def LeagueInfo(request, league_id):
         #Future fixtures
                            
         return render(request, "league.html", context)          
+
 @login_required
 def newsPage(request):
     news = {
@@ -529,8 +534,6 @@ def newsDetailPage(request, slug):
     }
     
     return render(request, 'news_detail.html', context)
-
-
 
 # Settings
 @login_required

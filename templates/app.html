@@ -75,10 +75,8 @@
           class="bg-p1 text-white flex justify-around items-center py-4 w-[430px] text-2xl rounded-t-lg"
         >
           <a href="{% url 'pc_index' %}"><i class="ph-fill ph-house"></i></a>
-          {% comment %} <a href="favourite-matches.html"
-            ><i class="ph ph-heart-straight"></i
-          ></a> {% endcomment %}
-          
+          {% comment %} <a href="{% url 'pc_news' %}"><i class="ph ph-heart-straight"></i></a> {% endcomment %}
+          <a href="{% url 'pc_news' %}"><i class="ph ph-article"></i></a>
           <a href="{% url 'pc_settings' %}"><i class="ph ph-user"></i></a>
         </div>
       </div>
